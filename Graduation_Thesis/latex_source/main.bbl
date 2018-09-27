@@ -1,0 +1,43 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{段小艳，任冬梅}(2012)]{jiguangganshe}
+{段小艳，任冬梅}.
+\newblock 激光干涉法微位移测量技术综述[J].
+\newblock 计测技术, 2012, 32(6):1--13.
+
+\bibitem[{唐军杰,杨翼,肖鸿宇等}(2012)]{xianpengzhang}
+{唐军杰,杨翼,肖鸿宇等}.
+\newblock 光杠杆法测定金属的线胀系数[J].
+\newblock 现代科学仪器, 2012(6):155--156.
+
+\bibitem[{张炳恒,宫铁波}(2003)]{guangdian}
+{张炳恒,宫铁波}.
+\newblock 光电光杠杆测微小位移系统的设计与应用[J].
+\newblock 计量技术, 2003(10):10--12.
+
+\bibitem[{吴宇,刘晓旻,杨国光等}(2007)]{xinhaochuli}
+{吴宇,刘晓旻,杨国光等}.
+\newblock 光杠杆纳米微位移测量系统中的信号处理[J].
+\newblock 光电工程, 2007, 34(7):30--34,38.
+
+\bibitem[{Stephen Wolfram}(2002)]{mathematicabook}
+{Stephen Wolfram}.
+\newblock
+\newblock Mathematica全书（第四版）[M]. 西安交通大学, 2002.
+
+\bibitem[{Sal Mangano}(2010)]{cookbook}
+{Sal Mangano}.
+\newblock
+\newblock Mathematica Cookbook[M]. O'Reily Media Inc, 2010.
+
+\bibitem[{Castleman K R}(1996)]{yuvtorgb}
+{Castleman K R}.
+\newblock
+\newblock Digital Image Processing[M]. Prentice-Hall International Inc, 1996.
+
+\end{thebibliography}

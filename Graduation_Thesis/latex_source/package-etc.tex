@@ -1,0 +1,35 @@
+\usepackage[left=25mm,right=25mm,top=30mm,vmarginratio=1:1]{geometry}
+\usepackage{ctexcap}
+\usepackage{amsmath}
+%%\usepackage{listings} % 排代码
+\usepackage[labelsep=period]{caption}
+\usepackage{graphicx,xcolor,layout,ifthen,titlesec,array}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hypernat}
+\usepackage{CJKutf8}
+\usepackage[colorlinks,unicode=true]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[OL]{}\fancyhead[OR]{}
+\fancyhead[C]{\zihao{3}\lishu 鲁东大学学士学位论文}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\newenvironment{MyAbstract}[1][zh]{\list{}{%
+    \itemindent=0em\listparindent=\itemindent
+    \leftmargin=2em\rightmargin=\leftmargin\parsep=0pt}\kaishu\zihao{5}\item%
+  \mbox{\heiti\zihao{-4}\textbf{\ifthenelse{\equal{#1}{zh}}{摘\quad要:}{Abstract:}}}
+}{\endlist}
+\newenvironment{MyKeywords}[1][zh]{\list{}{%
+    \itemindent=0em\listparindent=\itemindent
+    \leftmargin=2em\rightmargin=\leftmargin\parsep=0pt}\songti\zihao{5}\item%
+  \mbox{\heiti\zihao{-4}\textbf{\ifthenelse{\equal{#1}{zh}}{关键词:}{Key Words:}}}
+}{\endlist}
+
+\let\oldcitep\citep
+\newcommand{\citen}[2][]{\textsuperscript{\oldcitep{#2}#1}}
+\renewcommand{\cite}{\citen}
+
+
+\titleformat*{\section}{\zihao{3}\heiti}
+\titleformat*{\subsection}{\zihao{-3}\heiti}
+\titleformat*{\subsubsection}{\zihao{4}\heiti}
