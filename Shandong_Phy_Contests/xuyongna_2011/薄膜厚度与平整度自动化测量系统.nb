@@ -1,0 +1,1311 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     57410,       1302]
+NotebookOptionsPosition[     57077,       1285]
+NotebookOutlinePosition[     57431,       1301]
+CellTagsIndexPosition[     57388,       1298]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Button", "[", 
+  RowBox[{"\"\<\:8fdb\:7a0b\:5e8f\:5165\>\"", ",", "\[IndentingNewLine]", 
+   RowBox[{"CreateWindow", "[", "\[IndentingNewLine]", 
+    RowBox[{
+    "DialogNotebook", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Manipulate", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "[", "\n", 
+         RowBox[{"If", "[", 
+          RowBox[{"start", ",", "\n", 
+           RowBox[{"Column", "[", 
+            RowBox[{"{", "\n", 
+             RowBox[{
+              RowBox[{"Framed", "[", 
+               RowBox[{"processM2", "[", 
+                RowBox[{
+                 RowBox[{"CurrentImage", "[", "]"}], ",", "n", ",", "m", ",", 
+                 "d", ",", "sd"}], "]"}], "]"}], ",", "\n", "\"\<\>\"", ",", 
+              "\n", 
+              RowBox[{"Row", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<\>\"", ",", 
+                  RowBox[{"Dynamic", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"h", ",", "imin", ",", "imax", ",", "imean"}], 
+                    "}"}], "]"}], ",", "\n", 
+                  RowBox[{"If", "[", 
+                   RowBox[{"jishu", ",", "\n", 
+                    RowBox[{"Dynamic", "@", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"processJishu2", "[", 
+                    RowBox[{
+                    "u", ",", "sd", ",", "d", ",", "h", ",", "imin", ",", 
+                    "imax", ",", "imean"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Blue", ",", "15"}], "}"}]}], "]"}]}]}], "]"}], 
+                  "\n", "\n", "\n", "\n", ",", "\"\<\>\""}], "}"}], ",", 
+                RowBox[{"Spacer", "[", "20", "]"}]}], "]"}]}], "\n", "}"}], 
+            "]"}], ",", "\n", 
+           RowBox[{"Column", "[", 
+            RowBox[{"{", "\n", 
+             RowBox[{
+              RowBox[{"Framed", "@", 
+               RowBox[{"Row", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Framed", "@", 
+                    RowBox[{"Show", "[", 
+                    RowBox[{
+                    RowBox[{"Image", "[", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"{", "240", "}"}], ",", 
+                    RowBox[{"{", "320", "}"}]}], "]"}], "]"}], ",", 
+                    RowBox[{"ImageSize", "->", "380"}]}], "]"}]}], ",", 
+                   RowBox[{"Show", "[", 
+                    RowBox[{
+                    RowBox[{"Image", "[", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"{", "240", "}"}], ",", 
+                    RowBox[{"{", "320", "}"}]}], "]"}], "]"}], ",", 
+                    RowBox[{"ImageSize", "->", "400"}]}], "]"}]}], "}"}], ",", 
+                 RowBox[{"Spacer", "[", "20", "]"}]}], "]"}]}], ",", "\n", 
+              "\"\<\>\"", ",", "\n", 
+              RowBox[{"Row", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<\>\"", ",", 
+                  RowBox[{"Dynamic", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"h", ",", "imin", ",", "imax", ",", "imean"}], 
+                    "}"}], "]"}]}], "}"}], ",", 
+                RowBox[{"Spacer", "[", "20", "]"}]}], "]"}]}], "\n", "}"}], 
+            "]"}]}], "\n", "]"}], "\n", "\n", "\n", "\n", "\n", "\n", "]"}], 
+        ",", "\n", "\n", 
+        RowBox[{"Item", "[", 
+         RowBox[{
+          RowBox[{"Row", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<\>\"", ",", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+               "\"\<\:8584\:819c\:539a\:5ea6\:4e0e\:5e73\:6574\:5ea6\:81ea\
+\:52a8\:5316\:6d4b\:91cf\:7cfb\:7edf\>\"", ",", 
+                RowBox[{"{", 
+                 RowBox[{"Blue", ",", "25", ",", "Bold"}], "}"}]}], "]"}], 
+              ",", "\"\<\>\""}], "}"}], ",", 
+            RowBox[{"Spacer", "[", "220", "]"}]}], "]"}], ",", "\n", 
+          RowBox[{"ControlPlacement", "->", "Top"}]}], "]"}], ",", "\n", 
+        "Delimiter", ",", "\n", 
+        RowBox[{"Item", "[", 
+         RowBox[{
+          RowBox[{"Row", "[", "\n", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<\>\"", ",", 
+              RowBox[{"Button", "[", 
+               RowBox[{"\"\<\:53c2\:6570\:8bbe\:7f6e\>\"", ",", "\n", 
+                RowBox[{"CreateDialog", "[", "\n", 
+                 RowBox[{
+                  RowBox[{"Column", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Control", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{"h", ",", "5"}], "}"}], "}"}], "]"}], ",", 
+                    RowBox[{"Control", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{"imin", ",", "0.2"}], "}"}], "}"}], "]"}], ",", 
+                    RowBox[{"Control", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{"imax", ",", "0.8"}], "}"}], "}"}], "]"}], ",", 
+                    RowBox[{"Control", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{"imean", ",", "0.05"}], "}"}], "}"}], "]"}]}], 
+                    "}"}], ",", "Right"}], "]"}], ",", 
+                  RowBox[{"Modal", "->", "True"}]}], "]"}], "\n", "\n", "\n", 
+                ",", 
+                RowBox[{"ImageSize", "->", 
+                 RowBox[{"{", 
+                  RowBox[{"100", ",", "30"}], "}"}]}]}], "]"}], ",", 
+              RowBox[{"Button", "[", 
+               RowBox[{"\"\<\:68c0\:67e5CCD\>\"", ",", "\n", "\n", 
+                RowBox[{"CreateDialog", "[", 
+                 RowBox[{
+                  RowBox[{"CurrentImage", "[", "]"}], ",", 
+                  RowBox[{"Modal", "->", "True"}]}], "]"}], ",", 
+                RowBox[{"Method", "->", "\"\<Queued\>\""}], "\n", ",", 
+                RowBox[{"ImageSize", "->", 
+                 RowBox[{"{", 
+                  RowBox[{"100", ",", "30"}], "}"}]}]}], "]"}], ",", 
+              RowBox[{"Button", "[", 
+               RowBox[{"\"\<\:8c03\:6574\:4eea\:5668\>\"", ",", "\n", 
+                RowBox[{"CreateDialog", "[", 
+                 RowBox[{
+                  RowBox[{"Dynamic", "[", 
+                   RowBox[{"CurrentImage", "[", "]"}], "]"}], ",", 
+                  RowBox[{"Modal", "->", "True"}]}], "]"}], ",", 
+                RowBox[{"Method", "->", "\"\<Queued\>\""}], "\n", "\n", ",", 
+                RowBox[{"ImageSize", "->", 
+                 RowBox[{"{", 
+                  RowBox[{"100", ",", "30"}], "}"}]}]}], "]"}], ",", 
+              "\"\<\>\"", ",", "\n", 
+              RowBox[{"Dynamic", "@", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"!", "start"}], ",", "\n", 
+                 RowBox[{"Button", "[", 
+                  RowBox[{"\"\<\:5f00\:59cb\:62cd\:6444\>\"", ",", 
+                   RowBox[{"start", "=", "True"}], ",", 
+                   RowBox[{"ImageSize", "->", 
+                    RowBox[{"{", 
+                    RowBox[{"100", ",", "30"}], "}"}]}]}], "]"}], ",", 
+                 RowBox[{"Button", "[", 
+                  RowBox[{"\"\<\:505c\:6b62\:62cd\:6444\>\"", ",", "\n", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"!", "jishu"}], ",", "\n", 
+                    RowBox[{"start", "=", "False"}]}], "]"}], "\n", "\n", 
+                   "\n", ",", 
+                   RowBox[{"ImageSize", "->", 
+                    RowBox[{"{", 
+                    RowBox[{"100", ",", "30"}], "}"}]}]}], "]"}]}], "]"}]}], 
+              "\n", ",", "\n", 
+              RowBox[{"Dynamic", "@", 
+               RowBox[{"If", "[", 
+                RowBox[{"start", ",", "\n", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{"!", "jishu"}], ",", "\n", 
+                   RowBox[{"Button", "[", 
+                    RowBox[{"\"\<\:5f00\:59cb\:8ba1\:6570\>\"", ",", "\n", 
+                    RowBox[{"jishu", "=", "True"}], ",", 
+                    RowBox[{"ImageSize", "->", 
+                    RowBox[{"{", 
+                    RowBox[{"100", ",", "30"}], "}"}]}]}], "]"}], ",", "\n", 
+                   RowBox[{"Button", "[", 
+                    RowBox[{"\"\<\:6682\:505c\:8ba1\:6570\>\"", ",", "\n", 
+                    RowBox[{"jishu", "=", "False"}], ",", 
+                    RowBox[{"ImageSize", "->", 
+                    RowBox[{"{", 
+                    RowBox[{"100", ",", "30"}], "}"}]}]}], "]"}]}], "\n", 
+                  "]"}], ",", "\n", 
+                 RowBox[{"Button", "[", 
+                  RowBox[{"\"\<\:672a\:80fd\:8ba1\:6570\>\"", ",", 
+                   RowBox[{"ImageSize", "->", 
+                    RowBox[{"{", 
+                    RowBox[{"100", ",", "30"}], "}"}]}]}], "]"}]}], "]"}]}], 
+              "\n", "\n", "\n", ",", 
+              RowBox[{"Button", "[", 
+               RowBox[{"\"\<\:6e05\:9664\:6570\:636e\>\"", ",", "\n", 
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{"!", "jishu"}], ",", 
+                  RowBox[{
+                   RowBox[{"flag", "=", "True"}], ";", 
+                   RowBox[{"s", "=", "0"}], ";", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"lr", ",", "num", ",", "dataget", ",", "datas"}], 
+                    "}"}], "=", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0", ",", 
+                    RowBox[{"{", "}"}], ",", 
+                    RowBox[{"{", "}"}]}], "}"}]}]}]}], "]"}], "\n", "\n", 
+                "\n", "\n", ",", 
+                RowBox[{"ImageSize", "->", 
+                 RowBox[{"{", 
+                  RowBox[{"100", ",", "30"}], "}"}]}]}], "]"}]}], "}"}], ",", 
+            RowBox[{"Spacer", "[", "25", "]"}]}], "]"}], ",", "\n", 
+          RowBox[{"ControlPlacement", "->", "Top"}]}], "]"}], ",", "\n", "\n",
+         "\n", "\n", "\n", 
+        RowBox[{"Item", "[", 
+         RowBox[{
+          RowBox[{"Row", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<\>\"", ",", "\n", 
+              RowBox[{"Grid", "[", 
+               RowBox[{
+                RowBox[{"{", "\n", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Control", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "n", ",", "160", ",", 
+                    "\"\<\:6c34\:5e73\:8c03\:8282\>\""}], "}"}], ",", "1", 
+                    ",", "320", ",", "1", ",", 
+                    RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], 
+                    "]"}], ",", 
+                    RowBox[{"Control", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "sd", ",", "20", ",", 
+                    "\"\<\:626b\:63cf\:5bbd\:5ea6\>\""}], "}"}], ",", "10", 
+                    ",", "119", ",", "1", ",", 
+                    RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], 
+                    "]"}]}], "}"}], ",", "\n", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Control", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "m", ",", "120", ",", 
+                    "\"\<\:7ad6\:76f4\:8c03\:8282\>\""}], "}"}], ",", 
+                    RowBox[{"sd", "+", "1"}], ",", 
+                    RowBox[{"240", "-", "sd", "-", "1"}], ",", "1", ",", 
+                    RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], 
+                    "]"}], ",", 
+                    RowBox[{"Control", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "d", ",", "0", ",", "\"\<\:6837\:672c\:5bbd\:5ea6\>\""}], 
+                    "}"}], ",", "0", ",", "sd", ",", "1", ",", 
+                    RowBox[{"Appearance", "->", "\"\<Labeled\>\""}]}], "}"}], 
+                    "]"}]}], "}"}]}], "\n", "}"}], ",", 
+                RowBox[{"Spacings", "->", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"4", ",", "8", ",", "4"}], "}"}], "    ", ",", 
+                   "Automatic"}], "                                  ", 
+                  "}"}]}]}], "]"}]}], "}"}], ",", 
+            RowBox[{"Spacer", "[", "70", "]"}]}], "]"}], ",", 
+          RowBox[{"ControlPlacement", "->", "Bottom"}]}], "]"}], ",", "\n", 
+        "Delimiter", ",", "\n", 
+        RowBox[{"Item", "[", 
+         RowBox[{
+          RowBox[{"Row", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<\>\"", ",", 
+              RowBox[{"Button", "[", 
+               RowBox[{
+                RowBox[{"Style", "[", 
+                 RowBox[{"\"\<\:8584\:819c\:539a\:5ea6\:8ba1\:7b97\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"Red", ",", "20"}], "}"}]}], "]"}], ",", "\n", 
+                "\n", 
+                RowBox[{"CreateDialog", "[", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                   RowBox[{"StringForm", "[", 
+                    RowBox[{
+                    "\"\<\:6240\:6d4b\:8584\:819c\:539a\:5ea6\:4e3a: `1` \
+\:5fae\:7c73\>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"num", "/", "2"}], " ", "\[Lambda]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "3"}], "}"}]}], "]"}]}], "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"Red", ",", "30"}], "}"}]}], "]"}], "]"}], "\n", 
+                "\n", ",", 
+                RowBox[{"ImageSize", "->", 
+                 RowBox[{"{", 
+                  RowBox[{"240", ",", "40"}], "}"}]}]}], "]"}], ",", 
+              "\"\<\>\"", ",", 
+              RowBox[{"Row", "[", 
+               RowBox[{
+                RowBox[{"{", "\n", "\n", 
+                 RowBox[{
+                  RowBox[{"Dynamic", "@", 
+                   RowBox[{"Button", "[", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<\:8bb0\:5f55: `1`\>\"", ",", "s"}], "]"}], 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "15"}], "}"}]}], "]"}], ",", "\n", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"flag", "&&", 
+                    RowBox[{
+                    RowBox[{"Length", "[", "dataget", "]"}], ">=", "4"}]}], 
+                    ",", "\n", 
+                    RowBox[{
+                    RowBox[{"datas", "=", 
+                    RowBox[{"Append", "[", 
+                    RowBox[{"datas", ",", "dataget"}], "]"}]}], ";", "\n", 
+                    RowBox[{"s", "++"}], ";", 
+                    RowBox[{"flag", "=", "False"}]}]}], "\n", "]"}], "\n", 
+                    "\n", "\n", ",", 
+                    RowBox[{"ImageSize", "->", 
+                    RowBox[{"{", 
+                    RowBox[{"80", ",", "40"}], "}"}]}]}], "]"}]}], "\n", "\n",
+                   "\n", ",", 
+                  RowBox[{"Button", "[", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\:5e73\:6574\:5ea6\:8ba1\:7b97\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "20"}], "}"}]}], "]"}], ",", "\n", 
+                    "\n", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"data", "=", 
+                    RowBox[{"{", "}"}]}], ",", "len", ",", 
+                    RowBox[{"lmax", "=", "0"}], ",", "l"}], "}"}], ",", "\n", 
+                    RowBox[{
+                    RowBox[{"len", "=", 
+                    RowBox[{"Length", "[", "datas", "]"}]}], ";", "\n", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"len", ">", "0"}], ",", "\n", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"len", "==", "1"}], ",", "\n", 
+                    RowBox[{
+                    RowBox[{"data", "=", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"datas", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "/", "2"}], " ", 
+                    "\[Lambda]"}]}], ";", "\n", 
+                    RowBox[{"CreateDialog", "[", "\n", 
+                    RowBox[{
+                    RowBox[{"Column", "[", 
+                    RowBox[{"{", "\n", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{
+                    "\"\<\:6240\:6d4b\:5e73\:9762\:7684\:5e73\:6574\:5ea6\
+\:4e3a\:ff1a `1` \:5fae\:7c73\>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Max", "[", "data", "]"}], "-", 
+                    RowBox[{"Min", "[", "data", "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "3"}], "}"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "20"}], "}"}]}], "]"}], ",", "\n", 
+                    "\"\<\>\"", ",", "\n", 
+                    RowBox[{"ListLinePlot", "[", 
+                    RowBox[{"data", ",", 
+                    RowBox[{
+                    "PlotLabel", "->", 
+                    "\"\<\:5e73\:6574\:5ea6\:6298\:7ebf\>\""}], ",", 
+                    RowBox[{"PlotRange", "->", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "5"}], ",", "5"}], "}"}]}], ",", 
+                    RowBox[{"AspectRatio", "->", "0.4"}], ",", 
+                    RowBox[{"PlotStyle", "->", "Red"}], ",", 
+                    RowBox[{"Frame", "->", "True"}], ",", 
+                    RowBox[{"ImageSize", "->", "500"}]}], "]"}]}], "\n", 
+                    "}"}], "]"}], ",", 
+                    RowBox[{
+                    "WindowTitle", "->", 
+                    "\"\<\:6d4b\:91cf\:7ed3\:679c\>\""}]}], "]"}]}], ",", 
+                    "\n", 
+                    RowBox[{
+                    RowBox[{"Do", "[", "\n", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"l", "=", 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"datas", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "]"}]}], ";", "\n", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"l", ">", "lmax"}], ",", 
+                    RowBox[{"lmax", "=", "l"}]}], "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", "1", ",", "len"}], "}"}]}], "]"}], ";", 
+                    "\n", 
+                    RowBox[{"data", "=", 
+                    RowBox[{
+                    RowBox[{"datas", "/", "2"}], " ", "\[Lambda]"}]}], ";", 
+                    "\n", 
+                    RowBox[{"Do", "[", "\n", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"l", "=", 
+                    RowBox[{"Length", "[", 
+                    RowBox[{"data", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "]"}]}], ";", "\n", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"l", "<", "lmax"}], ",", "\n", 
+                    RowBox[{"Do", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"data", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], "=", 
+                    RowBox[{"Append", "[", 
+                    RowBox[{
+                    RowBox[{"data", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], ",", "0"}], "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"lmax", "-", "l"}], "}"}]}], "]"}]}], "]"}]}], 
+                    ",", "\n", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", "1", ",", "len"}], "}"}]}], "]"}], ";", 
+                    "\n", 
+                    RowBox[{"CreateDialog", "[", "\n", 
+                    RowBox[{
+                    RowBox[{"Column", "[", 
+                    RowBox[{"{", "\n", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{
+                    "\"\<\:6240\:6d4b\:5e73\:9762\:7684\:5e73\:6574\:5ea6\
+\:4e3a\:ff1a `1` \:5fae\:7c73\>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Max", "[", "data", "]"}], "-", 
+                    RowBox[{"Min", "[", "data", "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "3"}], "}"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "20"}], "}"}]}], "]"}], ",", "\n", 
+                    "\"\<\>\"", ",", "\n", 
+                    RowBox[{"ListPlot3D", "[", "\n", 
+                    RowBox[{"data", ",", 
+                    RowBox[{"Mesh", "->", "All"}], ",", 
+                    RowBox[{"PlotRange", "->", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "5"}], ",", "5"}], "}"}]}], ",", 
+                    RowBox[{"ImageSize", "->", "500"}], ",", 
+                    RowBox[{
+                    "PlotLabel", "->", 
+                    "\"\<\:5e73\:6574\:5ea6\:66f2\:9762\>\""}]}], "]"}]}], 
+                    "\n", "}"}], "]"}], ",", 
+                    RowBox[{
+                    "WindowTitle", "->", 
+                    "\"\<\:6d4b\:91cf\:7ed3\:679c\>\""}]}], "]"}]}]}], "\n", 
+                    "]"}]}], "\n", "\n", "]"}]}]}], "\n", "\n", "\n", "\n", 
+                    "\n", "\n", "\n", "\n", "\n", "\n", "\n", "\n", "\n", 
+                    "]"}], "\n", ",", 
+                    RowBox[{"ImageSize", "->", 
+                    RowBox[{"{", 
+                    RowBox[{"180", ",", "40"}], "}"}]}]}], "]"}]}], "}"}], 
+                ",", 
+                RowBox[{"Spacer", "[", "20", "]"}]}], "]"}], ",", 
+              "\"\<\>\""}], "}"}], ",", 
+            RowBox[{"Spacer", "[", "75", "]"}]}], "]"}], ",", "\n", 
+          RowBox[{"ControlPlacement", "->", "Bottom"}]}], "]"}], "\n", "\n", 
+        "\n", "\n", "\n", "\n", ",", "\n", 
+        RowBox[{"Initialization", ":>", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"start", "=", "False"}], ";", 
+           RowBox[{"jishu", "=", "False"}], ";", "   ", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"lr", ",", "num", ",", "dataget"}], "}"}], "=", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", 
+              RowBox[{"{", "}"}]}], "}"}]}], " ", ";", "\n", 
+           RowBox[{"\[Lambda]", "=", "0.633"}], ";", 
+           RowBox[{"s", "=", "0"}], ";", 
+           RowBox[{"datas", "=", 
+            RowBox[{"{", "}"}]}], ";", 
+           RowBox[{"flag", "=", "True"}], ";", "\n", 
+           RowBox[{
+            RowBox[{"processM2", "[", 
+             RowBox[{"img_", ",", "n_", ",", "m_", ",", "d_", ",", "sd_", ",", 
+              RowBox[{"L_:", "240"}], ",", 
+              RowBox[{"l_:", "320"}], ",", 
+              RowBox[{"size_:", "400"}]}], "]"}], ":=", "\n", 
+            RowBox[{
+             RowBox[{"Module", "[", 
+              RowBox[{
+               RowBox[{"{", "data", "                     ", "}"}], ",", "\n", 
+               RowBox[{
+                RowBox[{"u", "=", 
+                 RowBox[{"{", "}"}]}], ";", "\n", 
+                RowBox[{"data", "=", 
+                 RowBox[{"ImageData", "[", 
+                  RowBox[{"ColorConvert", "[", 
+                   RowBox[{"img", ",", "\"\<Grayscale\>\""}], "]"}], "]"}]}], 
+                ";", "\n", 
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Length", "[", 
+                    RowBox[{"data", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}], " ", "==", 
+                   "0"}], ",", "\n", 
+                  RowBox[{"Do", "[", 
+                   RowBox[{
+                    RowBox[{"u", "=", 
+                    RowBox[{"Prepend", "[", 
+                    RowBox[{"u", ",", 
+                    RowBox[{"data", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "n"}], "]"}], "]"}]}], "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"L", "-", "m", "+", "1", "-", "sd"}], ",", 
+                    RowBox[{"L", "-", "m", "+", "1", "+", "sd"}]}], "}"}]}], 
+                   "]"}], ",", "\n", 
+                  RowBox[{"Do", "[", 
+                   RowBox[{
+                    RowBox[{"u", "=", 
+                    RowBox[{"Prepend", "[", 
+                    RowBox[{"u", ",", 
+                    RowBox[{"data", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"i", ",", "n", ",", "1"}], "]"}], "]"}]}], 
+                    "]"}]}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"L", "-", "m", "+", "1", "-", "sd"}], ",", 
+                    RowBox[{"L", "-", "m", "+", "1", "+", "sd"}]}], "}"}]}], 
+                   "]"}]}], "]"}], ";", "\n", 
+                RowBox[{"Row", "[", 
+                 RowBox[{
+                  RowBox[{"{", "\n", 
+                   RowBox[{
+                    RowBox[{"Show", "[", "\n", 
+                    RowBox[{
+                    RowBox[{"ListLinePlot", "[", 
+                    RowBox[{"u", ",", 
+                    RowBox[{"Frame", "->", "True"}], ",", 
+                    RowBox[{"PlotStyle", "->", 
+                    RowBox[{"RGBColor", "[", 
+                    RowBox[{"0", ",", "0.5", ",", "0"}], "]"}]}], ",", 
+                    RowBox[{"PlotRange", "->", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "0.1"}], ",", "1.1"}], "}"}]}], ",", 
+                    RowBox[{"AspectRatio", "->", 
+                    RowBox[{"(", 
+                    RowBox[{"3", "/", "4"}], ")"}]}], ",", 
+                    RowBox[{"ImageSize", "->", "size"}]}], "]"}], ",", "\n", 
+                    RowBox[{"Graphics", "[", "\n", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"Blue", ",", "Dashed", ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "1"}], "}"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"2", "sd"}], "+", "1"}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"2", "sd"}], "+", "1"}], ",", "1"}], "}"}]}], 
+                    "}"}], "]"}]}], "}"}], ",", "\n", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"sd", "+", "1"}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"sd", "+", "1"}], ",", "1"}], "}"}]}], "}"}], 
+                    "]"}], ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"sd", "+", "1", "-", "d"}], ",", "0"}], "}"}], 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"sd", "+", "1", "-", "d"}], ",", "1"}], "}"}]}], 
+                    "}"}], "]"}], ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"sd", "+", "1", "+", "d"}], ",", "0"}], "}"}], 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"sd", "+", "1", "+", "d"}], ",", "1"}], "}"}]}], 
+                    "}"}], "]"}]}], "}"}]}], "\n", "}"}], "\n", "\n", "]"}]}],
+                     "]"}], ",", "\n", 
+                    RowBox[{"Show", "[", 
+                    RowBox[{"img", ",", 
+                    RowBox[{"Graphics", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"Green", ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"n", ",", 
+                    RowBox[{"m", "-", "sd"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"n", ",", 
+                    RowBox[{"m", "+", "sd"}]}], "}"}]}], "}"}], "]"}]}], 
+                    "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"n", "-", "50"}], ",", "m"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"n", "+", "50"}], ",", "m"}], "}"}]}], "}"}], 
+                    "]"}], ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"n", "-", "50"}], ",", 
+                    RowBox[{"m", "-", "d"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"n", "+", "50"}], ",", 
+                    RowBox[{"m", "-", "d"}]}], "}"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"n", "-", "50"}], ",", 
+                    RowBox[{"m", "+", "d"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"n", "+", "50"}], ",", 
+                    RowBox[{"m", "+", "d"}]}], "}"}]}], "}"}], "]"}]}], "}"}],
+                     ",", "\n", 
+                    RowBox[{"{", 
+                    RowBox[{"Dashed", ",", "Blue", ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"n", "-", "50"}], ",", 
+                    RowBox[{"m", "-", "sd"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"n", "+", "50"}], ",", 
+                    RowBox[{"m", "-", "sd"}]}], "}"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"n", "-", "50"}], ",", 
+                    RowBox[{"m", "+", "sd"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"n", "+", "50"}], ",", 
+                    RowBox[{"m", "+", "sd"}]}], "}"}]}], "}"}], "]"}]}], 
+                    "}"}]}], "}"}], "]"}], ",", 
+                    RowBox[{"ImageSize", "->", "size"}]}], "]"}]}], "\n", 
+                   "}"}], ",", 
+                  RowBox[{"Spacer", "[", "20", "]"}]}], "]"}]}]}], "\n", 
+              "]"}], "/;", 
+             RowBox[{"sd", "<", "m", "<", 
+              RowBox[{"L", "-", "sd"}]}]}]}], ";", "\n", "\n", "\n", "\n", 
+           RowBox[{"jishuflag", "=", "True"}], ";", 
+           RowBox[{"num", "=", "0"}], ";", 
+           RowBox[{"lr", "=", "0"}], ";", 
+           RowBox[{"dataget", "=", 
+            RowBox[{"{", "}"}]}], ";", 
+           RowBox[{"saveflag", "=", "False"}], ";", "\n", 
+           RowBox[{
+            RowBox[{"processJishu2", "[", 
+             RowBox[{"u_", ",", "sd_", ",", "d_", ",", 
+              RowBox[{"h_:", "5"}], ",", 
+              RowBox[{"imin_:", "0.2"}], ",", 
+              RowBox[{"imax_:", "0.8"}], ",", 
+              RowBox[{"imean_:", "0.05"}]}], 
+             "                                 ", "]"}], ":=", "\n", 
+            RowBox[{"Module", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"yangben", "=", 
+                 RowBox[{"{", "}"}]}], ",", 
+                RowBox[{"boolfirst", "=", 
+                 RowBox[{"{", "}"}]}], ",", 
+                RowBox[{"boolend", "=", 
+                 RowBox[{"{", "}"}]}], ",", "tot1", ",", "tot2", ",", "first",
+                 ",", "end", ",", "len", " ", ",", "mean"}], "             ", 
+               "}"}], ",", "\n", 
+              RowBox[{
+               RowBox[{"Do", "[", 
+                RowBox[{
+                 RowBox[{"yangben", "=", 
+                  RowBox[{"Append", "[", 
+                   RowBox[{"yangben", ",", 
+                    RowBox[{"Part", "[", 
+                    RowBox[{"u", ",", "i"}], "]"}]}], "]"}]}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"i", ",", 
+                   RowBox[{"sd", "+", "1", "-", "d"}], ",", 
+                   RowBox[{"sd", "+", "1", "+", "d"}]}], "}"}]}], "]"}], ";", 
+               "\n", 
+               RowBox[{"first", "=", 
+                RowBox[{"yangben", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}]}], ";", 
+               RowBox[{"end", "=", 
+                RowBox[{"yangben", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"-", "1"}], "]"}], "]"}]}], ";", 
+               RowBox[{"mean", "=", 
+                RowBox[{"Mean", "[", "yangben", "]"}]}], ";", "\n", 
+               RowBox[{"len", "=", 
+                RowBox[{"Length", "[", "yangben", "]"}]}], ";", "\n", 
+               RowBox[{"Do", "[", 
+                RowBox[{
+                 RowBox[{"boolfirst", "=", 
+                  RowBox[{"Append", "[", 
+                   RowBox[{"boolfirst", ",", 
+                    RowBox[{"Boole", "[", 
+                    RowBox[{
+                    RowBox[{"yangben", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], ">", "first"}], "]"}]}], 
+                   "]"}]}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"i", ",", "2", ",", 
+                   RowBox[{"len", "-", "1"}]}], "}"}]}], "]"}], ";", "\n", 
+               RowBox[{"Do", "[", 
+                RowBox[{
+                 RowBox[{"boolend", "=", 
+                  RowBox[{"Append", "[", 
+                   RowBox[{"boolend", ",", 
+                    RowBox[{"Boole", "[", 
+                    RowBox[{
+                    RowBox[{"yangben", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], ">", "end"}], "]"}]}], 
+                   "]"}]}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"i", ",", "2", ",", 
+                   RowBox[{"len", "-", "1"}]}], "}"}]}], "]"}], ";", "\n", 
+               RowBox[{"tot1", "=", 
+                RowBox[{
+                 RowBox[{"Total", "[", "boolfirst", "]"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{"len", "-", "2"}], ")"}]}]}], ";", 
+               RowBox[{"tot2", "=", 
+                RowBox[{
+                 RowBox[{"Total", "[", "boolend", "]"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{"len", "-", "2"}], ")"}]}]}], ";", "\n", "\n", 
+               RowBox[{"If", "[", 
+                RowBox[{"jishuflag", ",", "\n", 
+                 RowBox[{"Which", "[", "\n", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"tot1", "<=", "imin"}], "&&", 
+                    RowBox[{"tot2", ">=", "imax"}], "&&", 
+                    RowBox[{
+                    RowBox[{"first", "-", "mean"}], ">=", "imean"}], "&&", 
+                    RowBox[{
+                    RowBox[{"mean", "-", "end"}], ">=", "imean"}]}], ",", 
+                   "\n", 
+                   RowBox[{
+                    RowBox[{"lr", "++"}], ";", 
+                    RowBox[{"num", "++"}], ";", 
+                    RowBox[{"jishuflag", "=", "False"}], ";", 
+                    RowBox[{"saveflag", "=", "True"}]}], ",", "\n", 
+                   RowBox[{
+                    RowBox[{"tot1", ">=", "imax"}], "&&", 
+                    RowBox[{"tot2", "<=", "imin"}], "&&", 
+                    RowBox[{
+                    RowBox[{"mean", "-", "first"}], ">=", "imean"}], "&&", 
+                    RowBox[{
+                    RowBox[{"end", "-", "mean"}], ">=", "imean"}]}], ",", 
+                   "\n", 
+                   RowBox[{
+                    RowBox[{"lr", "--"}], ";", 
+                    RowBox[{"num", "++"}], ";", 
+                    RowBox[{"jishuflag", "=", "False"}], ";", 
+                    RowBox[{"saveflag", "=", "True"}]}]}], "\n", "]"}]}], 
+                "\n", "]"}], ";", "\n", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"!", "jishuflag"}], ")"}], "&&", 
+                  RowBox[{"tot1", "<=", "imin"}], "&&", 
+                  RowBox[{"tot2", "<=", "imin"}], "&&", 
+                  RowBox[{
+                   RowBox[{"first", "-", "mean"}], ">=", "imean"}], "&&", 
+                  RowBox[{
+                   RowBox[{"end", "-", "mean"}], ">=", "imean"}]}], ",", "\n", 
+                 RowBox[{"jishuflag", "=", "True"}]}], "]"}], ";", "\n", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"saveflag", "&&", 
+                  RowBox[{
+                   RowBox[{"Mod", "[", 
+                    RowBox[{"num", ",", "h"}], "]"}], "==", "0"}], "&&", 
+                  RowBox[{"num", "\[NotEqual]", "0"}]}], ",", "\n", 
+                 RowBox[{
+                  RowBox[{"dataget", "=", 
+                   RowBox[{"Append", "[", 
+                    RowBox[{"dataget", ",", "lr"}], "]"}]}], ";", 
+                  RowBox[{"lr", "=", "0"}], ";", 
+                  RowBox[{"saveflag", "=", "False"}]}]}], "]"}], ";", "\n", 
+               "\n", 
+               RowBox[{"{", 
+                RowBox[{"lr", ",", "num", ",", "dataget"}], "}"}]}]}], "\n", 
+             "\n", "\n", "\n", "\n", "\n", "]"}]}]}], "\n", "\n", "\n", "\n", 
+          "\n", "\n", "\n", "\n", "\n", "\n", "\n", "\n", 
+          "                          ", ")"}]}]}], "\n", "]"}], "\n", "\n", 
+      "\n", "\n", "\n", "\n", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", "\n", ",", 
+      RowBox[{"WindowSize", "\[Rule]", "All"}], ",", 
+      RowBox[{
+      "WindowTitle", "\[Rule]", 
+       "\"\<\:5e73\:9762\:539a\:5ea6\:4e0e\:5e73\:6574\:5ea6\:81ea\:52a8\:5316\
+\:6d4b\:91cf\:7a0b\:5e8f\>\""}]}], "]"}], "\[IndentingNewLine]", "]"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"200", ",", "50"}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5250697925625*^9, 3.525069944078125*^9}, {
+  3.52507048859375*^9, 3.525070495078125*^9}, {3.52507189090625*^9, 
+  3.52507189321875*^9}, {3.525074495625*^9, 3.52507451146875*^9}, {
+  3.52507525478125*^9, 3.52507525621875*^9}}],
+
+Cell[BoxData[
+ ButtonBox["\<\"\:8fdb\:7a0b\:5e8f\:5165\"\>",
+  Appearance->Automatic,
+  ButtonFunction:>CreateWindow[
+    DialogNotebook[
+     Manipulate[
+      Dynamic[
+       If[$CellContext`start, 
+        Column[{
+          Framed[
+           $CellContext`processM2[
+            
+            CurrentImage[], $CellContext`n, $CellContext`m, $CellContext`d, \
+$CellContext`sd]], "", 
+          Row[{"", 
+            
+            Dynamic[{$CellContext`h, $CellContext`imin, $CellContext`imax, \
+$CellContext`imean}], 
+            If[$CellContext`jishu, 
+             Dynamic[
+              Style[
+               $CellContext`processJishu2[$CellContext`u, $CellContext`sd, \
+$CellContext`d, $CellContext`h, $CellContext`imin, $CellContext`imax, \
+$CellContext`imean], {Blue, 15}]]], ""}, 
+           Spacer[20]]}], 
+        Column[{
+          Framed[
+           Row[{
+             Framed[
+              Show[
+               Image[
+                Table[1, {240}, {320}]], ImageSize -> 380]], 
+             Show[
+              Image[
+               Table[0, {240}, {320}]], ImageSize -> 400]}, 
+            Spacer[20]]], "", 
+          Row[{"", 
+            
+            Dynamic[{$CellContext`h, $CellContext`imin, $CellContext`imax, \
+$CellContext`imean}]}, 
+           Spacer[20]]}]]], 
+      Item[
+       Row[{"", 
+         Style[
+         "\:8584\:819c\:539a\:5ea6\:4e0e\:5e73\:6574\:5ea6\:81ea\:52a8\:5316\
+\:6d4b\:91cf\:7cfb\:7edf", {Blue, 25, Bold}], ""}, 
+        Spacer[220]], ControlPlacement -> Top], Delimiter, 
+      Item[
+       Row[{"", 
+         Button["\:53c2\:6570\:8bbe\:7f6e", 
+          CreateDialog[
+           Column[{
+             Control[{{$CellContext`h, 5}}], 
+             Control[{{$CellContext`imin, 0.2}}], 
+             Control[{{$CellContext`imax, 0.8}}], 
+             Control[{{$CellContext`imean, 0.05}}]}, Right], Modal -> True], 
+          ImageSize -> {100, 30}], 
+         Button["\:68c0\:67e5CCD", 
+          CreateDialog[
+           CurrentImage[], Modal -> True], Method -> "Queued", 
+          ImageSize -> {100, 30}], 
+         Button["\:8c03\:6574\:4eea\:5668", 
+          CreateDialog[
+           Dynamic[
+            CurrentImage[]], Modal -> True], Method -> "Queued", 
+          ImageSize -> {100, 30}], "", 
+         Dynamic[
+          If[
+           Not[$CellContext`start], 
+           Button[
+           "\:5f00\:59cb\:62cd\:6444", $CellContext`start = True, 
+            ImageSize -> {100, 30}], 
+           Button["\:505c\:6b62\:62cd\:6444", 
+            If[
+             Not[$CellContext`jishu], $CellContext`start = False], 
+            ImageSize -> {100, 30}]]], 
+         Dynamic[
+          If[$CellContext`start, 
+           If[
+            Not[$CellContext`jishu], 
+            Button[
+            "\:5f00\:59cb\:8ba1\:6570", $CellContext`jishu = True, 
+             ImageSize -> {100, 30}], 
+            Button[
+            "\:6682\:505c\:8ba1\:6570", $CellContext`jishu = False, 
+             ImageSize -> {100, 30}]], 
+           Button["\:672a\:80fd\:8ba1\:6570", ImageSize -> {100, 30}]]], 
+         Button["\:6e05\:9664\:6570\:636e", 
+          If[
+           
+           Not[$CellContext`jishu], $CellContext`flag = True; $CellContext`s = 
+            0; {$CellContext`lr, $CellContext`num, $CellContext`dataget, \
+$CellContext`datas} = {0, 0, {}, {}}], ImageSize -> {100, 30}]}, 
+        Spacer[25]], ControlPlacement -> Top], 
+      Item[
+       Row[{"", 
+         Grid[{{
+            
+            Control[{{$CellContext`n, 160, "\:6c34\:5e73\:8c03\:8282"}, 1, 
+              320, 1, Appearance -> "Labeled"}], 
+            
+            Control[{{$CellContext`sd, 20, "\:626b\:63cf\:5bbd\:5ea6"}, 10, 
+              119, 1, Appearance -> "Labeled"}]}, {
+            
+            Control[{{$CellContext`m, 120, 
+               "\:7ad6\:76f4\:8c03\:8282"}, $CellContext`sd + 1, 
+              240 - $CellContext`sd - 1, 1, Appearance -> "Labeled"}], 
+            
+            Control[{{$CellContext`d, 0, "\:6837\:672c\:5bbd\:5ea6"}, 
+              0, $CellContext`sd, 1, Appearance -> "Labeled"}]}}, 
+          Spacings -> {{4, 8, 4}, Automatic}]}, 
+        Spacer[70]], ControlPlacement -> Bottom], Delimiter, 
+      Item[
+       Row[{"", 
+         Button[
+          Style["\:8584\:819c\:539a\:5ea6\:8ba1\:7b97", {Red, 20}], 
+          CreateDialog[
+           Style[
+            StringForm[
+            "\:6240\:6d4b\:8584\:819c\:539a\:5ea6\:4e3a: `1` \:5fae\:7c73", 
+             
+             NumberForm[($CellContext`num/2) $CellContext`\[Lambda], {6, 
+              3}]], {Red, 30}]], ImageSize -> {240, 40}], "", 
+         Row[{
+           Dynamic[
+            Button[
+             Style[
+              StringForm["\:8bb0\:5f55: `1`", $CellContext`s], {Red, 15}], 
+             If[
+              
+              And[$CellContext`flag, Length[$CellContext`dataget] >= 
+               4], $CellContext`datas = 
+               Append[$CellContext`datas, $CellContext`dataget]; 
+              Increment[$CellContext`s]; $CellContext`flag = False], 
+             ImageSize -> {80, 40}]], 
+           Button[
+            Style["\:5e73\:6574\:5ea6\:8ba1\:7b97", {Red, 20}], 
+            
+            Module[{$CellContext`data = {}, $CellContext`len, \
+$CellContext`lmax = 0, $CellContext`l}, $CellContext`len = 
+              Length[$CellContext`datas]; If[$CellContext`len > 0, 
+               
+               If[$CellContext`len == 
+                1, $CellContext`data = (Part[$CellContext`datas, 1]/
+                   2) $CellContext`\[Lambda]; CreateDialog[
+                  Column[{
+                    Style[
+                    StringForm[
+                    "\:6240\:6d4b\:5e73\:9762\:7684\:5e73\:6574\:5ea6\:4e3a\
+\:ff1a `1` \:5fae\:7c73", 
+                    NumberForm[
+                    Max[$CellContext`data] - Min[$CellContext`data], {6, 
+                    3}]], {Red, 20}], "", 
+                    
+                    ListLinePlot[$CellContext`data, PlotLabel -> 
+                    "\:5e73\:6574\:5ea6\:6298\:7ebf", PlotRange -> {-5, 5}, 
+                    AspectRatio -> 0.4, PlotStyle -> Red, Frame -> True, 
+                    ImageSize -> 500]}], WindowTitle -> 
+                  "\:6d4b\:91cf\:7ed3\:679c"], Do[$CellContext`l = Length[
+                    Part[$CellContext`datas, $CellContext`i]]; 
+                  If[$CellContext`l > $CellContext`lmax, $CellContext`lmax = \
+$CellContext`l], {$CellContext`i, 
+                   1, $CellContext`len}]; $CellContext`data = \
+($CellContext`datas/2) $CellContext`\[Lambda]; Do[$CellContext`l = Length[
+                    Part[$CellContext`data, $CellContext`i]]; 
+                  If[$CellContext`l < $CellContext`lmax, 
+                    Do[Part[$CellContext`data, $CellContext`i] = Append[
+                    Part[$CellContext`data, $CellContext`i], 
+                    0], {$CellContext`lmax - $CellContext`l}]], \
+{$CellContext`i, 1, $CellContext`len}]; CreateDialog[
+                  Column[{
+                    Style[
+                    StringForm[
+                    "\:6240\:6d4b\:5e73\:9762\:7684\:5e73\:6574\:5ea6\:4e3a\
+\:ff1a `1` \:5fae\:7c73", 
+                    NumberForm[
+                    Max[$CellContext`data] - Min[$CellContext`data], {6, 
+                    3}]], {Red, 20}], "", 
+                    
+                    ListPlot3D[$CellContext`data, Mesh -> All, 
+                    PlotRange -> {-5, 5}, ImageSize -> 500, PlotLabel -> 
+                    "\:5e73\:6574\:5ea6\:66f2\:9762"]}], WindowTitle -> 
+                  "\:6d4b\:91cf\:7ed3\:679c"]]]], ImageSize -> {180, 40}]}, 
+          Spacer[20]], ""}, 
+        Spacer[75]], ControlPlacement -> Bottom], 
+      Initialization :> ($CellContext`start = False; $CellContext`jishu = 
+        False; {$CellContext`lr, $CellContext`num, $CellContext`dataget} = {
+         0, 0, {}}; $CellContext`\[Lambda] = 0.633; $CellContext`s = 
+        0; $CellContext`datas = {}; $CellContext`flag = 
+        True; $CellContext`processM2[
+          Pattern[$CellContext`img, 
+           Blank[]], 
+          Pattern[$CellContext`n, 
+           Blank[]], 
+          Pattern[$CellContext`m, 
+           Blank[]], 
+          Pattern[$CellContext`d, 
+           Blank[]], 
+          Pattern[$CellContext`sd, 
+           Blank[]], 
+          Optional[
+           Pattern[$CellContext`L, 
+            Blank[]], 240], 
+          Optional[
+           Pattern[$CellContext`l, 
+            Blank[]], 320], 
+          Optional[
+           Pattern[$CellContext`size, 
+            Blank[]], 400]] := Condition[
+          
+          Module[{$CellContext`data}, $CellContext`u = {}; $CellContext`data = 
+            ImageData[
+              ColorConvert[$CellContext`img, "Grayscale"]]; If[Length[
+               Part[$CellContext`data, 1, 1]] == 0, 
+             Do[$CellContext`u = Prepend[$CellContext`u, 
+                
+                Part[$CellContext`data, $CellContext`i, $CellContext`n]], \
+{$CellContext`i, $CellContext`L - $CellContext`m + 
+               1 - $CellContext`sd, $CellContext`L - $CellContext`m + 
+               1 + $CellContext`sd}], 
+             Do[$CellContext`u = Prepend[$CellContext`u, 
+                
+                Part[$CellContext`data, $CellContext`i, $CellContext`n, 
+                 1]], {$CellContext`i, $CellContext`L - $CellContext`m + 
+               1 - $CellContext`sd, $CellContext`L - $CellContext`m + 
+               1 + $CellContext`sd}]]; Row[{
+              Show[
+               
+               ListLinePlot[$CellContext`u, Frame -> True, PlotStyle -> 
+                RGBColor[0, 0.5, 0], PlotRange -> {-0.1, 1.1}, AspectRatio -> 
+                3/4, ImageSize -> $CellContext`size], 
+               Graphics[{{Blue, Dashed, 
+                  Line[{{1, 0}, {1, 1}}], 
+                  
+                  Line[{{2 $CellContext`sd + 1, 0}, {
+                    2 $CellContext`sd + 1, 1}}]}, {Red, 
+                  Line[{{$CellContext`sd + 1, 0}, {$CellContext`sd + 1, 1}}], 
+                  
+                  Line[{{$CellContext`sd + 1 - $CellContext`d, 
+                    0}, {$CellContext`sd + 1 - $CellContext`d, 1}}], 
+                  
+                  Line[{{$CellContext`sd + 1 + $CellContext`d, 
+                    0}, {$CellContext`sd + 1 + $CellContext`d, 1}}]}}]], 
+              Show[$CellContext`img, 
+               Graphics[{{Green, 
+                  
+                  Line[{{$CellContext`n, $CellContext`m - $CellContext`sd}, \
+{$CellContext`n, $CellContext`m + $CellContext`sd}}]}, {Red, 
+                  
+                  Line[{{$CellContext`n - 
+                    50, $CellContext`m}, {$CellContext`n + 
+                    50, $CellContext`m}}], 
+                  
+                  Line[{{$CellContext`n - 
+                    50, $CellContext`m - $CellContext`d}, {$CellContext`n + 
+                    50, $CellContext`m - $CellContext`d}}], 
+                  
+                  Line[{{$CellContext`n - 
+                    50, $CellContext`m + $CellContext`d}, {$CellContext`n + 
+                    50, $CellContext`m + $CellContext`d}}]}, {Dashed, Blue, 
+                  
+                  Line[{{$CellContext`n - 
+                    50, $CellContext`m - $CellContext`sd}, {$CellContext`n + 
+                    50, $CellContext`m - $CellContext`sd}}], 
+                  
+                  Line[{{$CellContext`n - 
+                    50, $CellContext`m + $CellContext`sd}, {$CellContext`n + 
+                    50, $CellContext`m + $CellContext`sd}}]}}], 
+               ImageSize -> $CellContext`size]}, 
+             Spacer[
+             20]]], $CellContext`sd < $CellContext`m < $CellContext`L - \
+$CellContext`sd]; $CellContext`jishuflag = True; $CellContext`num = 
+        0; $CellContext`lr = 
+        0; $CellContext`dataget = {}; $CellContext`saveflag = 
+        False; $CellContext`processJishu2[
+          Pattern[$CellContext`u, 
+           Blank[]], 
+          Pattern[$CellContext`sd, 
+           Blank[]], 
+          Pattern[$CellContext`d, 
+           Blank[]], 
+          Optional[
+           Pattern[$CellContext`h, 
+            Blank[]], 5], 
+          Optional[
+           Pattern[$CellContext`imin, 
+            Blank[]], 0.2], 
+          Optional[
+           Pattern[$CellContext`imax, 
+            Blank[]], 0.8], 
+          Optional[
+           Pattern[$CellContext`imean, 
+            Blank[]], 0.05]] := 
+        Module[{$CellContext`yangben = {}, $CellContext`boolfirst = {}, \
+$CellContext`boolend = {}, $CellContext`tot1, $CellContext`tot2, \
+$CellContext`first, $CellContext`end, $CellContext`len, $CellContext`mean}, 
+          Do[$CellContext`yangben = Append[$CellContext`yangben, 
+              
+              Part[$CellContext`u, $CellContext`i]], {$CellContext`i, \
+$CellContext`sd + 1 - $CellContext`d, $CellContext`sd + 
+             1 + $CellContext`d}]; $CellContext`first = 
+           Part[$CellContext`yangben, 1]; $CellContext`end = 
+           Part[$CellContext`yangben, -1]; $CellContext`mean = 
+           Mean[$CellContext`yangben]; $CellContext`len = 
+           Length[$CellContext`yangben]; 
+          Do[$CellContext`boolfirst = Append[$CellContext`boolfirst, 
+              Boole[
+              Part[$CellContext`yangben, $CellContext`i] > \
+$CellContext`first]], {$CellContext`i, 2, $CellContext`len - 1}]; 
+          Do[$CellContext`boolend = Append[$CellContext`boolend, 
+              Boole[
+              Part[$CellContext`yangben, $CellContext`i] > \
+$CellContext`end]], {$CellContext`i, 2, $CellContext`len - 
+             1}]; $CellContext`tot1 = 
+           Total[$CellContext`boolfirst]/($CellContext`len - 
+            2); $CellContext`tot2 = 
+           Total[$CellContext`boolend]/($CellContext`len - 2); 
+          If[$CellContext`jishuflag, 
+            Which[
+             
+             And[$CellContext`tot1 <= $CellContext`imin, $CellContext`tot2 >= \
+$CellContext`imax, $CellContext`first - $CellContext`mean >= \
+$CellContext`imean, $CellContext`mean - $CellContext`end >= \
+$CellContext`imean], Increment[$CellContext`lr]; 
+             Increment[$CellContext`num]; $CellContext`jishuflag = 
+              False; $CellContext`saveflag = True, 
+             
+             And[$CellContext`tot1 >= $CellContext`imax, $CellContext`tot2 <= \
+$CellContext`imin, $CellContext`mean - $CellContext`first >= \
+$CellContext`imean, $CellContext`end - $CellContext`mean >= \
+$CellContext`imean], Decrement[$CellContext`lr]; 
+             Increment[$CellContext`num]; $CellContext`jishuflag = 
+              False; $CellContext`saveflag = True]]; If[
+            And[
+             
+             Not[$CellContext`jishuflag], $CellContext`tot1 <= \
+$CellContext`imin, $CellContext`tot2 <= $CellContext`imin, $CellContext`first - \
+$CellContext`mean >= $CellContext`imean, $CellContext`end - $CellContext`mean >= \
+$CellContext`imean], $CellContext`jishuflag = True]; If[
+            
+            And[$CellContext`saveflag, Mod[$CellContext`num, $CellContext`h] == 
+             0, $CellContext`num != 0], $CellContext`dataget = 
+             Append[$CellContext`dataget, $CellContext`lr]; $CellContext`lr = 
+             0; $CellContext`saveflag = 
+             False]; {$CellContext`lr, $CellContext`num, \
+$CellContext`dataget}])], WindowSize -> All, WindowTitle -> 
+     "\:5e73\:9762\:539a\:5ea6\:4e0e\:5e73\:6574\:5ea6\:81ea\:52a8\:5316\:6d4b\
+\:91cf\:7a0b\:5e8f"]],
+  Evaluator->Automatic,
+  ImageSize->{200, 50},
+  Method->"Preemptive"]], "Output",
+ CellChangeTimes->{{3.5250699413125*^9, 3.525069946296875*^9}, 3.525070499*^9,
+    3.525071901359375*^9, 3.525074521796875*^9, {3.52507525884375*^9, 
+   3.5250752624375*^9}}]
+}, Open  ]]
+},
+WindowSize->{1358, 651},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (32-bit) (2011\:5e743\:670815\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 40854, 905, 4734, "Input"],
+Cell[41436, 929, 15625, 353, 67, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
