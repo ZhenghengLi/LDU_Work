@@ -1,0 +1,1552 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     69389,       1543]
+NotebookOptionsPosition[     69055,       1526]
+NotebookOutlinePosition[     69409,       1542]
+CellTagsIndexPosition[     69366,       1539]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Framed", "@", 
+   RowBox[{"Panel", "[", 
+    RowBox[{
+     RowBox[{"Manipulate", "[", 
+      RowBox[{
+       RowBox[{"Row", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Framed", "@", 
+            RowBox[{"Show", "[", 
+             RowBox[{"img1", ",", 
+              RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Framed", "@", 
+            RowBox[{"Show", "[", 
+             RowBox[{"img2", ",", 
+              RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}]}]}], "}"}], 
+         ",", 
+         RowBox[{"Spacer", "[", "20", "]"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Item", "[", 
+        RowBox[{
+         RowBox[{"Row", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<\>\"", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+              "\"\<\:6298 \:5c04 \:7387 \:81ea \:52a8 \:5316 \:6d4b \:91cf \
+\:7a0b \:5e8f\>\"", ",", 
+               RowBox[{"{", 
+                RowBox[{"Red", ",", "25"}], "}"}]}], "]"}], ",", "\"\<\>\""}],
+             "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Spacer", "[", "259", "]"}]}], "]"}], ",", 
+         RowBox[{"ControlPlacement", "\[Rule]", "Top"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+       RowBox[{"Item", "[", 
+        RowBox[{"\"\<\>\"", ",", 
+         RowBox[{"ControlPlacement", "\[Rule]", "Top"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Item", "[", 
+        RowBox[{
+         RowBox[{"Row", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<\>\"", ",", 
+             RowBox[{"Row", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Dynamic", "@", 
+                  RowBox[{"Setter", "[", 
+                   RowBox[{
+                    RowBox[{"Dynamic", "[", "yeorgu", "]"}], ",", "True", ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{"yeorgu", ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\< \:56fa\:4f53 \>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Blue", ",", "15"}], "}"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\< \:56fa\:4f53 \>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"GrayLevel", "[", "0.5", "]"}], ",", "15"}], 
+                    "}"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"Alignment", "\[Rule]", "Center"}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"100", ",", "25"}], "}"}]}]}], "]"}]}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"Dynamic", "@", 
+                  RowBox[{"Setter", "[", 
+                   RowBox[{
+                    RowBox[{"Dynamic", "[", "yeorgu", "]"}], ",", "False", 
+                    ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"!", "yeorgu"}], ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\< \:6db2\:4f53 \>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Blue", ",", "15"}], "}"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\< \:6db2\:4f53 \>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"GrayLevel", "[", "0.5", "]"}], ",", "15"}], 
+                    "}"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"Alignment", "\[Rule]", "Center"}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"100", ",", "25"}], "}"}]}]}], "]"}]}]}], "}"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"Spacer", "[", "20", "]"}]}], "]"}], "  ", ",", 
+             "\"\<\>\"", ",", 
+             RowBox[{"Row", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Button", "[", 
+                  RowBox[{"\"\<\:68c0\:67e5CCD\>\"", ",", 
+                   RowBox[{"CreateDialog", "[", 
+                    RowBox[{"CurrentImage", "[", "]"}], "]"}], ",", 
+                   RowBox[{"Method", "\[Rule]", "\"\<Queued\>\""}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"ImageSize", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"130", ",", "30"}], "}"}]}]}], "]"}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"Button", "[", 
+                  RowBox[{
+                  "\"\<\:6d4b\:524d\:8c03\:6574\:4e0ek\:503c\:7684\:6d4b\:91cf\
+\>\"", ",", 
+                   RowBox[{"CreateWindow", "[", 
+                    RowBox[{
+                    RowBox[{"DialogNotebook", "[", "\[IndentingNewLine]", 
+                    RowBox[{"(", 
+                    RowBox[{"Manipulate", "[", 
+                    RowBox[{
+                    RowBox[{"Framed", "[", 
+                    RowBox[{"Dynamic", "@", 
+                    RowBox[{"Show", "[", 
+                    RowBox[{"imgt", ",", 
+                    RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}]}], "]"}],
+                     ",", "\[IndentingNewLine]", 
+                    RowBox[{"Item", "[", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:6d4b\:524d\:8c03\:6574\:4e0ek\:503c\:7684\:6d4b\
+\:91cf\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"17", ",", "Blue"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"ControlPlacement", "\[Rule]", "Top"}]}], "]"}], 
+                    ",", "\[IndentingNewLine]", "Delimiter", ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Item", "[", 
+                    RowBox[{
+                    RowBox[{"Row", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"\"\<\>\"", ",", 
+                    RowBox[{"Column", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Button", "[", 
+                    RowBox[{
+                    RowBox[{"Style", "[", "\"\<\:62cd\:6444\>\"", "]"}], ",", 
+                    RowBox[{"imgt", ":=", 
+                    RowBox[{"CurrentImage", "[", "]"}]}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"150", ",", "25"}], "}"}]}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Button", "[", 
+                    RowBox[{
+                    RowBox[{"Style", "[", "\"\<\:62cd\:7167\>\"", "]"}], ",", 
+                    RowBox[{"imgt", "=", 
+                    RowBox[{"CurrentImage", "[", "]"}]}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"150", ",", "25"}], "}"}]}]}], "]"}]}], "}"}], 
+                    "]"}]}], "}"}], ",", 
+                    RowBox[{"Spacer", "[", "30", "]"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"ControlPlacement", "\[Rule]", "Right"}]}], "]"}],
+                     ",", "Delimiter", ",", "\[IndentingNewLine]", 
+                    RowBox[{"Item", "[", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<k\:503c\:7684\:6d4b\:91cf\\n\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"15", ",", "Bold"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"ControlPlacement", "\[Rule]", "Right"}]}], "]"}],
+                     ",", "\[IndentingNewLine]", 
+                    RowBox[{"Item", "[", 
+                    RowBox[{
+                    RowBox[{"Column", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Control", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{"p", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", 
+                    "\"\<p\>\""}], "}"}], "}"}], "]"}], ",", 
+                    RowBox[{"Control", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{"l", ",", "0", ",", "\"\<l\>\""}], "}"}], "}"}], 
+                    "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"Spacings", "\[Rule]", "3"}], ",", 
+                    RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+                    RowBox[{"FrameStyle", "\[Rule]", 
+                    RowBox[{"GrayLevel", "[", "0.6", "]"}]}]}], "]"}], ",", 
+                    RowBox[{"ControlPlacement", "\[Rule]", "Right"}]}], "]"}],
+                     ",", "\[IndentingNewLine]", 
+                    RowBox[{"Item", "[", 
+                    RowBox[{
+                    RowBox[{"Column", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Row", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"\"\<\>\"", ",", 
+                    RowBox[{"Button", "[", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\:8ba1\:7b97\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "15"}], "}"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"(", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"l", "\[NotEqual]", "0"}], ",", 
+                    RowBox[{"k", "=", 
+                    FractionBox[
+                    RowBox[{"Norm", "[", 
+                    RowBox[{
+                    RowBox[{"p", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", 
+                    RowBox[{"p", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "l"]}]}], "]"}], 
+                    ")"}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"150", ",", "30"}], "}"}]}]}], "]"}], ",", 
+                    "\"\<\>\""}], "}"}], ",", 
+                    RowBox[{"Spacer", "[", "30", "]"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Row", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"\"\<\>\"", ",", 
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<k= `1`\>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{"k", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "4"}], "}"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "15"}], "}"}]}], "]"}], "]"}], ",", 
+                    "\"\<\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"Spacer", "[", "50", "]"}]}], "]"}]}], "}"}], ",", 
+                    RowBox[{"Spacings", "\[Rule]", "2"}], ",", 
+                    RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+                    RowBox[{"FrameStyle", "\[Rule]", 
+                    RowBox[{"GrayLevel", "[", "0.6", "]"}]}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"ControlPlacement", "\[Rule]", "Right"}]}], "]"}],
+                     ",", 
+                    RowBox[{"Initialization", "\[RuleDelayed]", 
+                    RowBox[{"(", 
+                    RowBox[{"imgt", ":=", 
+                    RowBox[{"CurrentImage", "[", "]"}]}], ")"}]}]}], "]"}], 
+                    ")"}], "]"}], ",", "\[IndentingNewLine]", 
+                    RowBox[{
+                    "WindowTitle", "->", 
+                    "\"\<\:4eea\:5668\:8c03\:6574\:4e0ek\:503c\:7684\:4fa7\
+\:91cf\>\""}], ",", 
+                    RowBox[{"WindowSize", "\[Rule]", "All"}]}], "]"}], ",", 
+                   RowBox[{"Method", "\[Rule]", "\"\<Queued\>\""}], ",", 
+                   RowBox[{"ImageSize", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"200", ",", "30"}], "}"}]}]}], "]"}], 
+                 "\[IndentingNewLine]", ",", "\"\<\>\""}], "}"}], ",", 
+               RowBox[{"Spacer", "[", "20", "]"}]}], "]"}]}], "}"}], ",", 
+           RowBox[{"Spacer", "[", "79", "]"}]}], "]"}], ",", 
+         RowBox[{"ControlPlacement", "\[Rule]", "Top"}]}], "]"}], ",", 
+       RowBox[{"Item", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Row", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<\>\"", ",", 
+             RowBox[{"Button", "[", 
+              RowBox[{"\"\<\:7b2c\:4e00\:5f20\:7167\:7247\>\"", ",", 
+               RowBox[{"img1", "=", 
+                RowBox[{"CurrentImage", "[", "]"}]}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"200", ",", "30"}], "}"}]}]}], "]"}], ",", 
+             "\"\<\>\"", ",", "\"\<\>\"", ",", "\[IndentingNewLine]", 
+             RowBox[{"Button", "[", 
+              RowBox[{"\"\<\:7b2c\:4e8c\:5f20\:7167\:7247\>\"", ",", 
+               RowBox[{"img2", "=", 
+                RowBox[{"CurrentImage", "[", "]"}]}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"200", ",", "30"}], "}"}]}]}], "]"}], ",", 
+             "\"\<\>\""}], "}"}], ",", 
+           RowBox[{"Spacer", "[", "88", "]"}]}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ControlPlacement", "\[Rule]", "Bottom"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+       RowBox[{"Item", "[", 
+        RowBox[{"\"\<\>\"", ",", 
+         RowBox[{"ControlPlacement", "\[Rule]", "Bottom"}]}], "]"}], ",", 
+       RowBox[{"Item", "[", 
+        RowBox[{
+         RowBox[{"Row", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<\>\"", ",", 
+             RowBox[{"Grid", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Row", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "@", 
+                    RowBox[{"If", "[", 
+                    RowBox[{"yeorgu", ",", "\[IndentingNewLine]", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:5668\:58c1\:7684\:6298\:5c04\:7387 \
+\!\(\*SubscriptBox[\(n\), \(\:5668\:58c1\)]\)\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"GrayLevel", "[", "0.6", "]"}], ",", "15", ",", 
+                    "Bold"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:5668\:58c1\:7684\:6298\:5c04\:7387 \
+\!\(\*SubscriptBox[\(n\), \(\:5668\:58c1\)]\)\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"15", ",", "Bold"}], "}"}]}], "]"}]}], "]"}]}], 
+                    ",", "\[IndentingNewLine]", 
+                    RowBox[{"Dynamic", "@", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "ng", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"20", ",", "1.5"}], "}"}]}], ",", 
+                    RowBox[{"Enabled", "\[Rule]", 
+                    RowBox[{"!", "yeorgu"}]}]}], "]"}]}]}], "}"}], ",", 
+                    RowBox[{"Spacer", "[", "3", "]"}]}], "]"}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"Row", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:8ddd\:79bb\:6362\:7b97\:7cfb\:6570 k\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"15", ",", "Bold"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "k", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"20", ",", "1.5"}], "}"}]}]}], "]"}]}], "}"}], 
+                    ",", 
+                    RowBox[{"Spacer", "[", "3", "]"}]}], "]"}]}], "}"}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Row", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:955c\:9762\:65cb\:8f6c\:89d2\:5ea6 i\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"15", ",", "Bold"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "i", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"20", ",", "1.5"}], "}"}]}]}], "]"}]}], "}"}], 
+                    ",", 
+                    RowBox[{"Spacer", "[", "3", "]"}]}], "]"}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"Row", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "@", 
+                    RowBox[{"If", "[", 
+                    RowBox[{"yeorgu", ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:5f85\:6d4b\:7269\:4f53\:539a\:5ea6 d\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"15", ",", "Bold"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:5bb9\:5668\:5185\:58c1\:95f4\:8ddd d\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"15", ",", "Bold"}], "}"}]}], "]"}]}], "]"}]}], 
+                    ",", "\[IndentingNewLine]", 
+                    RowBox[{"InputField", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "d", "]"}], ",", 
+                    RowBox[{"FieldSize", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"20", ",", "1.5"}], "}"}]}]}], "]"}]}], "}"}], 
+                    ",", 
+                    RowBox[{"Spacer", "[", "3", "]"}]}], "]"}]}], "}"}]}], 
+                "\[IndentingNewLine]", "}"}], ",", 
+               RowBox[{"Alignment", "\[Rule]", "Right"}], ",", 
+               RowBox[{"Spacings", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "6", ",", "4"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"2", ",", "2", ",", "2"}], "}"}]}], "}"}]}]}], 
+              "]"}]}], "}"}], ",", 
+           RowBox[{"Spacer", "[", "20", "]"}]}], "]"}], ",", 
+         RowBox[{"ControlPlacement", "\[Rule]", "Bottom"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", "Delimiter", ",", 
+       RowBox[{"Item", "[", 
+        RowBox[{"\"\<\>\"", ",", 
+         RowBox[{"ControlPlacement", "\[Rule]", "Bottom"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Item", "[", 
+        RowBox[{
+         RowBox[{"Row", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<\>\"", ",", 
+             RowBox[{"Dynamic", "@", 
+              RowBox[{"Button", "[", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"If", "[", 
+                 RowBox[{"flag", ",", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{"\"\<\:8ba1\:7b97\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "15"}], "}"}]}], "]"}], ",", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{"\"\<\:6b63\:5728\:8ba1\:7b97...\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "15"}], "}"}]}], "]"}]}], "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"flag", "=", "False"}], ";", 
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"!", 
+                    RowBox[{"(", 
+                    RowBox[{"i", "===", "Null"}], ")"}]}], "&&", 
+                    RowBox[{"!", 
+                    RowBox[{"(", 
+                    RowBox[{"d", "===", "Null"}], ")"}]}], "&&", 
+                    RowBox[{"k", ">", "0"}]}], ",", 
+                    RowBox[{
+                    RowBox[{"timg1", "=", "img1"}], ";", 
+                    RowBox[{"img1", "=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"p", "=", 
+                    RowBox[{"graygetzuobiao1", "[", "timg1", "]"}]}], ";", 
+                    RowBox[{"Show", "[", 
+                    RowBox[{"timg1", ",", 
+                    RowBox[{"Graphics", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"p", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"320", ",", 
+                    RowBox[{"p", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "}"}]}], "}"}], "]"}], 
+                    ",", "\[IndentingNewLine]", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"p", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"p", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", "240"}], "}"}]}], 
+                    "}"}], "]"}]}], "}"}], "]"}]}], "]"}]}]}], "]"}]}], ";", 
+                    RowBox[{"timg2", "=", "img2"}], ";", 
+                    RowBox[{"img2", "=", 
+                    RowBox[{"Module", "[", 
+                    RowBox[{
+                    RowBox[{"{", "p", "}"}], ",", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"p", "=", 
+                    RowBox[{"graygetzuobiao1", "[", "timg2", "]"}]}], ";", 
+                    RowBox[{"Show", "[", 
+                    RowBox[{"timg2", ",", 
+                    RowBox[{"Graphics", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"p", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"320", ",", 
+                    RowBox[{"p", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "}"}]}], "}"}], "]"}], 
+                    ",", "\[IndentingNewLine]", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"p", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"p", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", "240"}], "}"}]}], 
+                    "}"}], "]"}]}], "}"}], "]"}]}], "]"}]}]}], "]"}]}], ";", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"CreateDialog", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", 
+                    RowBox[{
+                    RowBox[{"Panel", "[", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{"yeorgu", ",", 
+                    RowBox[{"jisuangu", "[", 
+                    RowBox[{
+                    "img1", ",", "img2", ",", "i", ",", "d", ",", "k"}], 
+                    "]"}], ",", 
+                    RowBox[{"jisuanye", "[", 
+                    RowBox[{
+                    "img1", ",", "img2", ",", "ng", ",", "i", ",", "d", ",", 
+                    "k"}], "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"Background", "->", "White"}]}], "]"}], ",", 
+                    RowBox[{"Deinitialization", "\[RuleDelayed]", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"img1", "=", "timg1"}], ";", 
+                    RowBox[{"img2", "=", "timg2"}]}], ")"}]}]}], "]"}], 
+                    "\[IndentingNewLine]", ",", 
+                    RowBox[{"Modal", "->", "True"}], ",", 
+                    RowBox[{
+                    "WindowTitle", "\[Rule]", 
+                    "\"\<\:8ba1\:7b97\:7ed3\:679c\>\""}]}], "]"}]}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"CreateDialog", "[", 
+                    RowBox[{"Panel", "[", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:6ca1\:6709\:8f93\:5165\:6570\:636e\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"20", ",", "Red"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Background", "\[Rule]", "White"}]}], "]"}], 
+                    "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+                  RowBox[{"flag", "=", "True"}]}], ")"}], ",", 
+                RowBox[{"Method", "\[Rule]", "\"\<Queued\>\""}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"200", ",", "30"}], "}"}]}]}], "]"}]}], ",", 
+             "\"\<\>\"", ",", "\"\<\>\"", ",", "\[IndentingNewLine]", 
+             RowBox[{"Button", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<\:6e05\:7a7a\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"Red", ",", "15"}], "}"}]}], "]"}], ",", 
+               RowBox[{
+                RowBox[{"img1", "=", 
+                 RowBox[{"img2", "=", 
+                  RowBox[{"Image", "[", 
+                   RowBox[{"Table", "[", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"{", "240", "}"}], ",", 
+                    RowBox[{"{", "320", "}"}]}], "]"}], "]"}]}]}], ";", 
+                RowBox[{"d", "=", 
+                 RowBox[{"i", "=", "Null"}]}], ";"}], "\[IndentingNewLine]", 
+               ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"200", ",", "30"}], "}"}]}]}], "]"}], ",", 
+             "\"\<\>\""}], "}"}], ",", 
+           RowBox[{"Spacer", "[", "88", "]"}]}], "]"}], ",", 
+         RowBox[{"ControlPlacement", "\[Rule]", "Bottom"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Initialization", "\[RuleDelayed]", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"i", "=", 
+           RowBox[{"d", "=", 
+            RowBox[{"ng", "=", "Null"}]}]}], ";", 
+          RowBox[{"k", "=", "43.5"}], ";", 
+          RowBox[{"flag", "=", "True"}], ";", 
+          RowBox[{"yeorgu", "=", "True"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"img1", "=", 
+           RowBox[{"img2", "=", 
+            RowBox[{"Image", "[", 
+             RowBox[{"Table", "[", 
+              RowBox[{"0", ",", 
+               RowBox[{"{", "240", "}"}], ",", 
+               RowBox[{"{", "320", "}"}]}], "]"}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"graygetzuobiao1", "[", 
+            RowBox[{"img_", ",", 
+             RowBox[{"L_:", "240"}], ",", 
+             RowBox[{"l_:", "320"}]}], "]"}], ":=", "\n", 
+           RowBox[{"Module", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"data", ",", 
+               RowBox[{"max", "=", "0"}], ",", "zuobiao", ",", "k"}], "}"}], 
+             ",", "\n", 
+             RowBox[{
+              RowBox[{"data", "=", 
+               RowBox[{"ImageData", "[", 
+                RowBox[{"ColorConvert", "[", 
+                 RowBox[{"img", ",", "\"\<Grayscale\>\""}], "]"}], "]"}]}], 
+              ";", "\n", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Length", "[", 
+                  RowBox[{"data", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}], "==", "0"}],
+                 ",", "\n", 
+                RowBox[{"Do", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"k", "=", 
+                    RowBox[{"data", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"m", ",", "n"}], "]"}], "]"}]}], ";", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"k", ">", "max"}], ",", 
+                    RowBox[{
+                    RowBox[{"max", "=", "k"}], ";", 
+                    RowBox[{"zuobiao", "=", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"n", "-", "1"}], ",", 
+                    RowBox[{"L", "-", "m"}]}], "}"}]}]}]}], "]"}]}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"m", ",", "1", ",", "L"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"n", ",", "1", ",", "l"}], "}"}]}], "]"}], ",", 
+                "\n", 
+                RowBox[{"Do", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"k", "=", 
+                    RowBox[{"data", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"m", ",", "n", ",", "1"}], "]"}], "]"}]}], ";", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"k", ">", "max"}], ",", 
+                    RowBox[{
+                    RowBox[{"max", "=", "k"}], ";", 
+                    RowBox[{"zuobiao", "=", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"n", "-", "1"}], ",", 
+                    RowBox[{"L", "-", "m"}]}], "}"}]}]}]}], "]"}]}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"m", ",", "1", ",", "L"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"n", ",", "1", ",", "l"}], "}"}]}], "]"}]}], "]"}],
+               ";", "\n", 
+              RowBox[{"Return", "[", "zuobiao", "]"}], ";"}]}], "\n", "]"}]}],
+           ";", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"jisuangu", "[", 
+            RowBox[{
+            "img1_", ",", "img2_", ",", "\[Alpha]_", ",", "d_", ",", "k_"}], 
+            "]"}], ":=", "\[IndentingNewLine]", 
+           RowBox[{"Module", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"p1", ",", "p2", ",", "xl"}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"p1", "=", 
+               RowBox[{"graygetzuobiao1", "[", "img1", "]"}]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"p2", "=", 
+               RowBox[{"graygetzuobiao1", "[", "img2", "]"}]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"xl", "=", 
+               FractionBox[
+                RowBox[{"Norm", "[", 
+                 RowBox[{"p1", "-", "p2"}], "]"}], "k"]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Grid", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\:8ba1\:7b97\:7ed3\:679c:\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Blue", ",", "20"}], "}"}]}], "]"}], ",", 
+                    "SpanFromLeft"}], "}"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\:5149\:6591\:4f4d\:79fbx\>\"", ",", "15"}], 
+                    "]"}], ",", 
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<`1` \:5398\:7c73\>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"N", "[", "xl", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "2"}], "}"}]}], "]"}]}], "]"}]}], "}"}],
+                   ",", "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:955c\:9762\:65cb\:8f6c\:89d2\:5ea6i\>\"", ",", 
+                    "15"}], "]"}], ",", 
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<`1` \:5ea6\>\"", ",", "\[Alpha]"}], "]"}]}], 
+                   "}"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:5f85\:6d4b\:7269\:4f53\:539a\:5ea6d\>\"", ",", 
+                    "15"}], "]"}], ",", 
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<`1` \:5398\:7c73\>\"", ",", "d"}], "]"}]}], 
+                   "}"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:6240\:6d4b\:56fa\:4f53\:6298\:5c04\:7387n\>\"", 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{"15", ",", "Red"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"N", "[", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", 
+                    RowBox[{
+                    FractionBox["\[Pi]", "2"], "-", 
+                    FractionBox[
+                    RowBox[{"\[Pi]", " ", "\[Alpha]"}], "90"]}], "]"}], "2"], 
+                    "+", 
+                    FractionBox[
+                    SuperscriptBox[
+                    RowBox[{"Cos", "[", 
+                    RowBox[{
+                    FractionBox["\[Pi]", "2"], "-", 
+                    FractionBox[
+                    RowBox[{"\[Pi]", " ", "\[Alpha]"}], "90"]}], "]"}], "2"], 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", 
+                    FractionBox["xl", "d"]}], ")"}], "2"]]}]], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "15"}], "}"}]}], "]"}]}], "}"}]}], 
+                 "\[IndentingNewLine]", "}"}], ",", 
+                RowBox[{"Frame", "\[Rule]", "All"}]}], "]"}]}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"jisuanye", "[", 
+            RowBox[{
+            "img1_", ",", "img2_", ",", "ng_", ",", "\[Alpha]_", ",", "d_", 
+             ",", "k_"}], "]"}], ":=", "\[IndentingNewLine]", 
+           RowBox[{"Module", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"p1", ",", "p2", ",", "xl"}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"p1", "=", 
+               RowBox[{"graygetzuobiao1", "[", "img1", "]"}]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"p2", "=", 
+               RowBox[{"graygetzuobiao1", "[", "img2", "]"}]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"xl", "=", 
+               FractionBox[
+                RowBox[{"Norm", "[", 
+                 RowBox[{"p1", "-", "p2"}], "]"}], "k"]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Grid", "[", 
+               RowBox[{
+                RowBox[{"{", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\:8ba1\:7b97\:7ed3\:679c: \>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Blue", ",", "20"}], "}"}]}], "]"}], ",", 
+                    "SpanFromLeft"}], "}"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\:5149\:6591\:4f4d\:79fbx\>\"", ",", "15"}], 
+                    "]"}], ",", 
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<`1` \:5398\:7c73\>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"N", "[", "xl", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "2"}], "}"}]}], "]"}]}], "]"}]}], "}"}],
+                   ",", "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:955c\:9762\:65cb\:8f6c\:89d2\:5ea6i\>\"", ",", 
+                    "15"}], "]"}], ",", 
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<`1` \:5ea6\>\"", ",", "\[Alpha]"}], "]"}]}], 
+                   "}"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:5bb9\:5668\:5185\:58c1\:95f4\:8dddd\>\"", ",", 
+                    "15"}], "]"}], ",", 
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<`1` \:5398\:7c73\>\"", ",", "d"}], "]"}]}], 
+                   "}"}], ",", "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\!\(\*SubscriptBox[\(\:5668\:58c1\:6298\:5c04\:7387n\
+\), \(\:5668\:58c1\)]\)\>\"", ",", "15"}], "]"}], ",", 
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<`1`\>\"", ",", 
+                    RowBox[{"N", "[", "ng", "]"}]}], "]"}]}], "}"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\<\:6240\:6d4b\:6db2\:4f53\:6298\:5c04\:7387n\>\"", 
+                    ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "15"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    SqrtBox[
+                    RowBox[{
+                    FractionBox[
+                    SuperscriptBox[
+                    RowBox[{"Sin", "[", 
+                    RowBox[{
+                    FractionBox["\[Pi]", "2"], "-", 
+                    FractionBox[
+                    RowBox[{"\[Pi]", " ", "\[Alpha]"}], "90"]}], "]"}], "2"], 
+                    SuperscriptBox["ng", "2"]], "+", 
+                    FractionBox[
+                    SuperscriptBox[
+                    RowBox[{"Cos", "[", 
+                    RowBox[{
+                    FractionBox["\[Pi]", "2"], "-", 
+                    FractionBox[
+                    RowBox[{"\[Pi]", " ", "\[Alpha]"}], "90"]}], "]"}], "2"], 
+                    RowBox[{
+                    SuperscriptBox["ng", "2"], " ", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"1", "-", 
+                    FractionBox["xl", "d"]}], ")"}], "2"]}]]}]], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "15"}], "}"}]}], "]"}]}], " ", 
+                   "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"Frame", "\[Rule]", "All"}]}], "]"}]}]}], "]"}]}]}], 
+         "\[IndentingNewLine]", ")"}]}], ",", 
+       RowBox[{"Paneled", "\[Rule]", "False"}]}], "]"}], ",", 
+     RowBox[{"Background", "\[Rule]", "LightGreen"}]}], "]"}]}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.524657323*^9, 3.524657370484375*^9}, {3.524657488*^9, 
+   3.524657578203125*^9}, {3.5246576406875*^9, 3.524657679359375*^9}, {
+   3.524657796734375*^9, 3.524657874671875*^9}, {3.524657933375*^9, 
+   3.524657936*^9}, {3.52465803175*^9, 3.524658052171875*^9}, {
+   3.524658091078125*^9, 3.524658143859375*^9}, {3.52465848575*^9, 
+   3.524658636671875*^9}, 3.524658758703125*^9, {3.52465882521875*^9, 
+   3.524658826625*^9}, {3.52465888415625*^9, 3.52465893578125*^9}, {
+   3.5246590316875*^9, 3.524659077109375*^9}, {3.524659140625*^9, 
+   3.524659170421875*^9}, {3.5246592095625*^9, 3.52465925359375*^9}, {
+   3.524659300984375*^9, 3.5246593289375*^9}, {3.52465939196875*^9, 
+   3.524659452453125*^9}, {3.5246595121875*^9, 3.5246596591875*^9}, {
+   3.524659982828125*^9, 3.524660042*^9}, {3.5246601855625*^9, 
+   3.524660236859375*^9}, {3.524660423625*^9, 3.524660441640625*^9}, {
+   3.52466063109375*^9, 3.524660634109375*^9}, {3.524660667671875*^9, 
+   3.52466074965625*^9}, {3.524661148578125*^9, 3.524661150296875*^9}, {
+   3.524661317703125*^9, 3.524661368*^9}, {3.52466145590625*^9, 
+   3.52466146125*^9}, {3.5246867625146255`*^9, 3.5246867647487144`*^9}, {
+   3.524686806337164*^9, 3.524686820397954*^9}, {3.5246868507066526`*^9, 
+   3.5246868649392056`*^9}, {3.525330505234375*^9, 3.525330845046875*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  PanelBox[
+   TagBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`l$$ = 0, $CellContext`p$$ = {{0, 0}, {0, 
+      0}}, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ =
+       1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+        Hold[
+         Item[
+          Row[{"", 
+            Style[
+            "\:6298 \:5c04 \:7387 \:81ea \:52a8 \:5316 \:6d4b \:91cf \:7a0b \
+\:5e8f", {
+              RGBColor[1, 0, 0], 25}], ""}, 
+           Spacer[259]]]], Manipulate`Dump`ThisIsNotAControl}, {
+        Hold[
+         Item[""]], Manipulate`Dump`ThisIsNotAControl}, {{
+         Hold[$CellContext`p$$], {{0, 0}, {0, 0}}, "p"}}, {{
+         Hold[$CellContext`l$$], 0, "l"}}, {
+        Hold[
+         Item[
+          Row[{"", 
+            Row[{
+              Dynamic[
+               Setter[
+                Dynamic[$CellContext`yeorgu], True, 
+                If[$CellContext`yeorgu, 
+                 Style[" \:56fa\:4f53 ", {Blue, 15}], 
+                 Style[" \:56fa\:4f53 ", {
+                   GrayLevel[0.5], 15}]], Alignment -> Center, 
+                ImageSize -> {100, 25}]], 
+              Dynamic[
+               Setter[
+                Dynamic[$CellContext`yeorgu], False, 
+                If[
+                 Not[$CellContext`yeorgu], 
+                 Style[" \:6db2\:4f53 ", {Blue, 15}], 
+                 Style[" \:6db2\:4f53 ", {
+                   GrayLevel[0.5], 15}]], Alignment -> Center, 
+                ImageSize -> {100, 25}]]}, 
+             Spacer[20]], "", 
+            Row[{
+              Button["\:68c0\:67e5CCD", 
+               CreateDialog[
+                CurrentImage[]], Method -> "Queued", ImageSize -> {130, 30}], 
+              Button[
+              "\:6d4b\:524d\:8c03\:6574\:4e0ek\:503c\:7684\:6d4b\:91cf", 
+               CreateWindow[
+                DialogNotebook[
+                 Manipulate[
+                  Framed[
+                   Dynamic[
+                    Show[$CellContext`imgt, ImageSize -> 400]]], 
+                  Item[
+                   Style[
+                   "\:6d4b\:524d\:8c03\:6574\:4e0ek\:503c\:7684\:6d4b\:91cf", \
+{17, Blue}], ControlPlacement -> Top], Delimiter, 
+                  Item[
+                   Row[{"", 
+                    Column[{
+                    Button[
+                    Style["\:62cd\:6444"], $CellContext`imgt := 
+                    CurrentImage[], ImageSize -> {150, 25}], 
+                    Button[
+                    Style["\:62cd\:7167"], $CellContext`imgt = CurrentImage[],
+                     ImageSize -> {150, 25}]}]}, 
+                    Spacer[30]], ControlPlacement -> Right], Delimiter, 
+                  Item[
+                   Style["k\:503c\:7684\:6d4b\:91cf\n", {15, Bold}], 
+                   ControlPlacement -> Right], 
+                  Item[
+                   Column[{
+                    Manipulate`Place[1], 
+                    Manipulate`Place[2]}, Spacings -> 3, Frame -> All, 
+                    FrameStyle -> GrayLevel[0.6]], ControlPlacement -> Right], 
+                  Item[
+                   Column[{
+                    Row[{"", 
+                    Button[
+                    Style["\:8ba1\:7b97", {Red, 15}], 
+                    
+                    If[$CellContext`l$$ != 0, $CellContext`k = 
+                    Norm[Part[$CellContext`p$$, 1] - 
+                    Part[$CellContext`p$$, 2]]/$CellContext`l$$], 
+                    ImageSize -> {150, 30}], ""}, 
+                    Spacer[30]], 
+                    Row[{"", 
+                    Dynamic[
+                    Style[
+                    StringForm["k= `1`", 
+                    NumberForm[$CellContext`k, {8, 4}]], {Red, 15}]], ""}, 
+                    Spacer[50]]}, Spacings -> 2, Frame -> All, FrameStyle -> 
+                    GrayLevel[0.6]], ControlPlacement -> Right], 
+                  Initialization :> ($CellContext`imgt := CurrentImage[])]], 
+                WindowTitle -> 
+                "\:4eea\:5668\:8c03\:6574\:4e0ek\:503c\:7684\:4fa7\:91cf", 
+                WindowSize -> All], Method -> "Queued", 
+               ImageSize -> {200, 30}], ""}, 
+             Spacer[20]]}, 
+           Spacer[79]]]], Manipulate`Dump`ThisIsNotAControl}, {
+        Hold[
+         Item[
+          Row[{"", 
+            Button[
+            "\:7b2c\:4e00\:5f20\:7167\:7247", $CellContext`img1 = 
+             CurrentImage[], ImageSize -> {200, 30}], "", "", 
+            Button[
+            "\:7b2c\:4e8c\:5f20\:7167\:7247", $CellContext`img2 = 
+             CurrentImage[], ImageSize -> {200, 30}], ""}, 
+           Spacer[88]]]], Manipulate`Dump`ThisIsNotAControl}, {
+        Hold[
+         Item[""]], Manipulate`Dump`ThisIsNotAControl}, {
+        Hold[
+         Item[
+          Row[{"", 
+            Grid[{{
+               Row[{
+                 Dynamic[
+                  If[$CellContext`yeorgu, 
+                   Style[
+                   "\:5668\:58c1\:7684\:6298\:5c04\:7387 \
+\!\(\*SubscriptBox[\(n\), \(\:5668\:58c1\)]\)", {
+                    GrayLevel[0.6], 15, Bold}], 
+                   Style[
+                   "\:5668\:58c1\:7684\:6298\:5c04\:7387 \
+\!\(\*SubscriptBox[\(n\), \(\:5668\:58c1\)]\)", {15, Bold}]]], 
+                 Dynamic[
+                  InputField[
+                   Dynamic[$CellContext`ng], FieldSize -> {20, 1.5}, Enabled -> 
+                   Not[$CellContext`yeorgu]]]}, 
+                Spacer[3]], 
+               Row[{
+                 Style["\:8ddd\:79bb\:6362\:7b97\:7cfb\:6570 k", {15, Bold}], 
+                 InputField[
+                  Dynamic[$CellContext`k], FieldSize -> {20, 1.5}]}, 
+                Spacer[3]]}, {
+               Row[{
+                 Style["\:955c\:9762\:65cb\:8f6c\:89d2\:5ea6 i", {15, Bold}], 
+                 InputField[
+                  Dynamic[$CellContext`i], FieldSize -> {20, 1.5}]}, 
+                Spacer[3]], 
+               Row[{
+                 Dynamic[
+                  If[$CellContext`yeorgu, 
+                   Style[
+                   "\:5f85\:6d4b\:7269\:4f53\:539a\:5ea6 d", {15, Bold}], 
+                   Style[
+                   "\:5bb9\:5668\:5185\:58c1\:95f4\:8ddd d", {15, Bold}]]], 
+                 InputField[
+                  Dynamic[$CellContext`d], FieldSize -> {20, 1.5}]}, 
+                Spacer[3]]}}, Alignment -> Right, 
+             Spacings -> {{0, 6, 4}, {2, 2, 2}}]}, 
+           Spacer[20]]]], Manipulate`Dump`ThisIsNotAControl}, {
+        Hold[
+         Item[""]], Manipulate`Dump`ThisIsNotAControl}, {
+        Hold[
+         Item[
+          Row[{"", 
+            Dynamic[
+             Button[
+              If[$CellContext`flag, 
+               Style["\:8ba1\:7b97", {Red, 15}], 
+               Style[
+               "\:6b63\:5728\:8ba1\:7b97...", {Red, 15}]], $CellContext`flag = 
+               False; If[
+                And[
+                 Not[$CellContext`i === Null], 
+                 Not[$CellContext`d === Null], $CellContext`k > 
+                 0], $CellContext`timg1 = $CellContext`img1; \
+$CellContext`img1 = 
+                 Module[{$CellContext`p}, $CellContext`p = \
+$CellContext`graygetzuobiao1[$CellContext`timg1]; Show[$CellContext`timg1, 
+                    Graphics[{Red, 
+                    Line[{{0, 
+                    Part[$CellContext`p, 2]}, {320, 
+                    Part[$CellContext`p, 2]}}], 
+                    Line[{{
+                    Part[$CellContext`p, 1], 0}, {
+                    Part[$CellContext`p, 1], 
+                    240}}]}]]]; $CellContext`timg2 = $CellContext`img2; \
+$CellContext`img2 = 
+                 Module[{$CellContext`p}, $CellContext`p = \
+$CellContext`graygetzuobiao1[$CellContext`timg2]; Show[$CellContext`timg2, 
+                    Graphics[{Red, 
+                    Line[{{0, 
+                    Part[$CellContext`p, 2]}, {320, 
+                    Part[$CellContext`p, 2]}}], 
+                    Line[{{
+                    Part[$CellContext`p, 1], 0}, {
+                    Part[$CellContext`p, 1], 240}}]}]]]; CreateDialog[
+                  Dynamic[
+                   Panel[
+                    If[$CellContext`yeorgu, 
+                    $CellContext`jisuangu[$CellContext`img1, \
+$CellContext`img2, $CellContext`i, $CellContext`d, $CellContext`k], 
+                    $CellContext`jisuanye[$CellContext`img1, \
+$CellContext`img2, $CellContext`ng, $CellContext`i, $CellContext`d, \
+$CellContext`k]], Background -> White], 
+                   Deinitialization :> ($CellContext`img1 = \
+$CellContext`timg1; $CellContext`img2 = $CellContext`timg2)], Modal -> True, 
+                  WindowTitle -> "\:8ba1\:7b97\:7ed3\:679c"], 
+                CreateDialog[
+                 Panel[
+                  Style["\:6ca1\:6709\:8f93\:5165\:6570\:636e", {20, Red}], 
+                  Background -> White]]]; $CellContext`flag = True, Method -> 
+              "Queued", ImageSize -> {200, 30}]], "", "", 
+            Button[
+             Style["\:6e05\:7a7a", {
+               RGBColor[1, 0, 0], 
+               15}], $CellContext`img1 = ($CellContext`img2 = Image[
+                 Table[0, {240}, {320}]]); $CellContext`d = ($CellContext`i = 
+               Null); Null, ImageSize -> {200, 30}], ""}, 
+           Spacer[88]]]], Manipulate`Dump`ThisIsNotAControl}}, 
+      Typeset`size$$ = {846., {152., 158.}}, Typeset`update$$ = 0, 
+      Typeset`initDone$$, Typeset`skipInitDone$$ = False}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       2, StandardForm, 
+        "Variables" :> {$CellContext`l$$ = 
+          0, $CellContext`p$$ = {{0, 0}, {0, 0}}}, 
+        "ControllerVariables" :> {}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Row[{
+           Framed[
+            Show[$CellContext`img1, ImageSize -> 400]], 
+           Framed[
+            Show[$CellContext`img2, ImageSize -> 400]]}, 
+          Spacer[20]], "Specifications" :> {
+          Item[
+           Row[{"", 
+             Style[
+             "\:6298 \:5c04 \:7387 \:81ea \:52a8 \:5316 \:6d4b \:91cf \:7a0b \
+\:5e8f", {
+               RGBColor[1, 0, 0], 25}], ""}, 
+            Spacer[259]], ControlPlacement -> Top], Delimiter, 
+          Item[
+          "", ControlPlacement -> 
+           Top], {{$CellContext`p$$, {{0, 0}, {0, 0}}, "p"}, ControlPlacement -> 
+           1}, {{$CellContext`l$$, 0, "l"}, ControlPlacement -> 2}, 
+          Item[
+           Row[{"", 
+             Row[{
+               Dynamic[
+                Setter[
+                 Dynamic[$CellContext`yeorgu], True, 
+                 If[$CellContext`yeorgu, 
+                  Style[" \:56fa\:4f53 ", {Blue, 15}], 
+                  Style[" \:56fa\:4f53 ", {
+                    GrayLevel[0.5], 15}]], Alignment -> Center, 
+                 ImageSize -> {100, 25}]], 
+               Dynamic[
+                Setter[
+                 Dynamic[$CellContext`yeorgu], False, 
+                 If[
+                  Not[$CellContext`yeorgu], 
+                  Style[" \:6db2\:4f53 ", {Blue, 15}], 
+                  Style[" \:6db2\:4f53 ", {
+                    GrayLevel[0.5], 15}]], Alignment -> Center, 
+                 ImageSize -> {100, 25}]]}, 
+              Spacer[20]], "", 
+             Row[{
+               Button["\:68c0\:67e5CCD", 
+                CreateDialog[
+                 CurrentImage[]], Method -> "Queued", ImageSize -> {130, 30}], 
+               Button[
+               "\:6d4b\:524d\:8c03\:6574\:4e0ek\:503c\:7684\:6d4b\:91cf", 
+                CreateWindow[
+                 DialogNotebook[
+                  Manipulate[
+                   Framed[
+                    Dynamic[
+                    Show[$CellContext`imgt, ImageSize -> 400]]], 
+                   Item[
+                    Style[
+                    "\:6d4b\:524d\:8c03\:6574\:4e0ek\:503c\:7684\:6d4b\:91cf",\
+ {17, Blue}], ControlPlacement -> Top], Delimiter, 
+                   Item[
+                    Row[{"", 
+                    Column[{
+                    Button[
+                    Style["\:62cd\:6444"], $CellContext`imgt := 
+                    CurrentImage[], ImageSize -> {150, 25}], 
+                    Button[
+                    Style["\:62cd\:7167"], $CellContext`imgt = CurrentImage[],
+                     ImageSize -> {150, 25}]}]}, 
+                    Spacer[30]], ControlPlacement -> Right], Delimiter, 
+                   Item[
+                    Style["k\:503c\:7684\:6d4b\:91cf\n", {15, Bold}], 
+                    ControlPlacement -> Right], 
+                   Item[
+                    Column[{
+                    Manipulate`Place[1], 
+                    Manipulate`Place[2]}, Spacings -> 3, Frame -> All, 
+                    FrameStyle -> GrayLevel[0.6]], ControlPlacement -> Right], 
+                   Item[
+                    Column[{
+                    Row[{"", 
+                    Button[
+                    Style["\:8ba1\:7b97", {Red, 15}], 
+                    
+                    If[$CellContext`l$$ != 0, $CellContext`k = 
+                    Norm[Part[$CellContext`p$$, 1] - 
+                    Part[$CellContext`p$$, 2]]/$CellContext`l$$], 
+                    ImageSize -> {150, 30}], ""}, 
+                    Spacer[30]], 
+                    Row[{"", 
+                    Dynamic[
+                    Style[
+                    StringForm["k= `1`", 
+                    NumberForm[$CellContext`k, {8, 4}]], {Red, 15}]], ""}, 
+                    Spacer[50]]}, Spacings -> 2, Frame -> All, FrameStyle -> 
+                    GrayLevel[0.6]], ControlPlacement -> Right], 
+                   Initialization :> ($CellContext`imgt := CurrentImage[])]], 
+                 WindowTitle -> 
+                 "\:4eea\:5668\:8c03\:6574\:4e0ek\:503c\:7684\:4fa7\:91cf", 
+                 WindowSize -> All], Method -> "Queued", 
+                ImageSize -> {200, 30}], ""}, 
+              Spacer[20]]}, 
+            Spacer[79]], ControlPlacement -> Top], 
+          Item[
+           Row[{"", 
+             Button[
+             "\:7b2c\:4e00\:5f20\:7167\:7247", $CellContext`img1 = 
+              CurrentImage[], ImageSize -> {200, 30}], "", "", 
+             Button[
+             "\:7b2c\:4e8c\:5f20\:7167\:7247", $CellContext`img2 = 
+              CurrentImage[], ImageSize -> {200, 30}], ""}, 
+            Spacer[88]], ControlPlacement -> Bottom], Delimiter, 
+          Item["", ControlPlacement -> Bottom], 
+          Item[
+           Row[{"", 
+             Grid[{{
+                Row[{
+                  Dynamic[
+                   If[$CellContext`yeorgu, 
+                    Style[
+                    "\:5668\:58c1\:7684\:6298\:5c04\:7387 \!\(\*SubscriptBox[\
+\(n\), \(\:5668\:58c1\)]\)", {
+                    GrayLevel[0.6], 15, Bold}], 
+                    Style[
+                    "\:5668\:58c1\:7684\:6298\:5c04\:7387 \!\(\*SubscriptBox[\
+\(n\), \(\:5668\:58c1\)]\)", {15, Bold}]]], 
+                  Dynamic[
+                   InputField[
+                    Dynamic[$CellContext`ng], FieldSize -> {20, 1.5}, Enabled -> 
+                    Not[$CellContext`yeorgu]]]}, 
+                 Spacer[3]], 
+                Row[{
+                  Style["\:8ddd\:79bb\:6362\:7b97\:7cfb\:6570 k", {15, Bold}], 
+                  InputField[
+                   Dynamic[$CellContext`k], FieldSize -> {20, 1.5}]}, 
+                 Spacer[3]]}, {
+                Row[{
+                  Style["\:955c\:9762\:65cb\:8f6c\:89d2\:5ea6 i", {15, Bold}], 
+                  InputField[
+                   Dynamic[$CellContext`i], FieldSize -> {20, 1.5}]}, 
+                 Spacer[3]], 
+                Row[{
+                  Dynamic[
+                   If[$CellContext`yeorgu, 
+                    Style[
+                    "\:5f85\:6d4b\:7269\:4f53\:539a\:5ea6 d", {15, Bold}], 
+                    Style[
+                    "\:5bb9\:5668\:5185\:58c1\:95f4\:8ddd d", {15, Bold}]]], 
+                  InputField[
+                   Dynamic[$CellContext`d], FieldSize -> {20, 1.5}]}, 
+                 Spacer[3]]}}, Alignment -> Right, 
+              Spacings -> {{0, 6, 4}, {2, 2, 2}}]}, 
+            Spacer[20]], ControlPlacement -> Bottom], Delimiter, 
+          Item["", ControlPlacement -> Bottom], 
+          Item[
+           Row[{"", 
+             Dynamic[
+              Button[
+               If[$CellContext`flag, 
+                Style["\:8ba1\:7b97", {Red, 15}], 
+                Style[
+                "\:6b63\:5728\:8ba1\:7b97...", {Red, 15}]], $CellContext`flag = 
+                False; If[
+                 And[
+                  Not[$CellContext`i === Null], 
+                  Not[$CellContext`d === Null], $CellContext`k > 
+                  0], $CellContext`timg1 = $CellContext`img1; \
+$CellContext`img1 = 
+                  Module[{$CellContext`p}, $CellContext`p = \
+$CellContext`graygetzuobiao1[$CellContext`timg1]; Show[$CellContext`timg1, 
+                    Graphics[{Red, 
+                    Line[{{0, 
+                    Part[$CellContext`p, 2]}, {320, 
+                    Part[$CellContext`p, 2]}}], 
+                    Line[{{
+                    Part[$CellContext`p, 1], 0}, {
+                    Part[$CellContext`p, 1], 
+                    240}}]}]]]; $CellContext`timg2 = $CellContext`img2; \
+$CellContext`img2 = 
+                  Module[{$CellContext`p}, $CellContext`p = \
+$CellContext`graygetzuobiao1[$CellContext`timg2]; Show[$CellContext`timg2, 
+                    Graphics[{Red, 
+                    Line[{{0, 
+                    Part[$CellContext`p, 2]}, {320, 
+                    Part[$CellContext`p, 2]}}], 
+                    Line[{{
+                    Part[$CellContext`p, 1], 0}, {
+                    Part[$CellContext`p, 1], 240}}]}]]]; CreateDialog[
+                   Dynamic[
+                    Panel[
+                    If[$CellContext`yeorgu, 
+                    $CellContext`jisuangu[$CellContext`img1, \
+$CellContext`img2, $CellContext`i, $CellContext`d, $CellContext`k], 
+                    $CellContext`jisuanye[$CellContext`img1, \
+$CellContext`img2, $CellContext`ng, $CellContext`i, $CellContext`d, \
+$CellContext`k]], Background -> White], 
+                    Deinitialization :> ($CellContext`img1 = \
+$CellContext`timg1; $CellContext`img2 = $CellContext`timg2)], Modal -> True, 
+                   WindowTitle -> "\:8ba1\:7b97\:7ed3\:679c"], 
+                 CreateDialog[
+                  Panel[
+                   Style["\:6ca1\:6709\:8f93\:5165\:6570\:636e", {20, Red}], 
+                   Background -> White]]]; $CellContext`flag = True, Method -> 
+               "Queued", ImageSize -> {200, 30}]], "", "", 
+             Button[
+              Style["\:6e05\:7a7a", {
+                RGBColor[1, 0, 0], 
+                15}], $CellContext`img1 = ($CellContext`img2 = Image[
+                  Table[0, {240}, {320}]]); $CellContext`d = ($CellContext`i = 
+                Null); Null, ImageSize -> {200, 30}], ""}, 
+            Spacer[88]], ControlPlacement -> Bottom]}, 
+        "Options" :> {Paneled -> False}, "DefaultOptions" :> {}],
+       ImageSizeCache->{897., {318., 323.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      Initialization:>(($CellContext`i = ($CellContext`d = ($CellContext`ng = 
+           Null)); $CellContext`k = 43.5; $CellContext`flag = 
+         True; $CellContext`yeorgu = 
+         True; $CellContext`img1 = ($CellContext`img2 = Image[
+            Table[0, {240}, {320}]]); $CellContext`graygetzuobiao1[
+           Pattern[$CellContext`img, 
+            Blank[]], 
+           Optional[
+            Pattern[$CellContext`L, 
+             Blank[]], 240], 
+           Optional[
+            Pattern[$CellContext`l, 
+             Blank[]], 320]] := 
+         Module[{$CellContext`data, $CellContext`max = 
+            0, $CellContext`zuobiao, $CellContext`k}, $CellContext`data = 
+            ImageData[
+              ColorConvert[$CellContext`img, "Grayscale"]]; If[Length[
+               Part[$CellContext`data, 1, 1]] == 0, 
+             Do[$CellContext`k = 
+               Part[$CellContext`data, $CellContext`m, $CellContext`n]; 
+              If[$CellContext`k > $CellContext`max, $CellContext`max = \
+$CellContext`k; $CellContext`zuobiao = {$CellContext`n - 
+                   1, $CellContext`L - $CellContext`m}], {$CellContext`m, 
+               1, $CellContext`L}, {$CellContext`n, 1, $CellContext`l}], 
+             
+             Do[$CellContext`k = 
+               Part[$CellContext`data, $CellContext`m, $CellContext`n, 1]; 
+              If[$CellContext`k > $CellContext`max, $CellContext`max = \
+$CellContext`k; $CellContext`zuobiao = {$CellContext`n - 
+                   1, $CellContext`L - $CellContext`m}], {$CellContext`m, 
+               1, $CellContext`L}, {$CellContext`n, 1, $CellContext`l}]]; 
+           Return[$CellContext`zuobiao]; Null]; $CellContext`jisuangu[
+           Pattern[$CellContext`img1, 
+            Blank[]], 
+           Pattern[$CellContext`img2, 
+            Blank[]], 
+           Pattern[$CellContext`\[Alpha], 
+            Blank[]], 
+           Pattern[$CellContext`d, 
+            Blank[]], 
+           Pattern[$CellContext`k, 
+            Blank[]]] := 
+         Module[{$CellContext`p1, $CellContext`p2, $CellContext`xl}, \
+$CellContext`p1 = $CellContext`graygetzuobiao1[$CellContext`img1]; \
+$CellContext`p2 = $CellContext`graygetzuobiao1[$CellContext`img2]; \
+$CellContext`xl = Norm[$CellContext`p1 - $CellContext`p2]/$CellContext`k; 
+           Grid[{{
+               Style["\:8ba1\:7b97\:7ed3\:679c:", {Blue, 20}], SpanFromLeft}, {
+               Style["\:5149\:6591\:4f4d\:79fbx", 15], 
+               StringForm["`1` \:5398\:7c73", 
+                NumberForm[
+                 N[$CellContext`xl], {3, 2}]]}, {
+               Style["\:955c\:9762\:65cb\:8f6c\:89d2\:5ea6i", 15], 
+               StringForm["`1` \:5ea6", $CellContext`\[Alpha]]}, {
+               Style["\:5f85\:6d4b\:7269\:4f53\:539a\:5ea6d", 15], 
+               StringForm["`1` \:5398\:7c73", $CellContext`d]}, {
+               Style[
+               "\:6240\:6d4b\:56fa\:4f53\:6298\:5c04\:7387n", {15, Red}], 
+               Style[
+                
+                N[(Sin[Pi/2 - Pi $CellContext`\[Alpha]/90]^2 + 
+                  Cos[Pi/2 - Pi $CellContext`\[Alpha]/90]^2/(
+                    1 - $CellContext`xl/$CellContext`d)^2)^Rational[1, 2]], {
+                Red, 15}]}}, Frame -> All]]; $CellContext`jisuanye[
+           Pattern[$CellContext`img1, 
+            Blank[]], 
+           Pattern[$CellContext`img2, 
+            Blank[]], 
+           Pattern[$CellContext`ng, 
+            Blank[]], 
+           Pattern[$CellContext`\[Alpha], 
+            Blank[]], 
+           Pattern[$CellContext`d, 
+            Blank[]], 
+           Pattern[$CellContext`k, 
+            Blank[]]] := 
+         Module[{$CellContext`p1, $CellContext`p2, $CellContext`xl}, \
+$CellContext`p1 = $CellContext`graygetzuobiao1[$CellContext`img1]; \
+$CellContext`p2 = $CellContext`graygetzuobiao1[$CellContext`img2]; \
+$CellContext`xl = Norm[$CellContext`p1 - $CellContext`p2]/$CellContext`k; 
+           Grid[{{
+               Style["\:8ba1\:7b97\:7ed3\:679c: ", {Blue, 20}], 
+               SpanFromLeft}, {
+               Style["\:5149\:6591\:4f4d\:79fbx", 15], 
+               StringForm["`1` \:5398\:7c73", 
+                NumberForm[
+                 N[$CellContext`xl], {3, 2}]]}, {
+               Style["\:955c\:9762\:65cb\:8f6c\:89d2\:5ea6i", 15], 
+               StringForm["`1` \:5ea6", $CellContext`\[Alpha]]}, {
+               Style["\:5bb9\:5668\:5185\:58c1\:95f4\:8dddd", 15], 
+               StringForm["`1` \:5398\:7c73", $CellContext`d]}, {
+               Style[
+               "\!\(\*SubscriptBox[\(\:5668\:58c1\:6298\:5c04\:7387n\), \(\
+\:5668\:58c1\)]\)", 15], 
+               StringForm["`1`", 
+                N[$CellContext`ng]]}, {
+               Style[
+               "\:6240\:6d4b\:6db2\:4f53\:6298\:5c04\:7387n", {Red, 15}], 
+               
+               Style[(Sin[
+                    Pi/2 - Pi $CellContext`\[Alpha]/90]^2/$CellContext`ng^2 + 
+                 Cos[Pi/2 - Pi $CellContext`\[Alpha]/
+                    90]^2/($CellContext`ng^2 (
+                    1 - $CellContext`xl/$CellContext`d)^2))^Rational[1, 2], {
+                Red, 15}]}}, Frame -> All]]); Typeset`initDone$$ = True),
+      SynchronousInitialization->True,
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+     Deployed->True,
+     StripOnInput->False],
+    Manipulate`InterpretManipulate[1]],
+   Background->RGBColor[0.88, 1, 0.88]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{
+  3.524657937671875*^9, 3.52465814584375*^9, {3.524658558765625*^9, 
+   3.524658574046875*^9}, 3.52465863840625*^9, {3.52465876103125*^9, 
+   3.52465878371875*^9}, 3.5246588279375*^9, 3.524658938328125*^9, 
+   3.524659078609375*^9, 3.524659679125*^9, 3.524659762546875*^9, 
+   3.524660241171875*^9, 3.5246604434375*^9, 3.5246606361875*^9, {
+   3.524660734078125*^9, 3.524660750875*^9}, 3.5246610280625*^9, 
+   3.52466115275*^9, 3.52466136990625*^9, 3.524661467203125*^9, 
+   3.524661781109375*^9, 3.5246867664984903`*^9, 3.524686822428957*^9, 
+   3.5246868662827835`*^9, 3.52533064959375*^9, 3.52533075103125*^9, {
+   3.525330846640625*^9, 3.525330855515625*^9}}]
+}, Open  ]]
+},
+WindowSize->{1358, 651},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (32-bit) (2011\:5e743\:670815\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 42974, 940, 2360, "Input"],
+Cell[43556, 964, 25483, 559, 691, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

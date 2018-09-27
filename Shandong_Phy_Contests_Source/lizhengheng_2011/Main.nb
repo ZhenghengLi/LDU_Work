@@ -1,0 +1,2726 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[    128785,       2717]
+NotebookOptionsPosition[    128347,       2697]
+NotebookOutlinePosition[    128724,       2714]
+CellTagsIndexPosition[    128681,       2711]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"SetDirectory", "[", 
+     RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"<<", "tuxingbujian3dfunction.m"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"<<", "tuxingbujian2dfunction.m"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"<<", "zuhe.m"}], ";"}], "\[IndentingNewLine]"}]}]], "Code",
+ CellChangeTimes->{{3.523069188140625*^9, 3.52306925840625*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Framed", "[", 
+       RowBox[{"Graphics3D", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"t", "\[Equal]", "0"}], "||", 
+            RowBox[{"t", "==", 
+             RowBox[{"finaltime", "[", 
+              RowBox[{"ky", ",", "kL", ",", "kh", ",", 
+               RowBox[{"If", "[", 
+                RowBox[{"flag", ",", "ks", ",", 
+                 RowBox[{"100", 
+                  SqrtBox[
+                   RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                "]"}]}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"process3D", "[", 
+              RowBox[{"ky", ",", "kx", ",", "kL", ",", "kh", ",", 
+               RowBox[{"If", "[", 
+                RowBox[{"flag", ",", "ks", ",", 
+                 RowBox[{"100", 
+                  SqrtBox[
+                   RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"processBall", "[", 
+              RowBox[{"ky", ",", "kx", ",", "kL", ",", "kh", ",", 
+               RowBox[{"If", "[", 
+                RowBox[{"flag", ",", "ks", ",", 
+                 RowBox[{"100", 
+                  SqrtBox[
+                   RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                "]"}], ",", "\[IndentingNewLine]", "km1", ",", "km2", ",", 
+               "e", ",", "\[CapitalDelta]Ef", ",", "g", ",", "t"}], "]"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"GrayLevel", "[", "0.7", "]"}], ",", 
+               RowBox[{"EdgeForm", "[", "]"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"Polygon", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "20"}], ",", 
+                    RowBox[{"-", "40"}], ",", 
+                    RowBox[{"-", "0.6"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"20", ",", 
+                    RowBox[{"-", "40"}], ",", 
+                    RowBox[{"-", "0.6"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"20", ",", "40", ",", 
+                    RowBox[{"-", "0.6"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "20"}], ",", "40", ",", 
+                    RowBox[{"-", "0.6"}]}], "}"}]}], "}"}], "]"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Polygon", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "20"}], ",", 
+                    RowBox[{"-", "40"}], ",", 
+                    RowBox[{"-", "1"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "20"}], ",", "40", ",", 
+                    RowBox[{"-", "1"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "20"}], ",", "40", ",", "50"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "20"}], ",", 
+                    RowBox[{"-", "40"}], ",", "50"}], "}"}]}], "}"}], "]"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"Polygon", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "20"}], ",", "40", ",", 
+                    RowBox[{"-", "1"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"20", ",", "40", ",", 
+                    RowBox[{"-", "1"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"20", ",", "40", ",", "50"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "20"}], ",", "40", ",", "50"}], "}"}]}], 
+                 "}"}], "]"}]}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"process2D", "[", 
+              RowBox[{"ky", ",", "kL", ",", "kh", ",", 
+               RowBox[{"If", "[", 
+                RowBox[{"flag", ",", "ks", ",", 
+                 RowBox[{"100", 
+                  SqrtBox[
+                   RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"processBall", "[", 
+              RowBox[{"ky", ",", "kx", ",", "kL", ",", "kh", ",", 
+               RowBox[{"If", "[", 
+                RowBox[{"flag", ",", "ks", ",", 
+                 RowBox[{"100", 
+                  SqrtBox[
+                   RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                "]"}], ",", "\[IndentingNewLine]", "km1", ",", "km2", ",", 
+               "e", ",", "\[CapitalDelta]Ef", ",", "g", ",", "t"}], "]"}]}], 
+            "}"}]}], "]"}], ",", 
+         RowBox[{"SphericalRegion", "\[Rule]", "True"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"ViewPoint", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"b", " ", 
+             RowBox[{"Sin", "[", "\[Alpha]", "]"}], 
+             RowBox[{"Cos", "[", "\[Beta]", "]"}]}], ",", 
+            RowBox[{"b", " ", 
+             RowBox[{"Sin", "[", "\[Alpha]", "]"}], 
+             RowBox[{"Sin", "[", "\[Beta]", "]"}]}], ",", 
+            RowBox[{"b", " ", 
+             RowBox[{"Cos", "[", "\[Alpha]", "]"}]}]}], "}"}]}], ",", 
+         RowBox[{"ImageSize", "\[Rule]", "size"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+         RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}], ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "20"}], ",", "20"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "40"}], ",", "40"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "1"}], ",", "50"}], "}"}]}], "}"}]}]}], "]"}], 
+       "]"}], ")"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"(*", "Titel", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{
+        "\"\<\:8ba1\:7b97\:673a\:5168\:771f\:6a21\:62df\:4e0b\:7684\:5bf9\
+\:78b0\:649e\:6253\:628a\:80fd\:91cf\:635f\:5931\:7684\:8fd1\:4e00\:6b65\:7814\
+\:7a76\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"25", ",", "Red", ",", "Bold"}], "}"}]}], "]"}], ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Top"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{"\"\< \>\"", ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Top"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", "Title", "*)"}], "\[IndentingNewLine]", "Delimiter", ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", "1111111111111111111111111", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<\:4ecb\:7ecd\:4e0e\:76f8\:5173\:7a0b\:5e8f\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", "15"}], "}"}]}], "]"}], ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{"\"\< \>\"", ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Row", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"PopupWindow", "[", 
+            RowBox[{
+             RowBox[{"Button", "[", "\"\<\:5b9e\:9a8c\:539f\:7406\>\"", "]"}],
+              ",", "\"\<\:5b9e\:9a8c\:539f\:7406\>\""}], "]"}], ",", 
+           RowBox[{"PopupWindow", "[", 
+            RowBox[{
+             RowBox[{"Button", "[", "\"\<\:64cd\:4f5c\:65b9\:6cd5\>\"", "]"}],
+              ",", "\"\<\:64cd\:4f5c\:65b9\:6cd5\>\""}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Button", "[", 
+            RowBox[{
+            "\"\<\:6062\:590d\:7cfb\:6570e\:6d4b\:91cf\:6570\:636e\:5904\:7406\
+\>\"", ",", "  ", "\[IndentingNewLine]", 
+             RowBox[{"CreateDialog", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"FrontEndExecute", "[", 
+                  RowBox[{
+                  "FrontEndToken", "[", "\"\<ToggleDynamicUpdating\>\"", 
+                   "]"}], "]"}], ",", "processe"}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"Enabled", "\[Rule]", "True"}], ",", 
+               RowBox[{
+               "WindowTitle", "\[Rule]", 
+                "\"\<\:6062\:590d\:7cfb\:6570e\:6d4b\:91cf\:6570\:636e\:5904\
+\:7406\>\""}], ",", 
+               RowBox[{"WindowFloating", "\[Rule]", "True"}]}], "]"}]}], "  ",
+             "]"}]}], "}"}], ",", 
+         RowBox[{"Spacer", "[", "4", "]"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", "111111111111111111111111111", "*)"}], "Delimiter", ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", "222222222222222222222222222", "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<\:56fe\:50cf\:8c03\:6574\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", "15"}], "}"}]}], "]"}], ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{
+       RowBox[{"Column", "[", 
+        RowBox[{"{", 
+         RowBox[{"\"\< \>\"", ",", "\[IndentingNewLine]", 
+          RowBox[{"Control", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "b", ",", "1.5", ",", "\"\<\:89c2\:5bdf\:8ddd\:79bb\>\""}], 
+              "}"}], ",", 
+             RowBox[{
+              RowBox[{"Manipulator", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "2"}], "}"}], ",", 
+                RowBox[{"AppearanceElements", "\[Rule]", 
+                 RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "]"}],
+               "&"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Control", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"\[Beta]", ",", 
+               RowBox[{
+                RowBox[{"-", "\[Pi]"}], "/", "6"}], ",", 
+               "\"\<\:6c34\:5e73\:65cb\:8f6c\>\""}], "}"}], ",", 
+             RowBox[{
+              RowBox[{"Manipulator", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "\[Pi]"}], ",", "\[Pi]"}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"AppearanceElements", "\[Rule]", 
+                 RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "]"}],
+               "&"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Control", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"\[Alpha]", ",", 
+               RowBox[{"\[Pi]", "/", "3"}], ",", 
+               "\"\<\:6539\:53d8\:4fef\:89d2\>\""}], "}"}], ",", 
+             RowBox[{
+              RowBox[{"Manipulator", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", 
+                  RowBox[{"\[Pi]", "/", "2"}]}], "}"}], ",", 
+                RowBox[{"AppearanceElements", "\[Rule]", 
+                 RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "]"}],
+               "&"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Control", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "size", ",", "600", ",", "\"\<\:653e\:5927\:7f29\:5c0f\>\""}], 
+              "}"}], ",", 
+             RowBox[{
+              RowBox[{"Manipulator", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"300", ",", "2000"}], "}"}], ",", 
+                "\[IndentingNewLine]", " ", 
+                RowBox[{"AppearanceElements", "\[Rule]", 
+                 RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "]"}],
+               "&"}]}], " ", "}"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+        "]"}], ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", "222222222222222222222222222", "*)"}], 
+     "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+     RowBox[{"(*", "33333333333333333333333333", "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{
+        "\"\<\:78b0\:649e\:5c0f\:7403\:53ca\:5b9e\:9a8c\:53f0\:7684\:6027\
+\:8d28\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", "15"}], "}"}]}], "]"}], ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{
+       RowBox[{"Column", "[", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"\"\< \>\"", ",", 
+          RowBox[{"Control", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "km1", ",", "32.77", ",", 
+               "\"\<\:649e\:51fb\:7403\:7684\\n\!\(\*SubscriptBox[\(\:8d28\
+\:91cfm\), \(1\)]\)\>\""}], "}"}], ",", 
+             RowBox[{
+              RowBox[{"Manipulator", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"10", ",", "50"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"AppearanceElements", "\[Rule]", 
+                 RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "]"}],
+               "&"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Control", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "km2", ",", "32.62", ",", 
+               "\"\<\:88ab\:649e\:7403\:7684\\n\!\(\*SubscriptBox[\(\:8d28\
+\:91cfm\), \(2\)]\)\>\""}], "}"}], ",", 
+             RowBox[{
+              RowBox[{"Manipulator", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"10", ",", "50"}], "}"}], ",", 
+                RowBox[{"AppearanceElements", "\[Rule]", 
+                 RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "]"}],
+               "&"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Control", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "e", ",", "0.94", ",", "\"\<\:6062\:590d\:7cfb\:6570\>\""}], 
+              "}"}], ",", 
+             RowBox[{
+              RowBox[{"Manipulator", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "1"}], "}"}], ",", 
+                RowBox[{"AppearanceElements", "\[Rule]", 
+                 RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "]"}],
+               "&"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Control", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "ky", ",", "15.70", ",", "\"\<\:7403\:67f1\:9ad8\:5ea6\>\""}], 
+              "}"}], ",", 
+             RowBox[{
+              RowBox[{"Manipulator", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"10", ",", "20"}], "}"}], ",", 
+                RowBox[{"AppearanceElements", "\[Rule]", 
+                 RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "]"}],
+               "&"}]}], "}"}], "]"}]}], "}"}], "]"}], ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", "333333333333333333333333333333", "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", "444444444444444444444444444444", "*)"}], 
+     "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<\:5b9e\:9a8c\:8c03\:8282\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", "15"}], "}"}]}], "]"}], ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{"\"\< \>\"", ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{
+       RowBox[{"Button", "[", 
+        RowBox[{
+         RowBox[{"Style", "[", 
+          RowBox[{
+          "\"\<\:5b9e\:9a8c\:8c03\:8282\:63a7\:5236\:9762\:677f\>\"", ",", 
+           RowBox[{"{", 
+            RowBox[{"Red", ",", "15"}], "}"}]}], "]"}], ",", 
+         RowBox[{"CreateDialog", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Grid", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Control", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "kL", ",", "25.00", ",", 
+                    "\"\<\:6446\:7ebf\:957fL  \>\""}], "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"Manipulator", "[", 
+                    RowBox[{"#", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", 
+                    RowBox[{"46", "-", "ky", "-", "1"}]}], "}"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"AppearanceElements", "\[Rule]", 
+                    RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                    RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], 
+                    "]"}], "&"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"Row", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"\"\<  \>\"", ",", 
+                    RowBox[{"Checkbox", "[", 
+                    RowBox[{"Dynamic", "[", "flag", "]"}], "]"}], ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    "\"\< \:8003\:8651\:6446\:7ebf\:5f2f\:66f2\>\"", ",", 
+                    "Orange"}], "]"}]}], "}"}], "]"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Control", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "kx", ",", "21.00", ",", 
+                    "\"\<\:9776\:5fc3\:4f4d\:7f6ex\>\""}], "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"Manipulator", "[", 
+                    RowBox[{"#", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "24", ",", "1"}], "}"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"AppearanceElements", "\[Rule]", 
+                    RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                    RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], 
+                    "]"}], "&"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"Dynamic", "[", 
+                  RowBox[{"StringForm", "[", 
+                   RowBox[{"\"\<  \:7406\:8bba\:503ch0=``cm\>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"N", "[", 
+                    FractionBox[
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"km1", "+", "km2"}], ")"}], "2"], " ", 
+                    SuperscriptBox["kx", "2"]}], 
+                    RowBox[{"16", " ", 
+                    SuperscriptBox["km1", "2"], " ", "ky"}]], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "2"}], "}"}]}], "]"}]}], "]"}], "]"}]}],
+                 "}"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Row", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Control", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "\[CapitalDelta]Ef", ",", "0.0005", ",", 
+                    "\"\<\:56fa\:6709\:635f\:5931\[CapitalDelta]\
+\[CurlyEpsilon]0   \>\""}], "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"InputField", "[", 
+                    RowBox[{"#", ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "14"}]}], "]"}], "&"}]}], 
+                    "}"}], "]"}], ",", "\"\<    J\>\""}], "}"}], "]"}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"Dynamic", "[", 
+                  RowBox[{"StringForm", "[", 
+                   RowBox[{
+                   "\"\<  \:4fee\:6b63\:503c\[CapitalDelta]h=``cm\>\"", ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"N", "[", "\[IndentingNewLine]", 
+                    RowBox[{"100", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"-", "g"}], " ", "km2", " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"16", " ", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"1", "+", "e"}], ")"}], "2"], " ", 
+                    SuperscriptBox["kL", "3"], " ", 
+                    SuperscriptBox["km1", "2"], " ", "ky"}], "-", 
+                    RowBox[{"16", " ", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"1", "+", "e"}], ")"}], "2"], " ", "kL", " ", 
+                    SuperscriptBox["km1", "2"], " ", 
+                    SuperscriptBox[
+                    RowBox[{"If", "[", 
+                    RowBox[{"flag", ",", "ks", ",", "\[IndentingNewLine]", 
+                    RowBox[{"100", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                    "]"}], "2"], " ", "ky"}], "+", 
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"1", "+", "e"}], ")"}], "2"], " ", 
+                    SuperscriptBox[
+                    RowBox[{"If", "[", 
+                    RowBox[{"flag", ",", "ks", ",", "\[IndentingNewLine]", 
+                    RowBox[{"100", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                    "]"}], "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"2", " ", "km1", " ", "km2", " ", 
+                    SuperscriptBox["kx", "2"]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["km2", "2"], " ", 
+                    SuperscriptBox["kx", "2"]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["km1", "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["kx", "2"], "+", "\[IndentingNewLine]", 
+                    RowBox[{"16", " ", 
+                    RowBox[{"\[Sqrt]", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["kL", "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"If", "[", 
+                    RowBox[{"flag", ",", "ks", ",", 
+                    RowBox[{"100", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                    "]"}], "2"]}], ")"}]}], " ", "ky"}]}], ")"}]}]}], ")"}]}],
+                     "-", "\[IndentingNewLine]", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["kL", "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"2", " ", "km1", " ", "km2", " ", 
+                    SuperscriptBox["kx", "2"]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["km2", "2"], " ", 
+                    SuperscriptBox["kx", "2"]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["km1", "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["kx", "2"], "+", 
+                    RowBox[{"4", " ", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"1", "+", "e"}], ")"}], "2"], " ", 
+                    RowBox[{"\[Sqrt]", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["kL", "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"If", "[", 
+                    RowBox[{"flag", ",", "ks", ",", "\[IndentingNewLine]", 
+                    RowBox[{"100", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                    "]"}], "2"]}], ")"}]}], " ", "ky"}]}], ")"}]}]}], 
+                    ")"}]}]}], ")"}]}], "+", "\[IndentingNewLine]", 
+                    RowBox[{"1600000", " ", 
+                    SuperscriptBox["kL", "2"], " ", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"km1", "+", "km2"}], ")"}], "2"], " ", "ky", " ", 
+                    "\[CapitalDelta]Ef"}]}], ")"}], "/", 
+                    RowBox[{"(", 
+                    RowBox[{"1600", " ", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"1", "+", "e"}], ")"}], "2"], " ", "g", " ", 
+                    SuperscriptBox["km1", "2"], " ", "km2", " ", 
+                    SuperscriptBox[
+                    RowBox[{"If", "[", 
+                    RowBox[{"flag", ",", "ks", ",", "\[IndentingNewLine]", 
+                    RowBox[{"100", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                    "]"}], "2"], " ", "ky"}], ")"}]}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "2"}], "}"}]}], "]"}]}], "]"}], "]"}]}],
+                 "}"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Control", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "kh", ",", "7.02", ",", 
+                    "\"\<\:8d77\:843d\:9ad8\:5ea6h\>\""}], "}"}], ",", 
+                    RowBox[{
+                    RowBox[{"Manipulator", "[", 
+                    RowBox[{"#", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"2", ",", "20"}], "}"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"AppearanceElements", "\[Rule]", 
+                    RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                    RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], 
+                    "]"}], "&"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"Dynamic", "[", 
+                  RowBox[{"StringForm", "[", 
+                   RowBox[{"\"\<      h-h0=``cm\>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"N", "[", "\[IndentingNewLine]", 
+                    RowBox[{"-", 
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"2", " ", "km1", " ", "km2", " ", 
+                    SuperscriptBox["kx", "2"]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["km2", "2"], " ", 
+                    SuperscriptBox["kx", "2"]}], "+", 
+                    RowBox[{
+                    SuperscriptBox["km1", "2"], " ", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["kx", "2"], "-", 
+                    RowBox[{"16", " ", "kh", " ", "ky"}]}], ")"}]}]}], 
+                    RowBox[{"16", " ", 
+                    SuperscriptBox["km1", "2"], " ", "ky"}]]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "2"}], "}"}]}], "]"}]}], "]"}], "]"}]}],
+                 "}"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Dynamic", "[", 
+                  RowBox[{"Row", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\:6c34\:5e73\:8ddd\:79bbs \>\"", ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{"flag", ",", "Black", ",", 
+                    RowBox[{"GrayLevel", "[", "0.5", "]"}]}], "]"}]}], "]"}], 
+                    "\[IndentingNewLine]", ",", 
+                    RowBox[{"Manipulator", "[", 
+                    RowBox[{
+                    RowBox[{"Dynamic", "[", "ks", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", 
+                    RowBox[{"100", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                    "}"}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"AppearanceElements", "\[Rule]", 
+                    RowBox[{"{", "\"\<InputField\>\"", "}"}]}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", "Medium"}], ",", 
+                    RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}], ",",
+                     "\[IndentingNewLine]", 
+                    RowBox[{"Enabled", "\[Rule]", "flag"}]}], "]"}]}], "}"}], 
+                   "]"}], "]"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"Dynamic", "[", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{
+                    RowBox[{"StringForm", "[", "      ", 
+                    RowBox[{
+                    "\"\<\:5f2f\:66f2\:504f\:79fb\[CapitalDelta]s=``cm\>\"", 
+                    "             ", ",", "\[IndentingNewLine]", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{
+                    RowBox[{"N", "[", 
+                    RowBox[{
+                    RowBox[{"100", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}], 
+                    "-", "ks"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "2"}], "}"}]}], "]"}]}], 
+                    "\[IndentingNewLine]", "]"}], ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{"flag", ",", "Black", ",", 
+                    RowBox[{"GrayLevel", "[", "0.5", "]"}]}], "]"}]}], "]"}], 
+                  "]"}]}], "}"}]}], "}"}], ",", 
+             RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+             RowBox[{"FrameStyle", "\[Rule]", 
+              RowBox[{"GrayLevel", "[", "0.8", "]"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}], 
+           "\[IndentingNewLine]", ",", 
+           RowBox[{"WindowFrame", "\[Rule]", "\"\<Palette\>\""}], ",", 
+           RowBox[{"WindowFloating", "\[Rule]", "True"}], ",", 
+           RowBox[{
+           "WindowTitle", "\[Rule]", 
+            "\"\<\:5b9e\:9a8c\:8c03\:8282\:63a7\:5236\:9762\:677f\>\""}]}], 
+          "]"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"ImageSize", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{"253", ",", "25"}], "}"}]}]}], "]"}], ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", "444444444444444444444444444444", "*)"}], 
+     "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<\:6a21\:62df\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", "15"}], "}"}]}], "]"}], ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{"\"\< \>\"", ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Item", "[", 
+      RowBox[{
+       RowBox[{"Framed", "[", 
+        RowBox[{"Grid", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", "\"\< \>\"", "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", " ", 
+             RowBox[{
+              RowBox[{"Style", "[", " ", 
+               RowBox[{"\"\<\:5f00\:59cb\:6a21\:62df\>\"", ",", 
+                RowBox[{"{", 
+                 RowBox[{"15", ",", "Bold"}], "}"}]}], "]"}], "         ", 
+              ",", "      ", 
+              RowBox[{"Style", "[", 
+               RowBox[{"\"\<\:901f\:7387\>\"", ",", 
+                RowBox[{"{", 
+                 RowBox[{"15", ",", "Bold"}], "}"}]}], "]"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"t", ",", "0", ",", "\"\<\>\""}], "}"}], ",", 
+                 RowBox[{
+                  RowBox[{"Trigger", "[", 
+                   RowBox[{"#", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", 
+                    RowBox[{"finaltime", "[", 
+                    RowBox[{"ky", ",", "kL", ",", "kh", ",", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    "flag", ",", " ", "ks", ",", "\[IndentingNewLine]", 
+                    RowBox[{"100", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                    "]"}]}], "]"}]}], "}"}], ",", "ups", ",", 
+                    RowBox[{"ImageSize", "\[Rule]", "Large"}]}], "]"}], 
+                  "&"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"ups", ",", "0.1", ",", "\"\<\>\""}], "}"}], ",", 
+                 RowBox[{
+                  RowBox[{"InputField", "[", 
+                   RowBox[{"#", ",", 
+                    RowBox[{"FieldSize", "\[Rule]", "3"}], ",", 
+                    RowBox[{"Background", "\[Rule]", 
+                    RowBox[{"GrayLevel", "[", "0.9", "]"}]}]}], "]"}], 
+                  "&"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+              "\"\<  \>\"", ",", 
+              RowBox[{"Button", "[", 
+               RowBox[{
+                RowBox[{"Style", "[", 
+                 RowBox[{"\"\<\:8f93\:51fa\:62a5\:544a\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"Red", ",", "15"}], "}"}]}], "]"}], ",", 
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{"t", "==", 
+                   RowBox[{"finaltime", "[", 
+                    RowBox[{
+                    "ky", ",", "kL", ",", "kh", ",", "\[IndentingNewLine]", 
+                    RowBox[{"If", "[", 
+                    RowBox[{"flag", ",", "ks", ",", 
+                    RowBox[{"100", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "2"], "-", 
+                    SuperscriptBox[
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"kL", "/", "100"}], ")"}], "-", 
+                    RowBox[{"(", 
+                    RowBox[{"kh", "/", "100"}], ")"}]}], ")"}], "2"]}]]}]}], 
+                    "]"}]}], "]"}]}], ",", 
+                  RowBox[{"CreateDialog", "[", 
+                   RowBox[{
+                    RowBox[{
+                    "Panel", "[", "\[IndentingNewLine]", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"StringForm", "[", 
+                    RowBox[{
+                    "\"\<\:88ab\:649e\:7403\:6253\:9776\:4f4d\:7f6e\:6a21\
+\:62df\:7ed3\:679c\:ff1a`1` cm\>\"", ",", 
+                    RowBox[{"NumberForm", "[", 
+                    RowBox[{"finalx", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "2"}], "}"}]}], "]"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "20"}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Background", "\[Rule]", "White"}]}], "]"}], ",", 
+                    RowBox[{"WindowFloating", "\[Rule]", "True"}], ",", 
+                    RowBox[{
+                    "WindowTitle", "\[Rule]", 
+                    "\"\<\:5b9e\:9a8c\:62a5\:544a\>\""}]}], "]"}]}], "]"}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"ImageSize", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"80", ",", "30"}], "}"}]}]}], "]"}]}], "}"}]}], 
+           "}"}], ",", 
+          RowBox[{"Background", "\[Rule]", 
+           RowBox[{"GrayLevel", "[", "0.8", "]"}]}]}], "]"}], "]"}], ",", 
+       RowBox[{"ControlPlacement", "\[Rule]", "Left"}]}], "]"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Initialization", "\[RuleDelayed]", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"g", "=", "9.796"}], ";", 
+        RowBox[{"flag", "=", "True"}], ";", 
+        RowBox[{"ks", "=", "15"}], ";"}], ")"}]}], ",", 
+     RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "\[IndentingNewLine]", 
+    "]"}], "//", "Framed"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.523001270671875*^9, 3.523001502609375*^9}, {
+   3.523001537921875*^9, 3.523001563515625*^9}, {3.523001615890625*^9, 
+   3.523001625265625*^9}, {3.52300190340625*^9, 3.52300204565625*^9}, {
+   3.5230020863125*^9, 3.52300211315625*^9}, {3.523002145296875*^9, 
+   3.523002147109375*^9}, {3.52300218196875*^9, 3.52300221215625*^9}, 
+   3.52300226109375*^9, {3.523002319046875*^9, 3.5230023975*^9}, {
+   3.523002465734375*^9, 3.523002493984375*^9}, {3.523002562546875*^9, 
+   3.5230026385625*^9}, {3.523002711796875*^9, 3.52300272584375*^9}, {
+   3.523002843296875*^9, 3.523003052828125*^9}, {3.523003094359375*^9, 
+   3.523003344125*^9}, {3.523003379203125*^9, 3.523003474046875*^9}, {
+   3.523003519046875*^9, 3.523003575953125*^9}, {3.523003607953125*^9, 
+   3.52300368675*^9}, {3.523003760671875*^9, 3.523003822765625*^9}, {
+   3.5230038546875*^9, 3.52300401071875*^9}, {3.523004076359375*^9, 
+   3.523004119453125*^9}, {3.5230043754375*^9, 3.523004463984375*^9}, {
+   3.523004550234375*^9, 3.523004552125*^9}, {3.523004584734375*^9, 
+   3.5230046001875*^9}, {3.5230046760625*^9, 3.523004695703125*^9}, {
+   3.523004734234375*^9, 3.52300485903125*^9}, {3.523004904453125*^9, 
+   3.52300492334375*^9}, {3.5230049554375*^9, 3.523005003125*^9}, {
+   3.523005035734375*^9, 3.52300508053125*^9}, {3.5230053365625*^9, 
+   3.523005339375*^9}, {3.5230054018125*^9, 3.523005519515625*^9}, {
+   3.523005559265625*^9, 3.52300574278125*^9}, {3.523005964984375*^9, 
+   3.523005995828125*^9}, {3.523006058109375*^9, 3.52300614996875*^9}, {
+   3.523007354703125*^9, 3.5230075578125*^9}, {3.52300763278125*^9, 
+   3.523007638140625*^9}, {3.52300771959375*^9, 3.52300783765625*^9}, {
+   3.52300787740625*^9, 3.523007900734375*^9}, {3.523049807484375*^9, 
+   3.523049868984375*^9}, {3.5230500016875*^9, 3.523050014546875*^9}, {
+   3.5230504635625*^9, 3.52305050625*^9}, {3.523050589296875*^9, 
+   3.5230506274375*^9}, {3.523050669984375*^9, 3.52305068915625*^9}, {
+   3.523050748421875*^9, 3.5230507520625*^9}, {3.5230507901875*^9, 
+   3.523050797*^9}, {3.523050851328125*^9, 3.5230509210625*^9}, {
+   3.523050960484375*^9, 3.523050966671875*^9}, {3.5230509971875*^9, 
+   3.523051022453125*^9}, 3.52305111225*^9, {3.523051260171875*^9, 
+   3.523051267703125*^9}, {3.523051591875*^9, 3.523051592609375*^9}, {
+   3.52305165609375*^9, 3.523051700125*^9}, {3.52305192475*^9, 
+   3.5230519521875*^9}, {3.523051985140625*^9, 3.523051993859375*^9}, {
+   3.52305205765625*^9, 3.523052064625*^9}, {3.523052680953125*^9, 
+   3.523052819328125*^9}, {3.52305289884375*^9, 3.523053023875*^9}, {
+   3.523053091515625*^9, 3.523053135*^9}, {3.523053203375*^9, 
+   3.523053241015625*^9}, {3.52305334540625*^9, 3.52305334753125*^9}, {
+   3.523053555625*^9, 3.523053612609375*^9}, {3.523053680375*^9, 
+   3.523053702328125*^9}, {3.523053833625*^9, 3.523053936796875*^9}, {
+   3.523053974125*^9, 3.52305400634375*^9}, {3.523054412421875*^9, 
+   3.5230544255625*^9}, {3.523054481421875*^9, 3.523054496296875*^9}, {
+   3.523054541234375*^9, 3.523054568359375*^9}, {3.523055354109375*^9, 
+   3.52305539040625*^9}, {3.523055437640625*^9, 3.523055444734375*^9}, {
+   3.52305566096875*^9, 3.52305566796875*^9}, {3.52305574175*^9, 
+   3.523055782171875*^9}, {3.523055872609375*^9, 3.5230559243125*^9}, {
+   3.52305639934375*^9, 3.523056401890625*^9}, {3.523056478078125*^9, 
+   3.52305648059375*^9}, {3.52305817690625*^9, 3.523058258578125*^9}, {
+   3.52305832803125*^9, 3.52305832965625*^9}, {3.523058367953125*^9, 
+   3.523058371703125*^9}, {3.523058430984375*^9, 3.523058450421875*^9}, {
+   3.523058692015625*^9, 3.523058732453125*^9}, 3.523059224140625*^9, {
+   3.523059256890625*^9, 3.523059304046875*^9}, {3.523068350296875*^9, 
+   3.523068355890625*^9}, {3.52306858921875*^9, 3.523068591625*^9}, {
+   3.523068696625*^9, 3.52306870203125*^9}, {3.52307024321875*^9, 
+   3.523070245640625*^9}, {3.523070619734375*^9, 3.523070622640625*^9}, {
+   3.523075963546875*^9, 3.523075965109375*^9}, {3.523076226515625*^9, 
+   3.523076286625*^9}, {3.523076348171875*^9, 3.523076392390625*^9}, {
+   3.523076424796875*^9, 3.523076450203125*^9}, {3.523076483265625*^9, 
+   3.523076487828125*^9}, {3.52307656884375*^9, 3.523076624828125*^9}, {
+   3.52307670325*^9, 3.5230770235*^9}, {3.5230770786875*^9, 
+   3.523077110609375*^9}, {3.523077169828125*^9, 3.523077397625*^9}, {
+   3.523077443453125*^9, 3.523077450125*^9}, {3.52313627203125*^9, 
+   3.52313627496875*^9}, {3.523150813484375*^9, 3.523150840171875*^9}, {
+   3.5231922189375*^9, 3.523192223375*^9}, {3.525049699484375*^9, 
+   3.52504971953125*^9}, {3.52504976215625*^9, 3.525049764484375*^9}, {
+   3.52504986075*^9, 3.525049916375*^9}, {3.525049959453125*^9, 
+   3.525050099875*^9}, {3.525345606421875*^9, 3.52534601296875*^9}}],
+
+Cell[BoxData[
+ FrameBox[
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{$CellContext`b$$ = 1.5, $CellContext`e$$ = 
+     0.94, $CellContext`kh$$ = 7.02, $CellContext`kL$$ = 
+     25., $CellContext`km1$$ = 32.77, $CellContext`km2$$ = 
+     32.62, $CellContext`kx$$ = 21., $CellContext`ky$$ = 
+     15.7, $CellContext`size$$ = 600, $CellContext`t$$ = 
+     0, $CellContext`ups$$ = 0.1, $CellContext`\[Alpha]$$ = Rational[1, 3] 
+     Pi, $CellContext`\[Beta]$$ = Rational[-1, 6] 
+     Pi, $CellContext`\[CapitalDelta]Ef$$ = 0.0005, Typeset`show$$ = True, 
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+     "\"untitled\"", Typeset`specs$$ = {{
+       Hold[
+        Item[
+         Style[
+         "\:8ba1\:7b97\:673a\:5168\:771f\:6a21\:62df\:4e0b\:7684\:5bf9\:78b0\
+\:649e\:6253\:628a\:80fd\:91cf\:635f\:5931\:7684\:8fd1\:4e00\:6b65\:7814\:7a76\
+", {25, 
+           RGBColor[1, 0, 0], Bold}]]], Manipulate`Dump`ThisIsNotAControl}, {
+       Hold[
+        Item[" "]], Manipulate`Dump`ThisIsNotAControl}, {
+       Hold[
+        Item[
+         Style["\:4ecb\:7ecd\:4e0e\:76f8\:5173\:7a0b\:5e8f", {
+           RGBColor[0, 0, 1], 15}]]], Manipulate`Dump`ThisIsNotAControl}, {
+       Hold[
+        Item[" "]], Manipulate`Dump`ThisIsNotAControl}, {
+       Hold[
+        Item[
+         Row[{
+           Button[
+            Button["\:5b9e\:9a8c\:539f\:7406"], 
+            CreateDocument[
+             Internal`PopupWindowNotebook["\:5b9e\:9a8c\:539f\:7406"]], 
+            Appearance -> None, BaseStyle -> {}, DefaultBaseStyle -> {}], 
+           Button[
+            Button["\:64cd\:4f5c\:65b9\:6cd5"], 
+            CreateDocument[
+             Internal`PopupWindowNotebook["\:64cd\:4f5c\:65b9\:6cd5"]], 
+            Appearance -> None, BaseStyle -> {}, DefaultBaseStyle -> {}], 
+           Button[
+           "\:6062\:590d\:7cfb\:6570e\:6d4b\:91cf\:6570\:636e\:5904\:7406", 
+            CreateDialog[{
+              FrontEndExecute[
+               FrontEndToken[
+               "ToggleDynamicUpdating"]], $CellContext`processe}, Enabled -> 
+             True, WindowTitle -> 
+             "\:6062\:590d\:7cfb\:6570e\:6d4b\:91cf\:6570\:636e\:5904\:7406", 
+             WindowFloating -> True]]}, 
+          Spacer[4]]]], Manipulate`Dump`ThisIsNotAControl}, {
+       Hold[
+        Item[
+         Style["\:56fe\:50cf\:8c03\:6574", {
+           RGBColor[0, 0, 1], 15}]]], Manipulate`Dump`ThisIsNotAControl}, {{
+        Hold[$CellContext`b$$], 1.5, "\:89c2\:5bdf\:8ddd\:79bb"}, 
+       Manipulator[#, {0, 2}, AppearanceElements -> {"InputField"}, ImageSize -> 
+        Medium, Appearance -> "Labeled"]& }, {{
+        Hold[$CellContext`\[Beta]$$], Rational[-1, 6] Pi, 
+        "\:6c34\:5e73\:65cb\:8f6c"}, 
+       Manipulator[#, {-Pi, Pi}, AppearanceElements -> {"InputField"}, 
+        ImageSize -> Medium, Appearance -> "Labeled"]& }, {{
+        Hold[$CellContext`\[Alpha]$$], Rational[1, 3] Pi, 
+        "\:6539\:53d8\:4fef\:89d2"}, 
+       Manipulator[#, {0, Pi/2}, AppearanceElements -> {"InputField"}, 
+        ImageSize -> Medium, Appearance -> "Labeled"]& }, {{
+        Hold[$CellContext`size$$], 600, "\:653e\:5927\:7f29\:5c0f"}, 
+       Manipulator[#, {300, 2000}, AppearanceElements -> {"InputField"}, 
+        ImageSize -> Medium, Appearance -> "Labeled"]& }, {
+       Hold[
+        Item[
+         Column[{" ", 
+           Manipulate`Place[1], 
+           Manipulate`Place[2], 
+           Manipulate`Place[3], 
+           Manipulate`Place[4]}]]], Manipulate`Dump`ThisIsNotAControl}, {
+       Hold[
+        Item[
+         Style[
+         "\:78b0\:649e\:5c0f\:7403\:53ca\:5b9e\:9a8c\:53f0\:7684\:6027\:8d28",\
+ {
+           RGBColor[0, 0, 1], 15}]]], Manipulate`Dump`ThisIsNotAControl}, {{
+        Hold[$CellContext`km1$$], 32.77, 
+        "\:649e\:51fb\:7403\:7684\n\!\(\*SubscriptBox[\(\:8d28\:91cfm\), \
+\(1\)]\)"}, 
+       Manipulator[#, {10, 50}, AppearanceElements -> {"InputField"}, 
+        ImageSize -> Medium, Appearance -> "Labeled"]& }, {{
+        Hold[$CellContext`km2$$], 32.62, 
+        "\:88ab\:649e\:7403\:7684\n\!\(\*SubscriptBox[\(\:8d28\:91cfm\), \
+\(2\)]\)"}, 
+       Manipulator[#, {10, 50}, AppearanceElements -> {"InputField"}, 
+        ImageSize -> Medium, Appearance -> "Labeled"]& }, {{
+        Hold[$CellContext`e$$], 0.94, "\:6062\:590d\:7cfb\:6570"}, 
+       Manipulator[#, {0, 1}, AppearanceElements -> {"InputField"}, ImageSize -> 
+        Medium, Appearance -> "Labeled"]& }, {{
+        Hold[$CellContext`ky$$], 15.7, "\:7403\:67f1\:9ad8\:5ea6"}, 
+       Manipulator[#, {10, 20}, AppearanceElements -> {"InputField"}, 
+        ImageSize -> Medium, Appearance -> "Labeled"]& }, {
+       Hold[
+        Item[
+         Column[{" ", 
+           Manipulate`Place[5], 
+           Manipulate`Place[6], 
+           Manipulate`Place[7], 
+           Manipulate`Place[8]}]]], Manipulate`Dump`ThisIsNotAControl}, {
+       Hold[
+        Item[
+         Style["\:5b9e\:9a8c\:8c03\:8282", {
+           RGBColor[0, 0, 1], 15}]]], Manipulate`Dump`ThisIsNotAControl}, {
+       Hold[
+        Item[" "]], Manipulate`Dump`ThisIsNotAControl}, {{
+        Hold[$CellContext`kL$$], 25., "\:6446\:7ebf\:957fL  "}, 
+       Dynamic[
+       Manipulator[#, {5, 46 - $CellContext`ky$$ - 1}, 
+         AppearanceElements -> {"InputField"}, ImageSize -> Medium, 
+         Appearance -> "Labeled"]& ]}, {{
+        Hold[$CellContext`kx$$], 21., "\:9776\:5fc3\:4f4d\:7f6ex"}, 
+       Manipulator[#, {6, 24, 1}, AppearanceElements -> {"InputField"}, 
+        ImageSize -> Medium, Appearance -> "Labeled"]& }, {{
+        Hold[$CellContext`\[CapitalDelta]Ef$$], 0.0005, 
+        "\:56fa\:6709\:635f\:5931\[CapitalDelta]\[CurlyEpsilon]0   "}, 
+       InputField[#, FieldSize -> 14]& }, {{
+        Hold[$CellContext`kh$$], 7.02, "\:8d77\:843d\:9ad8\:5ea6h"}, 
+       Manipulator[#, {2, 20}, AppearanceElements -> {"InputField"}, 
+        ImageSize -> Medium, Appearance -> "Labeled"]& }, {
+       Hold[
+        Item[
+         Button[
+          Style["\:5b9e\:9a8c\:8c03\:8282\:63a7\:5236\:9762\:677f", {
+            RGBColor[1, 0, 0], 15}], 
+          CreateDialog[
+           Grid[{{
+              Manipulate`Place[9], 
+              Row[{"  ", 
+                Checkbox[
+                 Dynamic[$CellContext`flag]], 
+                Style[" \:8003\:8651\:6446\:7ebf\:5f2f\:66f2", Orange]}]}, {
+              Manipulate`Place[10], 
+              Dynamic[
+               StringForm["  \:7406\:8bba\:503ch0=``cm", 
+                NumberForm[
+                 
+                 N[($CellContext`km1$$ + $CellContext`km2$$)^2 \
+$CellContext`kx$$^2/(16 $CellContext`km1$$^2 $CellContext`ky$$)], {4, 2}]]]}, {
+              Row[{
+                Manipulate`Place[11], "    J"}], 
+              Dynamic[
+               StringForm["  \:4fee\:6b63\:503c\[CapitalDelta]h=``cm", 
+                NumberForm[
+                 N[
+                 100 (((-$CellContext`g) $CellContext`km2$$ (
+                    16 (1 + $CellContext`e$$)^2 $CellContext`kL$$^3 \
+$CellContext`km1$$^2 $CellContext`ky$$ - 
+                    16 (1 + $CellContext`e$$)^2 $CellContext`kL$$ \
+$CellContext`km1$$^2 
+                    If[$CellContext`flag, $CellContext`ks, 
+                    100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^
+                    Rational[1, 2]]^2 $CellContext`ky$$ + (
+                    1 + $CellContext`e$$)^2 
+                    If[$CellContext`flag, $CellContext`ks, 
+                    100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^Rational[1, 2]]^2 (
+                    2 $CellContext`km1$$ $CellContext`km2$$ \
+$CellContext`kx$$^2 + $CellContext`km2$$^2 $CellContext`kx$$^2 + \
+$CellContext`km1$$^2 ($CellContext`kx$$^2 + 
+                    16 Sqrt[$CellContext`kL$$^2 - 
+                    If[$CellContext`flag, $CellContext`ks, 
+                    100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^
+                    Rational[1, 2]]^2] $CellContext`ky$$)) - 
+                    4 $CellContext`kL$$^2 (
+                    2 $CellContext`km1$$ $CellContext`km2$$ \
+$CellContext`kx$$^2 + $CellContext`km2$$^2 $CellContext`kx$$^2 + \
+$CellContext`km1$$^2 ($CellContext`kx$$^2 + 
+                    4 (1 + $CellContext`e$$)^2 
+                    Sqrt[$CellContext`kL$$^2 - 
+                    If[$CellContext`flag, $CellContext`ks, 
+                    100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^
+                    Rational[1, 2]]^2] $CellContext`ky$$))) + 
+                    1600000 $CellContext`kL$$^2 ($CellContext`km1$$ + \
+$CellContext`km2$$)^2 $CellContext`ky$$ $CellContext`\[CapitalDelta]Ef$$)/(
+                   1600 (1 + $CellContext`e$$)^2 $CellContext`g \
+$CellContext`km1$$^2 $CellContext`km2$$ 
+                   If[$CellContext`flag, $CellContext`ks, 
+                    100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^
+                    Rational[1, 2]]^2 $CellContext`ky$$))], {4, 2}]]]}, {
+              Manipulate`Place[12], 
+              Dynamic[
+               StringForm["      h-h0=``cm", 
+                NumberForm[
+                 
+                 N[-((2 $CellContext`km1$$ $CellContext`km2$$ \
+$CellContext`kx$$^2 + $CellContext`km2$$^2 $CellContext`kx$$^2 + \
+$CellContext`km1$$^2 ($CellContext`kx$$^2 - 
+                    16 $CellContext`kh$$ $CellContext`ky$$))/(
+                   16 $CellContext`km1$$^2 $CellContext`ky$$))], {4, 2}]]]}, {
+              Dynamic[
+               Row[{
+                 Style["\:6c34\:5e73\:8ddd\:79bbs ", 
+                  If[$CellContext`flag, Black, 
+                   GrayLevel[0.5]]], 
+                 Manipulator[
+                  Dynamic[$CellContext`ks], {
+                  5, 100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^Rational[1, 2]}, 
+                  AppearanceElements -> {"InputField"}, ImageSize -> Medium, 
+                  Appearance -> "Labeled", Enabled -> $CellContext`flag]}]], 
+              Dynamic[
+               Style[
+                StringForm["\:5f2f\:66f2\:504f\:79fb\[CapitalDelta]s=``cm", 
+                 NumberForm[
+                  N[
+                  100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^
+                    Rational[1, 2] - $CellContext`ks], {4, 2}]], 
+                If[$CellContext`flag, Black, 
+                 GrayLevel[0.5]]]]}}, Frame -> All, FrameStyle -> 
+            GrayLevel[0.8], Alignment -> Left], WindowFrame -> "Palette", 
+           WindowFloating -> True, WindowTitle -> 
+           "\:5b9e\:9a8c\:8c03\:8282\:63a7\:5236\:9762\:677f"], 
+          ImageSize -> {253, 25}]]], Manipulate`Dump`ThisIsNotAControl}, {
+       Hold[
+        Item[
+         Style["\:6a21\:62df", {
+           RGBColor[0, 0, 1], 15}]]], Manipulate`Dump`ThisIsNotAControl}, {
+       Hold[
+        Item[" "]], Manipulate`Dump`ThisIsNotAControl}, {{
+        Hold[$CellContext`t$$], 0, ""}, 
+       Dynamic[Trigger[#, {0, 
+          $CellContext`finaltime[$CellContext`ky$$, $CellContext`kL$$, \
+$CellContext`kh$$, 
+           
+           If[$CellContext`flag, $CellContext`ks, 
+            100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                100 - $CellContext`kh$$/100)^2)^
+             Rational[1, 2]]]}, $CellContext`ups$$, ImageSize -> Large]& ]}, {{
+        Hold[$CellContext`ups$$], 0.1, ""}, 
+       InputField[#, FieldSize -> 3, Background -> GrayLevel[0.9]]& }, {
+       Hold[
+        Item[
+         Framed[
+          Grid[{{" "}, {
+             Style["\:5f00\:59cb\:6a21\:62df", {15, Bold}], 
+             Style["\:901f\:7387", {15, Bold}]}, {
+             Manipulate`Place[13], 
+             Manipulate`Place[14], "  ", 
+             Button[
+              Style["\:8f93\:51fa\:62a5\:544a", {
+                RGBColor[1, 0, 0], 15}], 
+              
+              If[$CellContext`t$$ == \
+$CellContext`finaltime[$CellContext`ky$$, $CellContext`kL$$, \
+$CellContext`kh$$, 
+                 
+                 If[$CellContext`flag, $CellContext`ks, 
+                  100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^Rational[1, 2]]], 
+               CreateDialog[
+                Panel[
+                 Style[
+                  StringForm[
+                  "\:88ab\:649e\:7403\:6253\:9776\:4f4d\:7f6e\:6a21\:62df\
+\:7ed3\:679c\:ff1a`1` cm", 
+                   NumberForm[$CellContext`finalx, {4, 2}]], {Red, 20}], 
+                 Background -> White], WindowFloating -> True, WindowTitle -> 
+                "\:5b9e\:9a8c\:62a5\:544a"]], ImageSize -> {80, 30}]}}, 
+           Background -> GrayLevel[0.8]]]]], 
+       Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
+     610., {302., 308.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+     Typeset`skipInitDone$$ = False}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      2, StandardForm, 
+       "Variables" :> {$CellContext`b$$ = 1.5, $CellContext`e$$ = 
+         0.94, $CellContext`kh$$ = 7.02, $CellContext`kL$$ = 
+         25., $CellContext`km1$$ = 32.77, $CellContext`km2$$ = 
+         32.62, $CellContext`kx$$ = 21., $CellContext`ky$$ = 
+         15.7, $CellContext`size$$ = 600, $CellContext`t$$ = 
+         0, $CellContext`ups$$ = 0.1, $CellContext`\[Alpha]$$ = 
+         Rational[1, 3] Pi, $CellContext`\[Beta]$$ = 
+         Rational[-1, 6] Pi, $CellContext`\[CapitalDelta]Ef$$ = 0.0005}, 
+       "ControllerVariables" :> {}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Framed[
+         Graphics3D[
+          If[
+           
+           Or[$CellContext`t$$ == 
+            0, $CellContext`t$$ == $CellContext`finaltime[$CellContext`ky$$, \
+$CellContext`kL$$, $CellContext`kh$$, 
+              
+              If[$CellContext`flag, $CellContext`ks, 
+               100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                   100 - $CellContext`kh$$/100)^2)^Rational[1, 2]]]], {
+            $CellContext`process3D[$CellContext`ky$$, $CellContext`kx$$, \
+$CellContext`kL$$, $CellContext`kh$$, 
+             
+             If[$CellContext`flag, $CellContext`ks, 
+              100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                  100 - $CellContext`kh$$/100)^2)^Rational[1, 2]]], 
+            $CellContext`processBall[$CellContext`ky$$, $CellContext`kx$$, \
+$CellContext`kL$$, $CellContext`kh$$, 
+             
+             If[$CellContext`flag, $CellContext`ks, 
+              100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                  100 - $CellContext`kh$$/100)^2)^
+               Rational[
+                1, 2]], $CellContext`km1$$, $CellContext`km2$$, \
+$CellContext`e$$, $CellContext`\[CapitalDelta]Ef$$, $CellContext`g, \
+$CellContext`t$$], {
+             GrayLevel[0.7], 
+             EdgeForm[], 
+             
+             Polygon[{{-20, -40, -0.6}, {20, -40, -0.6}, {
+               20, 40, -0.6}, {-20, 40, -0.6}}], 
+             
+             Polygon[{{-20, -40, -1}, {-20, 40, -1}, {-20, 40, 50}, {-20, -40,
+               50}}], 
+             
+             Polygon[{{-20, 40, -1}, {20, 40, -1}, {20, 40, 50}, {-20, 40, 
+              50}}]}}, {
+            $CellContext`process2D[$CellContext`ky$$, $CellContext`kL$$, \
+$CellContext`kh$$, 
+             
+             If[$CellContext`flag, $CellContext`ks, 
+              100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                  100 - $CellContext`kh$$/100)^2)^Rational[1, 2]]], 
+            $CellContext`processBall[$CellContext`ky$$, $CellContext`kx$$, \
+$CellContext`kL$$, $CellContext`kh$$, 
+             
+             If[$CellContext`flag, $CellContext`ks, 
+              100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                  100 - $CellContext`kh$$/100)^2)^
+               Rational[
+                1, 2]], $CellContext`km1$$, $CellContext`km2$$, \
+$CellContext`e$$, $CellContext`\[CapitalDelta]Ef$$, $CellContext`g, \
+$CellContext`t$$]}], SphericalRegion -> True, 
+          ViewPoint -> {$CellContext`b$$ Sin[$CellContext`\[Alpha]$$] 
+            Cos[$CellContext`\[Beta]$$], $CellContext`b$$ 
+            Sin[$CellContext`\[Alpha]$$] 
+            Sin[$CellContext`\[Beta]$$], $CellContext`b$$ 
+            Cos[$CellContext`\[Alpha]$$]}, ImageSize -> $CellContext`size$$, 
+          Boxed -> False, Lighting -> "Neutral", 
+          PlotRange -> {{-20, 20}, {-40, 40}, {-1, 50}}]], "Specifications" :> {
+         Item[
+          Style[
+          "\:8ba1\:7b97\:673a\:5168\:771f\:6a21\:62df\:4e0b\:7684\:5bf9\:78b0\
+\:649e\:6253\:628a\:80fd\:91cf\:635f\:5931\:7684\:8fd1\:4e00\:6b65\:7814\:7a76\
+", {25, 
+            RGBColor[1, 0, 0], Bold}], ControlPlacement -> Top], 
+         Item[" ", ControlPlacement -> Top], Delimiter, 
+         Item[
+          Style["\:4ecb\:7ecd\:4e0e\:76f8\:5173\:7a0b\:5e8f", {
+            RGBColor[0, 0, 1], 15}], ControlPlacement -> Left], 
+         Item[" ", ControlPlacement -> Left], 
+         Item[
+          Row[{
+            Button[
+             Button["\:5b9e\:9a8c\:539f\:7406"], 
+             CreateDocument[
+              Internal`PopupWindowNotebook["\:5b9e\:9a8c\:539f\:7406"]], 
+             Appearance -> None, BaseStyle -> {}, DefaultBaseStyle -> {}], 
+            Button[
+             Button["\:64cd\:4f5c\:65b9\:6cd5"], 
+             CreateDocument[
+              Internal`PopupWindowNotebook["\:64cd\:4f5c\:65b9\:6cd5"]], 
+             Appearance -> None, BaseStyle -> {}, DefaultBaseStyle -> {}], 
+            Button[
+            "\:6062\:590d\:7cfb\:6570e\:6d4b\:91cf\:6570\:636e\:5904\:7406", 
+             CreateDialog[{
+               FrontEndExecute[
+                FrontEndToken[
+                "ToggleDynamicUpdating"]], $CellContext`processe}, Enabled -> 
+              True, WindowTitle -> 
+              "\:6062\:590d\:7cfb\:6570e\:6d4b\:91cf\:6570\:636e\:5904\:7406",
+               WindowFloating -> True]]}, 
+           Spacer[4]], ControlPlacement -> Left], Delimiter, 
+         Item[
+          Style["\:56fe\:50cf\:8c03\:6574", {
+            RGBColor[0, 0, 1], 15}], ControlPlacement -> 
+          Left], {{$CellContext`b$$, 1.5, "\:89c2\:5bdf\:8ddd\:79bb"}, 
+          Manipulator[#, {0, 2}, AppearanceElements -> {"InputField"}, 
+           ImageSize -> Medium, Appearance -> "Labeled"]& , ControlPlacement -> 
+          1}, {{$CellContext`\[Beta]$$, Rational[-1, 6] Pi, 
+           "\:6c34\:5e73\:65cb\:8f6c"}, 
+          Manipulator[#, {-Pi, Pi}, AppearanceElements -> {"InputField"}, 
+           ImageSize -> Medium, Appearance -> "Labeled"]& , ControlPlacement -> 
+          2}, {{$CellContext`\[Alpha]$$, Rational[1, 3] Pi, 
+           "\:6539\:53d8\:4fef\:89d2"}, 
+          Manipulator[#, {0, Pi/2}, AppearanceElements -> {"InputField"}, 
+           ImageSize -> Medium, Appearance -> "Labeled"]& , ControlPlacement -> 
+          3}, {{$CellContext`size$$, 600, "\:653e\:5927\:7f29\:5c0f"}, 
+          Manipulator[#, {300, 2000}, AppearanceElements -> {"InputField"}, 
+           ImageSize -> Medium, Appearance -> "Labeled"]& , ControlPlacement -> 
+          4}, 
+         Item[
+          Column[{" ", 
+            Manipulate`Place[1], 
+            Manipulate`Place[2], 
+            Manipulate`Place[3], 
+            Manipulate`Place[4]}], ControlPlacement -> Left], Delimiter, 
+         Item[
+          Style[
+          "\:78b0\:649e\:5c0f\:7403\:53ca\:5b9e\:9a8c\:53f0\:7684\:6027\:8d28\
+", {
+            RGBColor[0, 0, 1], 15}], ControlPlacement -> 
+          Left], {{$CellContext`km1$$, 32.77, 
+           "\:649e\:51fb\:7403\:7684\n\!\(\*SubscriptBox[\(\:8d28\:91cfm\), \
+\(1\)]\)"}, 
+          Manipulator[#, {10, 50}, AppearanceElements -> {"InputField"}, 
+           ImageSize -> Medium, Appearance -> "Labeled"]& , ControlPlacement -> 
+          5}, {{$CellContext`km2$$, 32.62, 
+           "\:88ab\:649e\:7403\:7684\n\!\(\*SubscriptBox[\(\:8d28\:91cfm\), \
+\(2\)]\)"}, 
+          Manipulator[#, {10, 50}, AppearanceElements -> {"InputField"}, 
+           ImageSize -> Medium, Appearance -> "Labeled"]& , ControlPlacement -> 
+          6}, {{$CellContext`e$$, 0.94, "\:6062\:590d\:7cfb\:6570"}, 
+          Manipulator[#, {0, 1}, AppearanceElements -> {"InputField"}, 
+           ImageSize -> Medium, Appearance -> "Labeled"]& , ControlPlacement -> 
+          7}, {{$CellContext`ky$$, 15.7, "\:7403\:67f1\:9ad8\:5ea6"}, 
+          Manipulator[#, {10, 20}, AppearanceElements -> {"InputField"}, 
+           ImageSize -> Medium, Appearance -> "Labeled"]& , ControlPlacement -> 
+          8}, 
+         Item[
+          Column[{" ", 
+            Manipulate`Place[5], 
+            Manipulate`Place[6], 
+            Manipulate`Place[7], 
+            Manipulate`Place[8]}], ControlPlacement -> Left], Delimiter, 
+         Item[
+          Style["\:5b9e\:9a8c\:8c03\:8282", {
+            RGBColor[0, 0, 1], 15}], ControlPlacement -> Left], 
+         Item[
+         " ", ControlPlacement -> 
+          Left], {{$CellContext`kL$$, 25., "\:6446\:7ebf\:957fL  "}, 
+          Dynamic[
+          Manipulator[#, {5, 46 - $CellContext`ky$$ - 1}, 
+            AppearanceElements -> {"InputField"}, ImageSize -> Medium, 
+            Appearance -> "Labeled"]& ], ControlPlacement -> 
+          9}, {{$CellContext`kx$$, 21., "\:9776\:5fc3\:4f4d\:7f6ex"}, 
+          Manipulator[#, {6, 24, 1}, AppearanceElements -> {"InputField"}, 
+           ImageSize -> Medium, Appearance -> "Labeled"]& , ControlPlacement -> 
+          10}, {{$CellContext`\[CapitalDelta]Ef$$, 0.0005, 
+           "\:56fa\:6709\:635f\:5931\[CapitalDelta]\[CurlyEpsilon]0   "}, 
+          InputField[#, FieldSize -> 14]& , ControlPlacement -> 
+          11}, {{$CellContext`kh$$, 7.02, "\:8d77\:843d\:9ad8\:5ea6h"}, 
+          Manipulator[#, {2, 20}, AppearanceElements -> {"InputField"}, 
+           ImageSize -> Medium, Appearance -> "Labeled"]& , ControlPlacement -> 
+          12}, 
+         Item[
+          Button[
+           Style["\:5b9e\:9a8c\:8c03\:8282\:63a7\:5236\:9762\:677f", {
+             RGBColor[1, 0, 0], 15}], 
+           CreateDialog[
+            Grid[{{
+               Manipulate`Place[9], 
+               Row[{"  ", 
+                 Checkbox[
+                  Dynamic[$CellContext`flag]], 
+                 Style[" \:8003\:8651\:6446\:7ebf\:5f2f\:66f2", Orange]}]}, {
+               Manipulate`Place[10], 
+               Dynamic[
+                StringForm["  \:7406\:8bba\:503ch0=``cm", 
+                 NumberForm[
+                  
+                  N[($CellContext`km1$$ + $CellContext`km2$$)^2 \
+$CellContext`kx$$^2/(16 $CellContext`km1$$^2 $CellContext`ky$$)], {4, 2}]]]}, {
+               Row[{
+                 Manipulate`Place[11], "    J"}], 
+               Dynamic[
+                StringForm["  \:4fee\:6b63\:503c\[CapitalDelta]h=``cm", 
+                 NumberForm[
+                  N[
+                  100 (((-$CellContext`g) $CellContext`km2$$ (
+                    16 (
+                    1 + $CellContext`e$$)^2 $CellContext`kL$$^3 \
+$CellContext`km1$$^2 $CellContext`ky$$ - 
+                    16 (1 + $CellContext`e$$)^2 $CellContext`kL$$ \
+$CellContext`km1$$^2 If[$CellContext`flag, $CellContext`ks, 
+                    100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^
+                    Rational[1, 2]]^2 $CellContext`ky$$ + (
+                    1 + $CellContext`e$$)^2 
+                    If[$CellContext`flag, $CellContext`ks, 
+                    100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^Rational[1, 2]]^2 (
+                    2 $CellContext`km1$$ $CellContext`km2$$ \
+$CellContext`kx$$^2 + $CellContext`km2$$^2 $CellContext`kx$$^2 + \
+$CellContext`km1$$^2 ($CellContext`kx$$^2 + 
+                    16 Sqrt[$CellContext`kL$$^2 - 
+                    If[$CellContext`flag, $CellContext`ks, 
+                    100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^
+                    Rational[1, 2]]^2] $CellContext`ky$$)) - 
+                    4 $CellContext`kL$$^2 (
+                    2 $CellContext`km1$$ $CellContext`km2$$ \
+$CellContext`kx$$^2 + $CellContext`km2$$^2 $CellContext`kx$$^2 + \
+$CellContext`km1$$^2 ($CellContext`kx$$^2 + 
+                    4 (1 + $CellContext`e$$)^2 
+                    Sqrt[$CellContext`kL$$^2 - 
+                    If[$CellContext`flag, $CellContext`ks, 
+                    100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^
+                    Rational[1, 2]]^2] $CellContext`ky$$))) + 
+                    1600000 $CellContext`kL$$^2 ($CellContext`km1$$ + \
+$CellContext`km2$$)^2 $CellContext`ky$$ $CellContext`\[CapitalDelta]Ef$$)/(
+                    1600 (1 + $CellContext`e$$)^2 $CellContext`g \
+$CellContext`km1$$^2 $CellContext`km2$$ 
+                    If[$CellContext`flag, $CellContext`ks, 
+                    100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^
+                    Rational[1, 2]]^2 $CellContext`ky$$))], {4, 2}]]]}, {
+               Manipulate`Place[12], 
+               Dynamic[
+                StringForm["      h-h0=``cm", 
+                 NumberForm[
+                  
+                  N[-((2 $CellContext`km1$$ $CellContext`km2$$ \
+$CellContext`kx$$^2 + $CellContext`km2$$^2 $CellContext`kx$$^2 + \
+$CellContext`km1$$^2 ($CellContext`kx$$^2 - 
+                    16 $CellContext`kh$$ $CellContext`ky$$))/(
+                    16 $CellContext`km1$$^2 $CellContext`ky$$))], {4, 2}]]]}, {
+               Dynamic[
+                Row[{
+                  Style["\:6c34\:5e73\:8ddd\:79bbs ", 
+                   If[$CellContext`flag, Black, 
+                    GrayLevel[0.5]]], 
+                  Manipulator[
+                   Dynamic[$CellContext`ks], {
+                   5, 100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^Rational[1, 2]}, 
+                   AppearanceElements -> {"InputField"}, ImageSize -> Medium, 
+                   Appearance -> "Labeled", Enabled -> $CellContext`flag]}]], 
+               Dynamic[
+                Style[
+                 StringForm["\:5f2f\:66f2\:504f\:79fb\[CapitalDelta]s=``cm", 
+                  NumberForm[
+                   N[
+                   100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^
+                    Rational[1, 2] - $CellContext`ks], {4, 2}]], 
+                 If[$CellContext`flag, Black, 
+                  GrayLevel[0.5]]]]}}, Frame -> All, FrameStyle -> 
+             GrayLevel[0.8], Alignment -> Left], WindowFrame -> "Palette", 
+            WindowFloating -> True, WindowTitle -> 
+            "\:5b9e\:9a8c\:8c03\:8282\:63a7\:5236\:9762\:677f"], 
+           ImageSize -> {253, 25}], ControlPlacement -> Left], Delimiter, 
+         Item[
+          Style["\:6a21\:62df", {
+            RGBColor[0, 0, 1], 15}], ControlPlacement -> Left], 
+         Item[" ", ControlPlacement -> Left], {{$CellContext`t$$, 0, ""}, 
+          Dynamic[Trigger[#, {0, 
+             $CellContext`finaltime[$CellContext`ky$$, $CellContext`kL$$, \
+$CellContext`kh$$, 
+              
+              If[$CellContext`flag, $CellContext`ks, 
+               100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                   100 - $CellContext`kh$$/100)^2)^
+                Rational[1, 2]]]}, $CellContext`ups$$, ImageSize -> Large]& ],
+           ControlPlacement -> 13}, {{$CellContext`ups$$, 0.1, ""}, 
+          InputField[#, FieldSize -> 3, Background -> GrayLevel[0.9]]& , 
+          ControlPlacement -> 14}, 
+         Item[
+          Framed[
+           Grid[{{" "}, {
+              Style["\:5f00\:59cb\:6a21\:62df", {15, Bold}], 
+              Style["\:901f\:7387", {15, Bold}]}, {
+              Manipulate`Place[13], 
+              Manipulate`Place[14], "  ", 
+              Button[
+               Style["\:8f93\:51fa\:62a5\:544a", {
+                 RGBColor[1, 0, 0], 15}], 
+               
+               If[$CellContext`t$$ == \
+$CellContext`finaltime[$CellContext`ky$$, $CellContext`kL$$, \
+$CellContext`kh$$, 
+                  
+                  If[$CellContext`flag, $CellContext`ks, 
+                   100 (($CellContext`kL$$/100)^2 - ($CellContext`kL$$/
+                    100 - $CellContext`kh$$/100)^2)^Rational[1, 2]]], 
+                CreateDialog[
+                 Panel[
+                  Style[
+                   StringForm[
+                   "\:88ab\:649e\:7403\:6253\:9776\:4f4d\:7f6e\:6a21\:62df\
+\:7ed3\:679c\:ff1a`1` cm", 
+                    NumberForm[$CellContext`finalx, {4, 2}]], {Red, 20}], 
+                  Background -> White], WindowFloating -> True, WindowTitle -> 
+                 "\:5b9e\:9a8c\:62a5\:544a"]], ImageSize -> {80, 30}]}}, 
+            Background -> GrayLevel[0.8]]], ControlPlacement -> Left]}, 
+       "Options" :> {}, "DefaultOptions" :> {}],
+      ImageSizeCache->{975., {360., 365.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     Initialization:>({{$CellContext`finaltime[
+            Pattern[$CellContext`ky, 
+             Blank[]], 
+            Pattern[$CellContext`kL, 
+             Blank[]], 
+            Pattern[$CellContext`kh, 
+             Blank[]], 
+            Pattern[$CellContext`ks, 
+             Blank[]]] := 
+          Module[{$CellContext`\[CapitalDelta]h, $CellContext`\[Theta]0, \
+$CellContext`f\[Theta], $CellContext`\[Theta]h, $CellContext`vq, \
+$CellContext`y, $CellContext`L, $CellContext`h, $CellContext`s, \
+$CellContext`t1, $CellContext`t2, $CellContext`t3, $CellContext`\[Theta]}, \
+$CellContext`y = $CellContext`ky/100; $CellContext`L = $CellContext`kL/
+              100; $CellContext`h = $CellContext`kh/
+              100; $CellContext`s = $CellContext`ks/
+              100; $CellContext`\[CapitalDelta]h = 
+             Chop[Sqrt[$CellContext`L^2 - $CellContext`s^2] - ($CellContext`L - \
+$CellContext`h)]; $CellContext`\[Theta]0 = 
+             Pi/2 - ArcSin[$CellContext`s/$CellContext`L]; $CellContext`t1 = 
+             Sqrt[(2 $CellContext`\[CapitalDelta]h)/$CellContext`g]; \
+$CellContext`vq = (
+               Sqrt[2 $CellContext`g $CellContext`\[CapitalDelta]h] \
+$CellContext`s)/$CellContext`L; $CellContext`f\[Theta] = 
+             ReplaceAll[$CellContext`\[Theta], 
+               Part[
+                
+                NDSolve[{
+                 Derivative[
+                   2][$CellContext`\[Theta]][$CellContext`tx] == \
+($CellContext`g Sin[
+                    Pi/2 - $CellContext`\[Theta][$CellContext`tx]])/$\
+CellContext`L, $CellContext`L 
+                   Derivative[
+                    1][$CellContext`\[Theta]][$CellContext`t1] == \
+$CellContext`vq, $CellContext`\[Theta][$CellContext`t1] == $CellContext`\
+\[Theta]0}, $CellContext`\[Theta], {$CellContext`tx, $CellContext`t1, 0.5}], 
+                1, 1]]; $CellContext`\[Theta]h = 
+             Derivative[
+              2][$CellContext`f\[Theta]]; $CellContext`t2 = $CellContext`t1; 
+            While[$CellContext`\[Theta]h[$CellContext`t2] > 
+              0, $CellContext`t2 = $CellContext`t2 + 
+               0.0001]; $CellContext`t3 = $CellContext`t2 + 
+              Sqrt[(2 $CellContext`y)/$CellContext`g]; 
+            Return[$CellContext`t3]; Null], $CellContext`ks = 
+          15, $CellContext`g = 9.796, 
+          Attributes[Derivative] = {
+           NHoldAll, ReadProtected}, $CellContext`flag = 
+          True, $CellContext`process3D[
+            Pattern[$CellContext`ky, 
+             Blank[]], 
+            Pattern[$CellContext`kx, 
+             Blank[]], 
+            Pattern[$CellContext`kL, 
+             Blank[]], 
+            Pattern[$CellContext`kh, 
+             Blank[]], 
+            Pattern[$CellContext`ks, 
+             
+             Blank[]]] := {$CellContext`gbapan, $CellContext`gzhuzuo, \
+$CellContext`gchangshuzhigan, $CellContext`gticksbapan, \
+$CellContext`gtickszhuzuo, $CellContext`gbzqiuzuo, 
+            $CellContext`fbahuan[$CellContext`kx], 
+            $CellContext`fzhichengqiuzhu[$CellContext`ky], 
+            $CellContext`fshuzhibiaogan[$CellContext`ks + 3.5 + 
+             2, $CellContext`ky], 
+            $CellContext`fticksbiaogan[$CellContext`ks + 3.5 + 
+             2, $CellContext`ky + 1], 
+            $CellContext`fgaodudingweiqi[$CellContext`ks + 3.5 + 
+             2, $CellContext`ky + 1 + $CellContext`kh], 
+            $CellContext`fbaixiangudingduan[$CellContext`ky + 
+             1 + $CellContext`kL]}, $CellContext`gbapan := {Green, 
+            EdgeForm[], 
+            GrayLevel[0.1], 
+            Specularity[1, 10], 
+            Cuboid[{-6, -32.5, -0.5}, {6, -2.5, 0}]}, $CellContext`gzhuzuo := {
+            EdgeForm[], 
+            RGBColor[0, 0, 0.1], 
+            Specularity[1, 10], 
+            Cuboid[{-6, -2.5, -0.5}, {6, 32.5, 1.1}], {
+             
+             Polygon[{{4.6, 32.5, 1.1}, {3.8, 32.5, 2.3}, {3.8, -2.5, 2.3}, {
+              4.6, -2.5, 1.1}}], 
+             
+             Polygon[{{-4.6, 32.5, 1.1}, {-3.8, 32.5, 2.3}, {-3.8, -2.5, 
+              2.3}, {-4.6, -2.5, 1.1}}], 
+             
+             Polygon[{{4.6, 32.5, 1.1}, {3.8, 32.5, 2.3}, {-3.8, 32.5, 
+              2.3}, {-4.6, 32.5, 1.1}}], 
+             
+             Polygon[{{4.6, -2.5, 1.1}, {3.8, -2.5, 2.3}, {-3.8, -2.5, 
+              2.3}, {-4.6, -2.5, 1.1}}], 
+             
+             Polygon[{{3.8, 32.5, 2.3}, {-3.8, 32.5, 2.3}, {-3.8, -2.5, 
+              2.3}, {3.8, -2.5, 2.3}}], 
+             
+             Polygon[{{1, 32.5, 2.3}, {1.5, 32.5, 3.5}, {1.5, -2.5, 3.5}, {
+               1, -2.5, 2.3}}], 
+             
+             Polygon[{{-1, 32.5, 2.3}, {-1.5, 32.5, 3.5}, {-1.5, -2.5, 
+               3.5}, {-1, -2.5, 2.3}}], 
+             
+             Polygon[{{1, 32.5, 2.3}, {1.5, 32.5, 3.5}, {-1.5, 32.5, 
+               3.5}, {-1, 32.5, 2.3}}], 
+             
+             Polygon[{{1, -2.51, 2.3}, {1.5, -2.51, 3.5}, {-1.5, -2.51, 
+               3.5}, {-1, -2.51, 2.3}}], 
+             
+             Polygon[{{1.5, 32.5, 3.5}, {-1.5, 32.5, 3.5}, {-1.5, -2.5, 
+              3.5}, {1.5, -2.5, 3.5}}]}}, $CellContext`gchangshuzhigan := {
+            EdgeForm[], 
+            GrayLevel[0.5], 
+            Specularity[1, 5], 
+            Cylinder[{{-5.2, 2, 0}, {-5.2, 2, 46}}, 0.8], 
+            Sphere[{-5.2, 2, 46}, 0.8]}, $CellContext`gticksbapan := 
+          Module[{$CellContext`u = {}}, 
+            For[$CellContext`i = 50, $CellContext`i <= 300, 
+              Increment[$CellContext`i], 
+              If[Mod[$CellContext`i, 10] == 0, $CellContext`u = 
+                Append[$CellContext`u, {
+                   
+                   Line[{{-6, (-0.1) $CellContext`i, 
+                    0}, {-6, (-0.1) $CellContext`i, 0.5}}], 
+                   
+                   Line[{{-6, (-0.1) $CellContext`i, 0}, {
+                    6, (-0.1) $CellContext`i, 0}}], 
+                   
+                   Text[$CellContext`i/
+                    10, {-6, (-0.1) $CellContext`i, 0.7}]}]]; If[
+                And[
+                Mod[$CellContext`i, 10] != 0, Mod[$CellContext`i, 5] == 
+                 0], $CellContext`u = Append[$CellContext`u, 
+                  
+                  Line[{{-6, (-0.1) $CellContext`i, 
+                    0}, {-6, (-0.1) $CellContext`i, 0.4}}]]]; If[
+                And[
+                Mod[$CellContext`i, 10] != 0, Mod[$CellContext`i, 5] != 
+                 0], $CellContext`u = Append[$CellContext`u, 
+                  
+                  Line[{{-6, (-0.1) $CellContext`i, 
+                    0}, {-6, (-0.1) $CellContext`i, 0.3}}]]]]; $CellContext`u = 
+             Append[$CellContext`u, {
+                Line[{{0, -2.5, 0}, {0, -32.5, 0}}], 
+                GrayLevel[0.9], 
+                
+                Polygon[{{-6, -2.5, 0}, {-6, -2.5, 0.9}, {-6, -32.5, 
+                   0.9}, {-6, -32.5, 0}}], {
+                 EdgeForm[], White, 
+                 
+                 Polygon[{{-6, -5, 0.01}, {6, -5, 0.01}, {
+                   6, -30, 0.01}, {-6, -30, 
+                    0.01}}]}}]; $CellContext`u], $CellContext`i = 
+          201, $CellContext`gtickszhuzuo := 
+          Module[{$CellContext`u = {}}, 
+            For[$CellContext`i = 0, $CellContext`i <= 300, 
+              Increment[$CellContext`i], 
+              If[Mod[$CellContext`i, 10] == 0, $CellContext`u = 
+                Append[$CellContext`u, {
+                   
+                   Line[{{3.8, 0.1 $CellContext`i, 2.3}, {
+                    4.077, 0.1 $CellContext`i, 1.883}}], 
+                   
+                   Text[$CellContext`i/10, {
+                    4.188, 0.1 $CellContext`i, 1.718}]}]]; If[
+                And[
+                Mod[$CellContext`i, 10] != 0, Mod[$CellContext`i, 5] == 
+                 0], $CellContext`u = Append[$CellContext`u, 
+                  
+                  Line[{{3.8, 0.1 $CellContext`i, 2.3}, {
+                    4.022, 0.1 $CellContext`i, 1.967}}]]]; If[
+                And[
+                Mod[$CellContext`i, 10] != 0, Mod[$CellContext`i, 5] != 
+                 0], $CellContext`u = Append[$CellContext`u, 
+                  
+                  Line[{{3.8, 0.1 $CellContext`i, 2.3}, {
+                    3.966, 0.1 $CellContext`i, 2.05}}]]]]; $CellContext`u = 
+             Append[$CellContext`u, {White, 
+                
+                Polygon[{{4.41, -0.5, 1.4}, {3.81, -0.5, 2.3}, {3.81, 30.5, 
+                 2.3}, {4.41, 30.5, 
+                 1.4}}]}]; $CellContext`u], $CellContext`gbzqiuzuo := {
+            EdgeForm[], 
+            GrayLevel[0.1], 
+            Specularity[1, 10], 
+            
+            Polygon[{{3.8, 2.5, 2.3}, {3.3, 2.5, 3.05}, {3.3, -2.5, 3.05}, {
+             3.8, -2.5, 2.3}}], 
+            
+            Polygon[{{-3.8, 2.5, 2.3}, {-3.8, 2.5, 3.05}, {-3.8, -2.5, 
+             3.05}, {-3.8, -2.5, 2.3}}], 
+            
+            Polygon[{{3.8, 2.5, 2.3}, {3.3, 2.5, 3.05}, {-3.8, 2.5, 
+             3.05}, {-3.8, 2.5, 2.3}}], 
+            
+            Polygon[{{3.8, -2.5, 2.3}, {3.3, -2.5, 3.05}, {-3.8, -2.5, 
+             3.05}, {-3.8, -2.5, 2.3}}], 
+            
+            Cuboid[{-3.8, -2.5, 3.05}, {3.3, 2.5, 
+             5.05}]}, $CellContext`fbahuan[
+            Pattern[$CellContext`y, 
+             Blank[]]] := {
+            Line[
+             Table[{
+               Cos[$CellContext`\[Theta]], 
+               Sin[$CellContext`\[Theta]] - $CellContext`y, 
+               0}, {$CellContext`\[Theta], 0, 2 Pi + 0.1, 0.1}]], 
+            Line[
+             
+             Table[{2 Cos[$CellContext`\[Theta]], 
+               2 Sin[$CellContext`\[Theta]] - $CellContext`y, 
+               0}, {$CellContext`\[Theta], 0, 2 Pi + 0.1, 0.1}]], 
+            Line[
+             
+             Table[{3 Cos[$CellContext`\[Theta]], 
+               3 Sin[$CellContext`\[Theta]] - $CellContext`y, 
+               0}, {$CellContext`\[Theta], 0, 2 Pi + 0.1, 0.1}]], 
+            Line[
+             
+             Table[{4 Cos[$CellContext`\[Theta]], 
+               4 Sin[$CellContext`\[Theta]] - $CellContext`y, 
+               0}, {$CellContext`\[Theta], 0, 2 Pi + 0.1, 0.1}]], 
+            Line[
+             
+             Table[{6 Cos[$CellContext`\[Theta]], 
+               6 Sin[$CellContext`\[Theta]] - $CellContext`y, 
+               0}, {$CellContext`\[Theta], 0, 2 Pi + 0.1, 
+               0.1}]]}, $CellContext`fzhichengqiuzhu[
+            Pattern[$CellContext`z, 
+             Blank[]]] := {
+            EdgeForm[], {
+             GrayLevel[0.1], 
+             Specularity[1, 10], 
+             Cylinder[{{0, 0, 5.05}, {0, 0, $CellContext`z - 3.5}}, 1]}, {
+             GrayLevel[0.5], 
+             Specularity[1, 5], 
+             
+             Cylinder[{{0, 0, $CellContext`z - 3.5}, {
+               0, 0, $CellContext`z - 2}}, 0.7], 
+             Polygon[
+              
+              Table[{{0.7 Cos[$CellContext`\[Theta]], 0.7 
+                 Sin[$CellContext`\[Theta]], $CellContext`z - 2}, {
+                0.7 Cos[$CellContext`\[Theta] + 0.5], 0.7 
+                 Sin[$CellContext`\[Theta] + 0.5], $CellContext`z - 2}, {
+                0.2 Cos[$CellContext`\[Theta] + 0.5], 0.2 
+                 Sin[$CellContext`\[Theta] + 0.5], $CellContext`z}, {
+                0.2 Cos[$CellContext`\[Theta]], 0.2 
+                 Sin[$CellContext`\[Theta]], $CellContext`z}}, {$CellContext`\
+\[Theta], -Pi, Pi, 0.5}]], 
+             Polygon[
+              
+              Table[{0.2 Cos[$CellContext`\[Theta]], 0.2 
+                Sin[$CellContext`\[Theta]], $CellContext`z}, {$CellContext`\
+\[Theta], 0, 2 Pi, 0.5}]]}}, $CellContext`fshuzhibiaogan[
+            Pattern[$CellContext`y, 
+             Blank[]], 
+            Pattern[$CellContext`z, 
+             Blank[]]] := {{
+             EdgeForm[], {
+              GrayLevel[0.1], 
+              Specularity[1, 10], 
+              
+              Polygon[{{3.8, $CellContext`y + 2.5, 2.3}, {
+                3.3, $CellContext`y + 2.5, 3.05}, {
+                3.3, $CellContext`y - 2.5, 3.05}, {
+                3.8, $CellContext`y - 2.5, 2.3}}], 
+              Polygon[{{-3.8, $CellContext`y + 2.5, 
+                 2.3}, {-3.8, $CellContext`y + 2.5, 
+                 3.05}, {-3.8, $CellContext`y - 2.5, 
+                 3.05}, {-3.8, $CellContext`y - 2.5, 2.3}}], 
+              
+              Polygon[{{3.8, $CellContext`y + 2.5, 2.3}, {
+                3.3, $CellContext`y + 2.5, 3.05}, {-3.8, $CellContext`y + 2.5,
+                  3.05}, {-3.8, $CellContext`y + 2.5, 2.3}}], 
+              
+              Polygon[{{3.8, $CellContext`y - 2.5, 2.3}, {
+                3.3, $CellContext`y - 2.5, 3.05}, {-3.8, $CellContext`y - 2.5,
+                  3.05}, {-3.8, $CellContext`y - 2.5, 2.3}}], 
+              
+              Cuboid[{-3.8, $CellContext`y - 2.5, 3.05}, {
+               3.3, $CellContext`y + 2.5, 5.05}], 
+              
+              Cylinder[{{0, $CellContext`y, 5.05}, {
+                0, $CellContext`y, $CellContext`z - 3.5}}, 1]}, {
+              GrayLevel[0.5], 
+              Specularity[1, 5], 
+              Polygon[
+               
+               Table[{{
+                 0.8 Cos[$CellContext`\[Theta]], 
+                  0.8 Sin[$CellContext`\[Theta]] + $CellContext`y, \
+$CellContext`z - 3.5}, {
+                 0.8 Cos[$CellContext`\[Theta] + 0.1], 
+                  0.8 Sin[$CellContext`\[Theta] + 
+                    0.1] + $CellContext`y, $CellContext`z - 3.5}, {
+                 0.8 Cos[$CellContext`\[Theta] + 0.1], 
+                  0.8 Sin[$CellContext`\[Theta] + 
+                    0.1] + $CellContext`y, $CellContext`z + 21.5}, {
+                 0.8 Cos[$CellContext`\[Theta]], 
+                  0.8 Sin[$CellContext`\[Theta]] + $CellContext`y, \
+$CellContext`z + 21.5}}, {$CellContext`\[Theta], Pi/4, (7 Pi)/4 - 0.1, 0.1}]], 
+              
+              Polygon[{{
+                0.566, $CellContext`y - 0.566, $CellContext`z - 3.5}, {
+                0.566, $CellContext`y + 0.566, $CellContext`z - 3.5}, {
+                0.566, $CellContext`y + 0.566, $CellContext`z + 21.5}, {
+                0.566, $CellContext`y - 0.566, $CellContext`z + 21.5}}], 
+              Polygon[
+               
+               Table[{0.8 Cos[$CellContext`\[Theta]], 
+                 0.8 Sin[$CellContext`\[Theta]] + $CellContext`y, \
+$CellContext`z + 21.5}, {$CellContext`\[Theta], Pi/4, (7 Pi)/4, 0.1}]]}}, {
+            White, 
+             
+             Line[{{3.8, $CellContext`y, 2.3}, {
+               3.3, $CellContext`y, 3.05}}]}}, $CellContext`fticksbiaogan[
+            Pattern[$CellContext`y, 
+             Blank[]], 
+            Pattern[$CellContext`z, 
+             Blank[]]] := 
+          Module[{$CellContext`u = {}}, 
+            For[$CellContext`i = 0, $CellContext`i <= 200, 
+              Increment[$CellContext`i], 
+              If[Mod[$CellContext`i, 10] == 0, $CellContext`u = 
+                Append[$CellContext`u, {
+                   
+                   Line[{{0.566, $CellContext`y - 0.566, 
+                    0.1 $CellContext`i + $CellContext`z}, {
+                    0.566, $CellContext`y - 0.066, 
+                    0.1 $CellContext`i + $CellContext`z}}], 
+                   
+                   Text[$CellContext`i/10, {
+                    0.566, $CellContext`y + 0.134, 
+                    0.1 $CellContext`i + $CellContext`z}]}]]; If[
+                And[
+                Mod[$CellContext`i, 10] != 0, Mod[$CellContext`i, 5] == 
+                 0], $CellContext`u = Append[$CellContext`u, 
+                  
+                  Line[{{0.566, $CellContext`y - 0.566, 
+                    0.1 $CellContext`i + $CellContext`z}, {
+                    0.566, $CellContext`y - 0.166, 
+                    0.1 $CellContext`i + $CellContext`z}}]]]; If[
+                And[
+                Mod[$CellContext`i, 10] != 0, Mod[$CellContext`i, 5] != 
+                 0], $CellContext`u = Append[$CellContext`u, 
+                  
+                  Line[{{0.566, $CellContext`y - 0.566, 
+                    0.1 $CellContext`i + $CellContext`z}, {
+                    0.566, $CellContext`y - 0.266, 
+                    0.1 $CellContext`i + $CellContext`z}}]]]]; $CellContext`u = 
+             Append[$CellContext`u, {White, 
+                EdgeForm[], 
+                Specularity[1, 10], 
+                
+                Polygon[{{
+                  0.576, $CellContext`y - 0.566, $CellContext`z - 0.5}, {
+                  0.576, $CellContext`y + 0.566, $CellContext`z - 0.5}, {
+                  0.576, $CellContext`y + 0.566, $CellContext`z + 20.5}, {
+                  0.576, $CellContext`y - 0.566, $CellContext`z + 
+                   20.5}}]}]; $CellContext`u], $CellContext`fgaodudingweiqi[
+            Pattern[$CellContext`y, 
+             Blank[]], 
+            Pattern[$CellContext`z, 
+             Blank[]]] := {
+            EdgeForm[], 
+            GrayLevel[0.1], 
+            Specularity[1, 10], 
+            Polygon[
+             Table[{{
+               1.5 Cos[$CellContext`\[Theta]], 
+                1.5 Sin[$CellContext`\[Theta]] + $CellContext`y, \
+$CellContext`z - 1}, {
+               1.5 Cos[$CellContext`\[Theta] + 0.1], 
+                1.5 Sin[$CellContext`\[Theta] + 
+                   0.1] + $CellContext`y, $CellContext`z - 1}, {
+               1.5 Cos[$CellContext`\[Theta] + 0.1], 
+                1.5 Sin[$CellContext`\[Theta] + 
+                   0.1] + $CellContext`y, $CellContext`z + 1}, {
+               1.5 Cos[$CellContext`\[Theta]], 
+                1.5 Sin[$CellContext`\[Theta]] + $CellContext`y, \
+$CellContext`z + 1}}, {$CellContext`\[Theta], 1.159, 5.124, 0.1}]], 
+            Polygon[
+             
+             Table[{1.5 Cos[$CellContext`\[Theta]], 
+               1.5 Sin[$CellContext`\[Theta]] + $CellContext`y, \
+$CellContext`z - 1}, {$CellContext`\[Theta], 1.159, 5.224, 0.1}]], 
+            
+            Polygon[{{0.6, $CellContext`y - 1.375, $CellContext`z - 1}, {
+              0.6, $CellContext`y - 0.566, $CellContext`z - 1}, {
+              0.6, $CellContext`y - 0.566, $CellContext`z + 1}, {
+              0.6, $CellContext`y - 1.375, $CellContext`z + 1}}], 
+            
+            Polygon[{{0.6, $CellContext`y + 1.375, $CellContext`z - 1}, {
+              0.6, $CellContext`y + 0.566, $CellContext`z - 1}, {
+              0.6, $CellContext`y + 0.566, $CellContext`z + 1}, {
+              0.6, $CellContext`y + 1.375, $CellContext`z + 1}}], {
+             
+             Line[{{0.6, $CellContext`y - 1.375, $CellContext`z}, {
+               0.6, $CellContext`y + 1.375, $CellContext`z}}]}, 
+            
+            Cylinder[{{0, $CellContext`y, $CellContext`z + 1}, {
+              0, $CellContext`y, $CellContext`z + 2.5}}, 1.5], 
+            
+            Cuboid[{-1.5, $CellContext`y - 5, $CellContext`z + 2.5}, {
+             1.5, $CellContext`y + 1.5, $CellContext`z + 3}], 
+            
+            Cuboid[{-1.5, $CellContext`y - 5, $CellContext`z + 3}, {
+             1.5, $CellContext`y - 2, $CellContext`z + 6}], 
+            Polygon[
+             
+             Table[{{0.7 Cos[$CellContext`\[Theta]], 
+                0.7 Sin[$CellContext`\[Theta]] + $CellContext`y - 
+                3.5, $CellContext`z + 2.5}, {
+               0.7 Cos[$CellContext`\[Theta] + 0.1], 
+                0.7 Sin[$CellContext`\[Theta] + 0.1] + $CellContext`y - 
+                3.5, $CellContext`z + 2.5}, {
+               0.4 Cos[$CellContext`\[Theta] + 0.1], 
+                0.4 Sin[$CellContext`\[Theta] + 0.1] + $CellContext`y - 
+                3.5, $CellContext`z + 1}, {
+               0.4 Cos[$CellContext`\[Theta]], 
+                0.4 Sin[$CellContext`\[Theta]] + $CellContext`y - 
+                3.5, $CellContext`z + 1}}, {$CellContext`\[Theta], 0, 2 Pi, 
+               0.1}]], 
+            Polygon[
+             
+             Table[{0.4 Cos[$CellContext`\[Theta]], 
+               0.4 Sin[$CellContext`\[Theta]] + $CellContext`y - 
+               3.5, $CellContext`z + 1}, {$CellContext`\[Theta], 0, 2 Pi, 
+               0.1}]]}, $CellContext`fbaixiangudingduan[
+            Pattern[$CellContext`z, 
+             Blank[]]] := {
+            EdgeForm[], 
+            GrayLevel[0.1], 
+            Specularity[1, 10], 
+            
+            Cuboid[{-6.5, 0.7, $CellContext`z - 2}, {-3.9, 
+              3.3, $CellContext`z}], 
+            Cuboid[{-6.5, 0.7, $CellContext`z}, {1, 3.3, $CellContext`z + 1}], 
+            
+            Polygon[{{-1.5, 3.3, $CellContext`z}, {-3.9, 
+               3.3, $CellContext`z}, {-3.9, 3.3, $CellContext`z - 2}}], 
+            
+            Polygon[{{-1.5, 0.7, $CellContext`z}, {-3.9, 
+               0.7, $CellContext`z}, {-3.9, 0.7, $CellContext`z - 
+               2}}]}, $CellContext`processBall[
+            Pattern[$CellContext`ky, 
+             Blank[]], 
+            Pattern[$CellContext`kx, 
+             Blank[]], 
+            Pattern[$CellContext`kL, 
+             Blank[]], 
+            Pattern[$CellContext`kh, 
+             Blank[]], 
+            Pattern[$CellContext`ks, 
+             Blank[]], 
+            Pattern[$CellContext`km1, 
+             Blank[]], 
+            Pattern[$CellContext`km2, 
+             Blank[]], 
+            Pattern[$CellContext`e, 
+             Blank[]], 
+            Pattern[$CellContext`\[CapitalDelta]Ef, 
+             Blank[]], 
+            Pattern[$CellContext`g, 
+             Blank[]], 
+            Pattern[$CellContext`t, 
+             Blank[]]] := 
+          Module[{$CellContext`y, $CellContext`x, $CellContext`L, \
+$CellContext`h, $CellContext`s, $CellContext`m1, $CellContext`m2, \
+$CellContext`yball1, $CellContext`zball1, $CellContext`yball2, \
+$CellContext`zball2, $CellContext`t1, $CellContext`t2, $CellContext`t3, \
+$CellContext`\[CapitalDelta]h, $CellContext`\[Theta]0, $CellContext`vq, \
+$CellContext`\[Theta], $CellContext`\[Theta]h, $CellContext`f\[Theta], \
+$CellContext`v2, $CellContext`gbaixian, $CellContext`baixianfunction, \
+$CellContext`gshoulifenxi}, $CellContext`y = $CellContext`ky/
+              100; $CellContext`x = $CellContext`kx/
+              100; $CellContext`L = $CellContext`kL/
+              100; $CellContext`h = $CellContext`kh/
+              100; $CellContext`s = $CellContext`ks/
+              100; $CellContext`m1 = $CellContext`km1/
+              1000; $CellContext`m2 = $CellContext`km2/
+              1000; $CellContext`\[CapitalDelta]h = 
+             Chop[Sqrt[$CellContext`L^2 - $CellContext`s^2] - ($CellContext`L - \
+$CellContext`h)]; $CellContext`\[Theta]0 = 
+             Pi/2 - ArcSin[$CellContext`s/$CellContext`L]; $CellContext`t1 = 
+             Sqrt[(2 $CellContext`\[CapitalDelta]h)/$CellContext`g]; \
+$CellContext`vq = (
+               Sqrt[2 $CellContext`g $CellContext`\[CapitalDelta]h] \
+$CellContext`s)/$CellContext`L; $CellContext`f\[Theta] = 
+             ReplaceAll[$CellContext`\[Theta], 
+               Part[
+                
+                NDSolve[{
+                 Derivative[
+                   2][$CellContext`\[Theta]][$CellContext`tx] == \
+($CellContext`g Sin[
+                    Pi/2 - $CellContext`\[Theta][$CellContext`tx]])/$\
+CellContext`L, $CellContext`L 
+                   Derivative[
+                    1][$CellContext`\[Theta]][$CellContext`t1] == \
+$CellContext`vq, $CellContext`\[Theta][$CellContext`t1] == $CellContext`\
+\[Theta]0}, $CellContext`\[Theta], {$CellContext`tx, $CellContext`t1, 0.5}], 
+                1, 1]]; $CellContext`\[Theta]h = 
+             Derivative[
+              2][$CellContext`f\[Theta]]; $CellContext`t2 = $CellContext`t1; 
+            While[$CellContext`\[Theta]h[$CellContext`t2] > 
+              0, $CellContext`t2 = $CellContext`t2 + 
+               0.0001]; $CellContext`t3 = $CellContext`t2 + 
+              Sqrt[(2 $CellContext`y)/$CellContext`g]; $CellContext`v2 = 
+             Sqrt[2] Sqrt[-(((
+                    1 + $CellContext`e)^2 $CellContext`g $CellContext`m1^2 \
+$CellContext`m2 (-($CellContext`h $CellContext`s^2) + ($CellContext`L - \
+$CellContext`s) ($CellContext`L + $CellContext`s) (-$CellContext`L + 
+                    Sqrt[$CellContext`L^2 - $CellContext`s^2])) + \
+$CellContext`L^2 ($CellContext`m1 + $CellContext`m2)^2 $CellContext`\
+\[CapitalDelta]Ef)/($CellContext`L^2 $CellContext`m2 ($CellContext`m1 + \
+$CellContext`m2)^2))]; $CellContext`yball1 := 
+             Condition[$CellContext`ks + 2, 
+               0 <= $CellContext`t <= $CellContext`t1]; $CellContext`yball1 := 
+             Condition[2 + $CellContext`kL Cos[
+                  $CellContext`f\[Theta][$CellContext`t]], 
+               
+               Inequality[$CellContext`t1, Less, $CellContext`t, 
+                LessEqual, $CellContext`t2]]; $CellContext`yball1 := 
+             Condition[
+              2, $CellContext`t2 < $CellContext`t]; $CellContext`zball1 := 
+             Condition[$CellContext`kh + $CellContext`ky + 
+               1 - (100 1 $CellContext`g $CellContext`t^2)/2, 
+               0 <= $CellContext`t <= $CellContext`t1]; $CellContext`zball1 := 
+             Condition[$CellContext`ky + $CellContext`kL + 
+               1 - $CellContext`kL Sin[
+                 $CellContext`f\[Theta][$CellContext`t]], 
+               
+               Inequality[$CellContext`t1, Less, $CellContext`t, 
+                LessEqual, $CellContext`t2]]; $CellContext`zball1 := 
+             Condition[$CellContext`ky + 
+               1, $CellContext`t2 < $CellContext`t]; $CellContext`yball2 := 
+             Condition[
+              0, 0 <= $CellContext`t <= $CellContext`t2]; $CellContext`yball2 := 
+             Condition[(-100) $CellContext`v2 ($CellContext`t - \
+$CellContext`t2), 
+               
+               Inequality[$CellContext`t2, Less, $CellContext`t, 
+                LessEqual, $CellContext`t3]]; $CellContext`yball2 := 
+             Condition[(-100) $CellContext`v2 ($CellContext`t3 - \
+$CellContext`t2), $CellContext`t3 < $CellContext`t]; $CellContext`zball2 := 
+             Condition[$CellContext`ky + 1, 
+               0 <= $CellContext`t <= $CellContext`t2]; $CellContext`zball2 := 
+             Condition[$CellContext`ky + 
+               1 - (100 
+                1 $CellContext`g ($CellContext`t - $CellContext`t2)^2)/2, 
+               
+               Inequality[$CellContext`t2, Less, $CellContext`t, 
+                LessEqual, $CellContext`t3]]; $CellContext`zball2 := 
+             Condition[$CellContext`ky + 
+               1 - (100 
+                1 $CellContext`g ($CellContext`t3 - $CellContext`t2)^2)/
+               2, $CellContext`t3 < $CellContext`t]; \
+$CellContext`baixianfunction = $CellContext`fbaixian[
+              2, $CellContext`ky + 
+               1 + $CellContext`kL, $CellContext`yball1, $CellContext`zball1, \
+$CellContext`kL]; $CellContext`gbaixian := Condition[
+               Line[
+                Table[{0, $CellContext`i, 
+                  $CellContext`baixianfunction[$CellContext`i]}, \
+{$CellContext`i, 2, $CellContext`yball1, 0.1}]], 
+               Inequality[
+               0, LessEqual, $CellContext`t, 
+                Less, $CellContext`t2]]; $CellContext`gbaixian := Condition[
+               
+               Line[{{0, 2, $CellContext`ky + 1 + $CellContext`kL}, {
+                 0, $CellContext`yball1, $CellContext`zball1}}], \
+$CellContext`t2 <= $CellContext`t]; $CellContext`gshoulifenxi := Condition[{}, 
+               Or[
+                And[$CellContext`t1 < 0.01, 
+                 Inequality[0, LessEqual, $CellContext`t, Less, 0.01]], 
+                
+                And[$CellContext`t1 >= 0.01, 
+                 0 <= $CellContext`t <= $CellContext`t1 - 
+                  0.01], $CellContext`t > $CellContext`t1 + 
+                 0.01]]; $CellContext`gshoulifenxi := Condition[
+               $CellContext`fshoulifenxi[
+                Sqrt[2 $CellContext`g $CellContext`\[CapitalDelta]h], 
+                Pi/2 - $CellContext`\[Theta]0, $CellContext`yball1, \
+$CellContext`zball1], 
+               And[
+                
+                Inequality[$CellContext`t1 - 0.01, Less, $CellContext`t, 
+                 LessEqual, $CellContext`t1 + 0.01], $CellContext`t1 >= 
+                0.01]]; $CellContext`finalx = 
+             100 $CellContext`v2 ($CellContext`t3 - $CellContext`t2); Return[{{
+                GrayLevel[0.5], 
+                Specularity[1, 50], 
+                Sphere[{0, $CellContext`yball1, $CellContext`zball1}], 
+                
+                Sphere[{
+                 0, $CellContext`yball2, $CellContext`zball2}]}, \
+$CellContext`gbaixian, $CellContext`gshoulifenxi, 
+               If[$CellContext`t >= $CellContext`t3, {Red, 
+                 
+                 Line[{{-6, $CellContext`yball2, 0.01}, {
+                   6, $CellContext`yball2, 0.01}}]}]}]; 
+            Null], $CellContext`fbaixian[
+            Pattern[$CellContext`y1, 
+             Blank[]], 
+            Pattern[$CellContext`z1, 
+             Blank[]], 
+            Pattern[$CellContext`y2, 
+             Blank[]], 
+            Pattern[$CellContext`z2, 
+             Blank[]], 
+            Pattern[$CellContext`L, 
+             Blank[]]] := Function[{$CellContext`x}, 
+            Evaluate[
+             
+             Fit[{{$CellContext`y1, $CellContext`z1}, {$CellContext`y2, \
+$CellContext`z2}, {($CellContext`y1 + $CellContext`y2)/
+                2, ($CellContext`z1 + $CellContext`z2)/2 - ($CellContext`L - 
+                Sqrt[($CellContext`y1 - $CellContext`y2)^2 + ($CellContext`z1 - \
+$CellContext`z2)^2])}}, {
+              1, $CellContext`x, $CellContext`x^2}, $CellContext`x]]], \
+$CellContext`fshoulifenxi[
+            Pattern[$CellContext`v, 
+             Blank[]], 
+            Pattern[$CellContext`\[Alpha], 
+             Blank[]], 
+            Pattern[$CellContext`y, 
+             Blank[]], 
+            Pattern[$CellContext`z, 
+             Blank[]]] := {
+            Arrowheads[0.01], Red, 
+            
+            Arrow[{{0, $CellContext`y, $CellContext`z}, {
+              0, $CellContext`y, $CellContext`z - 5 $CellContext`v}}], 
+            
+            Arrow[{{0, $CellContext`y, $CellContext`z}, {
+              0, $CellContext`y + 
+               5 $CellContext`v Cos[$CellContext`\[Alpha]] 
+                Sin[$CellContext`\[Alpha]], $CellContext`z - 5 $CellContext`v 
+               Cos[$CellContext`\[Alpha]] Cos[$CellContext`\[Alpha]]}}], 
+            
+            Arrow[{{0, $CellContext`y, $CellContext`z}, {
+              0, $CellContext`y - 5 $CellContext`v Sin[$CellContext`\[Alpha]] 
+               Cos[$CellContext`\[Alpha]], $CellContext`z - 5 $CellContext`v 
+               Sin[$CellContext`\[Alpha]] Sin[$CellContext`\[Alpha]]}}], {
+            Dashed, 
+             
+             Line[{{0, $CellContext`y, $CellContext`z - 5 $CellContext`v}, {
+               0, $CellContext`y + 
+                5 $CellContext`v Cos[$CellContext`\[Alpha]] 
+                 Sin[$CellContext`\[Alpha]], $CellContext`z - 
+                5 $CellContext`v Cos[$CellContext`\[Alpha]] 
+                Cos[$CellContext`\[Alpha]]}}], 
+             
+             Line[{{0, $CellContext`y, $CellContext`z - 5 $CellContext`v}, {
+               0, $CellContext`y - 5 $CellContext`v 
+                Sin[$CellContext`\[Alpha]] 
+                Cos[$CellContext`\[Alpha]], $CellContext`z - 5 $CellContext`v 
+                Sin[$CellContext`\[Alpha]] 
+                Sin[$CellContext`\[Alpha]]}}]}}, $CellContext`finalx = 
+          18.169746323341926`, $CellContext`process2D[
+            Pattern[$CellContext`ky, 
+             Blank[]], 
+            Pattern[$CellContext`kL, 
+             Blank[]], 
+            Pattern[$CellContext`kh, 
+             Blank[]], 
+            Pattern[$CellContext`ks, 
+             
+             Blank[]]] := {$CellContext`gpbapan, $CellContext`gpzhuzuo, \
+$CellContext`gpbzqiuzuo, 
+            $CellContext`fpzhichengqiuzhu[$CellContext`ky], 
+            $CellContext`fpshuzhibiaogan[$CellContext`ks + 3.5 + 
+             2, $CellContext`ky], 
+            $CellContext`fpgaodudingweiqi[$CellContext`ks + 3.5 + 
+             2, $CellContext`ky + 1 + $CellContext`kh], 
+            $CellContext`fpbaixiangudingduan[$CellContext`ky + 
+             1 + $CellContext`kL]}, $CellContext`gpbapan := {
+            
+            Line[{{0, -32.5, -0.5}, {0, -2.5, -0.5}, {0, -2.5, 0}, {
+              0, -32.5, 0}, {0, -32.5, -0.5}}]}, $CellContext`gpzhuzuo := {
+            
+            Line[{{0, -2.5, -0.5}, {0, 32.5, -0.5}, {0, 32.5, 3.5}, {
+              0, -2.5, 3.5}, {0, -2.5, -0.5}}], 
+            Line[{{0, -2.5, 2.3}, {0, 32.5, 2.3}}]}, $CellContext`gpbzqiuzuo := {
+            
+            Line[{{0, -2.5, 3.5}, {0, -2.5, 5.05}, {0, 2.5, 5.05}, {
+              0, 2.5, 2.3}}]}, $CellContext`fpzhichengqiuzhu[
+            Pattern[$CellContext`z, 
+             Blank[]]] := {
+            
+            Line[{{0, -1, 5.05}, {0, -1, $CellContext`z - 3.5}, {
+              0, 1, $CellContext`z - 3.5}, {0, 1, 5.05}}], 
+            
+            Line[{{0, -0.7, $CellContext`z - 3.5}, {
+              0, -0.7, $CellContext`z - 2}, {0, -0.2, $CellContext`z}, {
+              0, 0.2, $CellContext`z}, {0, 0.7, $CellContext`z - 2}, {
+              0, 0.7, $CellContext`z - 3.5}}]}, $CellContext`fpshuzhibiaogan[
+            Pattern[$CellContext`y, 
+             Blank[]], 
+            Pattern[$CellContext`z, 
+             Blank[]]] := {
+            
+            Line[{{0, $CellContext`y - 2.5, 2.3}, {
+              0, $CellContext`y - 2.5, 5.05}, {
+              0, $CellContext`y + 2.5, 5.05}, {
+              0, $CellContext`y + 2.5, 2.3}}], 
+            
+            Line[{{0, $CellContext`y - 1, 5.05}, {
+              0, $CellContext`y - 1, $CellContext`z - 3.5}, {
+              0, $CellContext`y + 1, $CellContext`z - 3.5}, {
+              0, $CellContext`y + 1, 5.05}}], 
+            
+            Line[{{0, $CellContext`y - 0.8, $CellContext`z - 3.5}, {
+              0, $CellContext`y - 0.8, $CellContext`z + 21.5}, {
+              0, $CellContext`y + 0.8, $CellContext`z + 21.5}, {
+              0, $CellContext`y + 0.8, $CellContext`z - 
+               3.5}}]}, $CellContext`fpgaodudingweiqi[
+            Pattern[$CellContext`y, 
+             Blank[]], 
+            Pattern[$CellContext`z, 
+             Blank[]]] := {
+            
+            Line[{{0, $CellContext`y - 1.5, $CellContext`z + 2.5}, {
+              0, $CellContext`y - 1.5, $CellContext`z - 1}, {
+              0, $CellContext`y + 1.5, $CellContext`z - 1}, {
+              0, $CellContext`y + 1.5, $CellContext`z + 2.5}}], 
+            
+            Line[{{0, $CellContext`y - 1.5, $CellContext`z + 1}, {
+              0, $CellContext`y + 1.5, $CellContext`z + 1}}], 
+            
+            Line[{{0, $CellContext`y - 5, $CellContext`z + 2.5}, {
+              0, $CellContext`y + 1.5, $CellContext`z + 2.5}, {
+              0, $CellContext`y + 1.5, $CellContext`z + 3}, {
+              0, $CellContext`y - 5, $CellContext`z + 3}, {
+              0, $CellContext`y - 5, $CellContext`z + 2.5}}], 
+            
+            Line[{{0, $CellContext`y - 5, $CellContext`z + 3}, {
+              0, $CellContext`y - 5, $CellContext`z + 6}, {
+              0, $CellContext`y - 2, $CellContext`z + 6}, {
+              0, $CellContext`y - 2, $CellContext`z + 3}}], 
+            
+            Line[{{0, $CellContext`y - 4.2, $CellContext`z + 2.5}, {
+              0, $CellContext`y - 3.9, $CellContext`z + 1}, {
+              0, $CellContext`y - 3.1, $CellContext`z + 1}, {
+              0, $CellContext`y - 2.8, $CellContext`z + 
+               2.5}}]}, $CellContext`fpbaixiangudingduan[
+            Pattern[$CellContext`z, 
+             Blank[]]] := {
+            
+            Line[{{0, 0.7, $CellContext`z}, {0, 3.3, $CellContext`z}, {
+              0, 3.3, $CellContext`z + 1}, {0, 0.7, $CellContext`z + 1}, {
+              0, 0.7, $CellContext`z}}]}, $CellContext`processe := 
+          Manipulate[$CellContext`w = 
+             Module[{$CellContext`u = {}, $CellContext`i, $CellContext`y, \
+$CellContext`m1, $CellContext`m2}, $CellContext`m1 = $CellContext`m10/
+                 1000; $CellContext`m2 = $CellContext`m20/
+                 1000; $CellContext`y = $CellContext`y0/100; 
+               For[$CellContext`i = 1, $CellContext`i <= 
+                 Length[$CellContext`data], 
+                 Increment[$CellContext`i], $CellContext`u = 
+                 Append[$CellContext`u, {
+                    
+                    Part[$CellContext`data, $CellContext`i, 1], (
+                    100 ($CellContext`m1^2 (
+                    Part[$CellContext`data, $CellContext`i, 1]/100)^2 + 
+                    2 $CellContext`m1 $CellContext`m2 (
+                    Part[$CellContext`data, $CellContext`i, 1]/
+                    100)^2 + $CellContext`m2^2 (
+                    Part[$CellContext`data, $CellContext`i, 1]/100)^2))/(
+                    16 $CellContext`m1^2 $CellContext`y), 
+                    
+                    Part[$CellContext`data, $CellContext`i, 
+                    2]}]]; $CellContext`u]; If[$CellContext`ii == 1, 
+              
+              Module[{$CellContext`u = {}, $CellContext`uu = {}, \
+$CellContext`f, $CellContext`b, $CellContext`s, $CellContext`e, \
+$CellContext`ee, $CellContext`x, $CellContext`\[CapitalDelta]E0, \
+$CellContext`i, $CellContext`y, $CellContext`m1, $CellContext`m2}, \
+$CellContext`m1 = $CellContext`m10/1000; $CellContext`m2 = $CellContext`m20/
+                 1000; $CellContext`y = $CellContext`y0/100; 
+               For[$CellContext`i = 1, $CellContext`i <= 
+                 Length[$CellContext`data], 
+                 Increment[$CellContext`i], $CellContext`u = 
+                  Append[$CellContext`u, {(
+                    1 ($CellContext`m1^2 (
+                    Part[$CellContext`data, $CellContext`i, 1]/100)^2 + 
+                    2 $CellContext`m1 $CellContext`m2 (
+                    Part[$CellContext`data, $CellContext`i, 1]/
+                    100)^2 + $CellContext`m2^2 (
+                    Part[$CellContext`data, $CellContext`i, 1]/100)^2))/(
+                    16 $CellContext`m1^2 $CellContext`y), (
+                    1 $CellContext`m2 (
+                    Part[$CellContext`data, $CellContext`i, 1]/(100 
+                    Sqrt[(2 $CellContext`y)/$CellContext`g]))^2)/2 - (
+                    1 $CellContext`m2 (
+                    Part[$CellContext`data, $CellContext`i, 2]/(100 
+                    Sqrt[(2 $CellContext`y)/$CellContext`g]))^2)/
+                    2}]; $CellContext`uu = 
+                  Append[$CellContext`u, (
+                    1 ($CellContext`m1^2 (
+                    Part[$CellContext`data, $CellContext`i, 1]/100)^2 + 
+                    2 $CellContext`m1 $CellContext`m2 (
+                    Part[$CellContext`data, $CellContext`i, 1]/
+                    100)^2 + $CellContext`m2^2 (
+                    Part[$CellContext`data, $CellContext`i, 1]/100)^2))/(
+                    16 $CellContext`m1^2 $CellContext`y)]]; $CellContext`f = 
+                Function[{$CellContext`x}, 
+                  Evaluate[
+                   
+                   Fit[$CellContext`u, {
+                    1, $CellContext`x}, $CellContext`x]]]; $CellContext`b = 
+                Part[
+                  Fit[$CellContext`u, {1, $CellContext`x}, $CellContext`x], 2,
+                   1]; $CellContext`e = -1 + 
+                 Sqrt[$CellContext`g $CellContext`m1^2 $CellContext`m2 (
+                    4 $CellContext`g $CellContext`m1^2 $CellContext`m2 - \
+$CellContext`b ($CellContext`m1 + $CellContext`m2)^2)]/($CellContext`g \
+$CellContext`m1^2 $CellContext`m2); $CellContext`\[CapitalDelta]E0 = Part[
+                  Fit[$CellContext`u, {1, $CellContext`x}, $CellContext`x], 
+                  1]; Column[{
+                  Show[
+                   Plot[
+                    $CellContext`f[$CellContext`x], {$CellContext`x, 0, 
+                    Max[$CellContext`uu]}, AxesOrigin -> {0, 0}], 
+                   ListPlot[$CellContext`u], ImageSize -> 400], "\n", 
+                  StringForm["\:6062\:590d\:7cfb\:6570e\:4e3a\:ff1a ``", 
+                   NumberForm[$CellContext`e, {3, 2}]], 
+                  StringForm[
+                  "\:56fa\:5b9a\:80fd\:91cf\:635f\:5931\:4e3a\:ff1a `` J", 
+                   ScientificForm[$CellContext`\[CapitalDelta]E0, 3]]}]]], 
+            Column[{
+              Style["   \:6d4b\:91cf\:6062\:590d\:7cfb\:6570e", {Red, 20}], 
+              "\n", 
+              
+              Control[{{$CellContext`y0, 0, "   y"}, 
+                InputField[#, ImageSize -> {150, 20}]& }], 
+              
+              Control[{{$CellContext`m10, 0, "  m1"}, 
+                InputField[#, ImageSize -> {150, 20}]& }], 
+              
+              Control[{{$CellContext`m20, 0, "  m2"}, 
+                InputField[#, ImageSize -> {150, 20}]& }], 
+              
+              Control[{{$CellContext`data, 0, "data\n="}, 
+                InputField[#, ImageSize -> {150, 200}]& }], 
+              Row[{"     ", 
+                Button["\:68c0\:67e5", 
+                 CreateDialog[
+                  
+                  TableForm[$CellContext`w, 
+                   TableHeadings -> {
+                    None, {"\:6253\:9776\:76ee\:6807/cm", 
+                    "\:7406\:8bba\:8d77\:843d\:9ad8\:5ea6/cm", 
+                    "\:5b9e\:9645\:6253\:9776\:4f4d\:7f6e/cm"}}], WindowFrame -> 
+                  "Palette", WindowFloating -> True]], 
+                Button["\:8ba1\:7b97", 
+                 If[Head[$CellContext`data] == List, $CellContext`ii = 1]], 
+                Button[
+                "\:91cd\:65b0\:8f93\:5165", $CellContext`ii = 
+                  0; $CellContext`data = 0; $CellContext`y0 = 
+                  0; $CellContext`m10 = 0; $CellContext`m20 = 
+                  0; $CellContext`w = 0], 
+                PopupWindow[
+                 Button["\:5e2e\:52a9"], 
+                 "\ny \:88ab\:649e\:7403\:5ea7\:7684\:9ad8\:5ea6\:ff0c\:5355\
+\:4f4d\:4e3a\:5398\:7c73\:ff1b\n\n\
+m1\:4e3a\:649e\:51fb\:7403\:7684\:8d28\:91cf\:ff0cm2\:4e3a\:88ab\:649e\:7403\
+\:7684\:8d28\:91cf\:ff0c\:5355\:4f4d\:90fd\:4e3a\:514b\:ff1b\n\ndata\:4e3a\
+\:5b9e\:9a8c\:6570\:636e\:3002\n\n\:5b9e\:9a8c\:ff08\:6d4b\:91cf\:ff09\:65b9\
+\:6cd5\:ff1a\n"]}]}], ControlPlacement -> Left, 
+            Initialization :> ($CellContext`ii = 0; $CellContext`g = 
+              9.796; $CellContext`w = 0), Deinitialization :> FrontEndExecute[
+              FrontEndToken["ToggleDynamicUpdating"]]]}; ($CellContext`g = 
+          9.796; $CellContext`flag = True; $CellContext`ks = 15; Null)}; 
+      Typeset`initDone$$ = True),
+     SynchronousInitialization->True,
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{
+  3.52300134834375*^9, {3.523001382765625*^9, 3.52300145275*^9}, {
+   3.523001965203125*^9, 3.523002046296875*^9}, {3.523002343828125*^9, 
+   3.52300237103125*^9}, 3.523002609390625*^9, 3.523002641125*^9, 
+   3.523002726921875*^9, 3.523002854421875*^9, 3.523002888796875*^9, 
+   3.5230029333125*^9, 3.523002981703125*^9, 3.5230030141875*^9, 
+   3.52300305384375*^9, {3.52300318990625*^9, 3.52300322015625*^9}, 
+   3.52300334490625*^9, 3.523003582640625*^9, 3.523003688171875*^9, {
+   3.5230039864375*^9, 3.52300401184375*^9}, {3.523004092640625*^9, 
+   3.523004120859375*^9}, {3.523004404328125*^9, 3.52300442121875*^9}, 
+   3.52300446515625*^9, 3.523004553703125*^9, {3.523004587953125*^9, 
+   3.523004601265625*^9}, 3.523004941109375*^9, {3.523004975078125*^9, 
+   3.523005004359375*^9}, {3.52300505396875*^9, 3.523005081296875*^9}, 
+   3.523005342796875*^9, {3.523005638984375*^9, 3.523005668125*^9}, {
+   3.523005716109375*^9, 3.523005744140625*^9}, {3.523005987046875*^9, 
+   3.5230059970625*^9}, {3.52300606921875*^9, 3.523006094359375*^9}, {
+   3.5230061261875*^9, 3.52300614265625*^9}, {3.523007513484375*^9, 
+   3.5230075593125*^9}, 3.523007639984375*^9, {3.523007817703125*^9, 
+   3.5230078394375*^9}, {3.5230078865625*^9, 3.52300790234375*^9}, 
+   3.523049631234375*^9, {3.5230498480625*^9, 3.52304987015625*^9}, {
+   3.52305000490625*^9, 3.523050016046875*^9}, 3.523051042078125*^9, 
+   3.523051116859375*^9, 3.52305159403125*^9, {3.523051660453125*^9, 
+   3.523051702*^9}, 3.523051998109375*^9, {3.523052068421875*^9, 
+   3.52305207578125*^9}, 3.523052373703125*^9, 3.523052725140625*^9, {
+   3.523052764140625*^9, 3.52305282059375*^9}, 3.52305302803125*^9, {
+   3.523053093859375*^9, 3.52305313653125*^9}, 3.523053245078125*^9, 
+   3.5230533500625*^9, 3.52305361659375*^9, 3.52305370540625*^9, 
+   3.52305387821875*^9, 3.523053946109375*^9, {3.523053991515625*^9, 
+   3.523054007953125*^9}, 3.523054583328125*^9, 3.5230553921875*^9, 
+   3.523055451953125*^9, 3.523055671203125*^9, 3.52305592790625*^9, 
+   3.52305633825*^9, 3.52305640284375*^9, 3.523056483921875*^9, {
+   3.523058194078125*^9, 3.52305822246875*^9}, 3.523058259453125*^9, 
+   3.523058332171875*^9, 3.523058374328125*^9, 3.523058451328125*^9, 
+   3.5230584946875*^9, 3.5230587026875*^9, 3.52305873859375*^9, 
+   3.52305932025*^9, 3.523067469734375*^9, 3.523068013640625*^9, 
+   3.52306814653125*^9, 3.523068235453125*^9, 3.523068358484375*^9, 
+   3.52306859428125*^9, 3.5230687045625*^9, 3.523069752546875*^9, 
+   3.523069807*^9, 3.52306986353125*^9, 3.523069920953125*^9, 
+   3.523070247859375*^9, 3.52307031009375*^9, 3.52307035315625*^9, 
+   3.523070475171875*^9, 3.52307055328125*^9, 3.523070625546875*^9, 
+   3.523071605171875*^9, 3.523071661484375*^9, 3.523072013*^9, 
+   3.52307232078125*^9, 3.52307241825*^9, 3.52307248596875*^9, 
+   3.523072594578125*^9, 3.523072676484375*^9, 3.523072796859375*^9, 
+   3.52307288334375*^9, 3.523072980640625*^9, 3.5230730966875*^9, 
+   3.5230733254375*^9, 3.52307343534375*^9, 3.52307348896875*^9, 
+   3.523073804453125*^9, 3.523073919546875*^9, 3.5230741093125*^9, 
+   3.523074165*^9, 3.523074236640625*^9, {3.52307463715625*^9, 
+   3.52307465925*^9}, 3.52307481915625*^9, 3.52307492840625*^9, 
+   3.523075011578125*^9, 3.523075095609375*^9, 3.523075223703125*^9, 
+   3.523075528734375*^9, 3.523075730796875*^9, 3.5230758458125*^9, 
+   3.523075885*^9, 3.523075928328125*^9, 3.523075968671875*^9, {
+   3.52307610725*^9, 3.523076129546875*^9}, 3.523076288203125*^9, 
+   3.523076332046875*^9, {3.52307636709375*^9, 3.5230763955*^9}, {
+   3.523076430109375*^9, 3.523076451015625*^9}, {3.52307649071875*^9, 
+   3.523076508453125*^9}, {3.523076587640625*^9, 3.5230766275*^9}, 
+   3.523076914046875*^9, 3.52307694715625*^9, 3.52307711196875*^9, 
+   3.523077188171875*^9, 3.5230772508125*^9, 3.523077364515625*^9, 
+   3.523077400671875*^9, 3.523077452734375*^9, 3.52307768746875*^9, 
+   3.52307792721875*^9, 3.523078148375*^9, 3.5231353368125*^9, 
+   3.523136104671875*^9, 3.5231361596875*^9, 3.523136277921875*^9, 
+   3.523136821078125*^9, {3.5231508200625*^9, 3.52315084278125*^9}, 
+   3.52315091909375*^9, 3.5231834394375*^9, 3.523185274453125*^9, 
+   3.523185306546875*^9, 3.523185352875*^9, 3.523192128703125*^9, 
+   3.52319222615625*^9, 3.52504968996875*^9, 3.525049721328125*^9, 
+   3.525049766859375*^9, 3.52504991834375*^9, 3.525050109375*^9, 
+   3.525050188234375*^9, 3.52534559840625*^9, 3.525345646296875*^9, 
+   3.52534594875*^9, 3.525346016484375*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.52306844809375*^9, 3.5230684939375*^9}]
+},
+WindowSize->{1366, 768},
+WindowMargins->{{0, Automatic}, {-30, Automatic}},
+ShowSelection->True,
+FrontEndVersion->"8.0 for Microsoft Windows (32-bit) (2011\:5e743\:670815\
+\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 523, 13, 148, "Code"],
+Cell[CellGroupData[{
+Cell[1105, 37, 50412, 1101, 2985, "Input"],
+Cell[51520, 1140, 76721, 1551, 752, "Output"]
+}, Open  ]],
+Cell[128256, 2694, 87, 1, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
